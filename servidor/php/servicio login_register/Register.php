@@ -16,9 +16,9 @@
 	else
 	{
                 $password = md5($password);
-		$sql = "INSERT INTO Persona(nombre,telefono,correo, contrasena, islogging) VALUE('$name',' $phone','$username', '$password','0')";
+		$sql = "INSERT INTO Persona(nombre,correo, contrasena, islogging) VALUE('$name','$username', '$password','0')";
 		$result = mysqli_query($con, $sql);
-		die("Usuario registrado");
+                die("Usuario registrado");
 	}
 
 ?>
