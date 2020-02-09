@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://camel.apache.org/schema/cxf" xmlns:ctx="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee" xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+        http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+
+	<import resource="properties-beans.xml" />
+
+	<!-- Enabled Spring Annotations -->
+	<ctx:annotation-config />
+	<ctx:component-scan base-package="com.proyecto.server.*" />
+
+	<!-- From -->
+	<cxf:rsServer address="${rest.server.url.path}" id="restServer" serviceClass="com.proyecto.server.service.RestService" staticSubresourceResolution="true">
+		<cxf:providers>
+			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>
+	<!-- JMS ActiveMQ -->
+	<bean class="com.proyecto.server.processor.PrepareMailingNotificationProcessor" id="prepareMailingNotificationProcessor" />
+	<bean class="org.apache.activemq.ActiveMQConnectionFactory" id="jmsConnectionFactory">
+		<property name="brokerURL" value="${AMQ.brokerURL}" />
+		<property name="userName" value="${AMQ.userName}" />
+		<property name="password" value="${AMQ.password}" />
+	</bean>
+	<bean class="org.apache.activemq.camel.component.ActiveMQComponent" id="activemq">
+		<property name="Configuration" ref="jmsConfiguration" />
+	</bean>
+	<bean class="org.apache.camel.component.jms.JmsConfiguration" id="jmsConfiguration">
+		<property name="connectionFactory" ref="pooledConnectionFactory" />
+	</bean>
+	<bean class="org.apache.activemq.pool.PooledConnectionFactory" destroy-method="stop" id="pooledConnectionFactory" init-method="start">
+		<property name="maxConnections" value="10" />
+		<property name="maximumActiveSessionPerConnection" value="100" />
+		<property name="blockIfSessionPoolIsFull" value="false" />
+		<property name="blockIfSessionPoolIsFullTimeout" value="10000" />
+		<property name="connectionFactory" ref="jmsConnectionFactory" />
+	</bean>
+	<!-- Response -->
+	<bean class="com.proyecto.server.response.ResponseHandler" id="responseHandler" />
+	
+	<camelContext id="register" messageHistory="true" trace="false" useMDCLogging="true" typeConverterStatisticsEnabled="true" xmlns="http://camel.apache.org/schema/spring">
+		<propertyPlaceholder location="ref:properties" id="propertiesRef" />
+		<endpoint id="rsServerEndpoint" uri="cxfrs://bean://restServer">
+			<property key="bindingStyle" value="SimpleConsumer" />
+			<property key="loggingFeatureEnabled" value="{{rest.server.loggingFeatureEnabled}}" />
+		</endpoint>
+		<onException>
+			<exception>java.lang.RuntimeException</exception>
+			<exception>java.lang.Exception</exception>
+			<handled>
+				<constant>true</constant>
+			</handled>
+			<log id="log_messageError" logName="RegisterLog" loggingLevel="ERROR" message="Se ha generado un error al momento de registrar: --> ${exception}" />
+			<log id="log_stackTraceError" logName="RegisterLog" loggingLevel="ERROR" message="Stack trace del error: ${exception.stacktrace}" />
+			<setHeader headerName="errorMessage">
+				<simple>${exception.message}, Detail: ${exception.stacktrace}</simple>
+			</setHeader>
+			<to uri="direct:MailNotification" />
+			<setProperty propertyName="success">
+				<simple>false</simple>
+			</setProperty>
+			<setProperty propertyName="code">
+				<simple>400</simple>
+			</setProperty>
+			<setProperty propertyName="message">
+				<simple>Ha ocurrido un error en el registro</simple>
+			</setProperty>
+			<bean ref="responseHandler" />
+		</onException>
+
+		<onException>
+			<exception>java.net.ConnectException</exception>
+			<exception>java.net.UnknownHostException</exception>
+			<handled>
+				<constant>true</constant>
+			</handled>
+			<log id="log_messageError" logName="RegisterLog" loggingLevel="ERROR" message="Se ha generado un error de conexion --> ${exception}" />
+			<log id="log_stackTraceError" logName="RegisterLog" loggingLevel="ERROR" message="Stack trace del error: ${exception.stacktrace}" />
+			<setProperty propertyName="errorMessage">
+				<simple>${exception.message}, Detail: ${exception.stacktrace}</simple>
+			</setProperty>
+			<to uri="direct:MailNotification" />
+			<setProperty propertyName="success">
+				<simple>false</simple>
+			</setProperty>
+			<setProperty propertyName="code">
+				<simple>400</simple>
+			</setProperty>
+			<setProperty propertyName="message">
+				<simple>Transaccion fallida.</simple>
+			</setProperty>
+			<bean id="_bean4" ref="responseHandler" />
+		</onException>
+
+		<!-- COMSUMO WS -->
+		<route id="ROUTE-REGISTER" streamCache="true">
+			<from uri="ref:rsServerEndpoint" />
+			<removeHeaders pattern="*" />
+			<log logName="RegisterLog" loggingLevel="INFO" message="Hola tostaku" />
+					<setProperty propertyName="success">
+						<simple>true</simple>
+					</setProperty>
+					<setProperty propertyName="code">
+						<simple>200</simple>
+					</setProperty>
+					<setProperty propertyName="message">
+						<simple>Hola tostak de mierda.</simple>
+					</setProperty>
+			<log logName="RegisterLog" loggingLevel="INFO" message="${body}" />
+					<bean ref="responseHandler" />
+		</route>
+
+		<!-- MAIL NOTIFICATION ROUTE -->
+		<route id="ROUTE-MAIL-NOTIFICATION" customId="true" streamCache="true">
+			<description>Se direcciona el mensaje al JMS de envio de Emails</description>
+			<from uri="direct:MailNotification" />
+			<doTry>
+				<log message="Notificando el registro: ${headers.errorMessage}" loggingLevel="INFO" logName="RegisterLog" />
+				<setHeader headerName="DescripcionError">
+					<simple>${headers.errorMessage}</simple>
+				</setHeader>
+				<setHeader headerName="NombreServicio">
+					<simple>{{email.service.name}}</simple>
+				</setHeader>
+				<setHeader headerName="TipoServicio">
+					<simple>{{email.service.type}}</simple>
+				</setHeader>
+				<setProperty propertyName="mailTo">
+					<simple>{{email.to}}</simple>
+				</setProperty>
+				<setProperty propertyName="mailFrom">
+					<simple>{{email.from}}</simple>
+				</setProperty>
+				<setProperty propertyName="mailSubject">
+					<simple>{{email.subject}}</simple>
+				</setProperty>
+				<setProperty propertyName="mailTemplate">
+					<simple>{{email.template.send.notification}}</simple>
+				</setProperty>
+				<process ref="prepareMailingNotificationProcessor">
+					<description>Create request to send to notification queue</description>
+				</process>
+				<log message="Enviando mensaje a la JMS de Notificaciones: ${body}" loggingLevel="INFO" logName="RegisterLog" />
+				<inOnly uri="activemq:queue:{{email.notification.queue.name}}" />
+				<doCatch>
+					<exception>java.lang.Exception</exception>
+					<handled>
+						<constant>true</constant>
+					</handled>
+					<log message="Error enviando mensaje al QUEUE: {{email.notification.queue.name}}, MessageError: ${exception.message}" loggingLevel="ERROR" logName="RegisterLog" />
+				</doCatch>
+			</doTry>
+		</route>
+	</camelContext>
+
+</beans>
