@@ -40,9 +40,16 @@
 		<property name="blockIfSessionPoolIsFullTimeout" value="10000" />
 		<property name="connectionFactory" ref="jmsConnectionFactory" />
 	</bean>
+	
+		<!-- Datasource -->
+	<jee:jndi-lookup expected-type="javax.sql.DataSource" id="dsRegister" jndi-name="osgi:service/${jndi.name.datasource}" />
+	<bean class="com.proyecto.server.sql.ConsultasBD" id="consultasBD" />
+	
+	
 	<!-- Response -->
 	<bean class="com.proyecto.server.response.ResponseHandler" id="responseHandler" />
 	
+
 	<camelContext id="register" messageHistory="true" trace="false" useMDCLogging="true" typeConverterStatisticsEnabled="true" xmlns="http://camel.apache.org/schema/spring">
 		<propertyPlaceholder location="ref:properties" id="propertiesRef" />
 		<endpoint id="rsServerEndpoint" uri="cxfrs://bean://restServer">
@@ -101,7 +108,28 @@
 		<route id="ROUTE-REGISTER" streamCache="true">
 			<from uri="ref:rsServerEndpoint" />
 			<removeHeaders pattern="*" />
-			<log logName="RegisterLog" loggingLevel="INFO" message="Hola tostaku" />
+			<log logName="RegisterLog" loggingLevel="INFO" message="${body}" />
+			<choice>
+				<when>
+					<simple>${body.person.email} != null || ${body.person.password} != null || ${body.person.name} != null || ${body.person.phone} != null </simple>					
+					<setHeader headerName="email">
+						<simple>${body.person.email}</simple>
+					</setHeader>
+					<setHeader headerName="password">
+						<simple>${body.person.password}</simple>
+					</setHeader>
+					<setHeader headerName="name">
+						<simple>${body.person.name}</simple>
+					</setHeader>
+					<setHeader headerName="phone">
+						<simple>${body.person.phone}</simple>
+					</setHeader>
+
+					<to uri="direct:fechaActual" />
+					
+					<bean ref="consultasBD" />
+					
+					
 					<setProperty propertyName="success">
 						<simple>true</simple>
 					</setProperty>
@@ -109,12 +137,38 @@
 						<simple>200</simple>
 					</setProperty>
 					<setProperty propertyName="message">
-						<simple>Hola tostak de mierda.</simple>
+						<simple>registro exitoso.</simple>
 					</setProperty>
-			<log logName="RegisterLog" loggingLevel="INFO" message="${body}" />
+					<log logName="RegisterLog" loggingLevel="INFO" message="${body}" />
 					<bean ref="responseHandler" />
+				</when>
+				<otherwise>
+					<log logName="RegisterLog" loggingLevel="WARN" message="campos nulos" />
+					<setProperty propertyName="success">
+						<simple>false</simple>
+					</setProperty>
+					<setProperty propertyName="code">
+						<simple>450</simple>
+					</setProperty>
+					<setProperty propertyName="message">
+						<simple>se requiere digitar todos los campos.</simple>
+					</setProperty>
+					<bean ref="responseHandler" />
+				</otherwise>
+			</choice>					
 		</route>
-
+		
+		<!-- validador fecha -->
+		<route id="ROUTE-DATE" streamCache="true">
+			<from uri="direct:fechaActual">
+				<description>fecha Actual del registro de la persona</description>
+			</from>
+			<setHeader headerName="hora">
+						<simple>${date:now:YYYY-MM-dd HH:mm:ss}</simple>
+			</setHeader>
+			<log logName="RegisterLog" loggingLevel="INFO" message="fecha actual ${headers.hora}" />
+		</route>
+		
 		<!-- MAIL NOTIFICATION ROUTE -->
 		<route id="ROUTE-MAIL-NOTIFICATION" customId="true" streamCache="true">
 			<description>Se direcciona el mensaje al JMS de envio de Emails</description>

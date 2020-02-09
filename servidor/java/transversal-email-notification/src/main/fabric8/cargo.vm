@@ -1,0 +1,11 @@
+<p>Buen dia</p>
+<p>Solicitar su ayuda para la correccion de la ruta (Nombre del servicio). Los detalles del error se encuentran
+    especificados a continuacion.
+    agradecemos su ayuda lo mas pronto posible:
+</p>
+<p>
+    <p>Descripcion: ${body}
+</p>
+Quedamos a la espera de su pronta ayuda,
+<p>Saludos</p>
+<p>Equipo Avianca Cargo</p>

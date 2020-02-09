@@ -1,0 +1,13 @@
+<p>Buen dia</p>
+<p>Solicitar su ayuda para la correccion de la ruta. Los detalles del error se encuentran
+    especificados a continuacion.
+    agradecemos su ayuda lo mas pronto posible:
+</p>
+<p>
+    <p>Nombre del Servicio: ${body["NombreServicio"]}</p>
+    <p>Tipo de Servicio: ${body["TipoServicio"]}</p>
+    <p>Descripcion Error: ${body["DescripcionError"]}</p>
+</p>
+Quedamos a la espera de su pronta ayuda,
+<p>Saludos</p>
+<p>Equipo Simplify</p>

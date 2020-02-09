@@ -2,10 +2,10 @@
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: fdb19.awardspace.net
--- Tiempo de generación: 19-01-2020 a las 21:59:05
--- Versión del servidor: 5.7.20-log
--- Versión de PHP: 5.5.38
+-- Host: fdb19.awardspace.net
+-- Generation Time: Feb 09, 2020 at 07:09 PM
+-- Server version: 5.7.20-log
+-- PHP Version: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `3296648_viewerrealm`
+-- Database: `3296648_viewerrealm`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `comentarios`
+-- Table structure for table `comentarios`
 --
 
 CREATE TABLE `comentarios` (
@@ -37,7 +37,7 @@ CREATE TABLE `comentarios` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `fotos`
+-- Table structure for table `fotos`
 --
 
 CREATE TABLE `fotos` (
@@ -48,7 +48,7 @@ CREATE TABLE `fotos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `fotoxinmueble`
+-- Table structure for table `fotoxinmueble`
 --
 
 CREATE TABLE `fotoxinmueble` (
@@ -60,7 +60,7 @@ CREATE TABLE `fotoxinmueble` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Inmueble`
+-- Table structure for table `Inmueble`
 --
 
 CREATE TABLE `Inmueble` (
@@ -75,18 +75,27 @@ CREATE TABLE `Inmueble` (
   `texturas` varchar(4000) NOT NULL,
   `muebles` varchar(10000) NOT NULL,
   `precio` int(20) NOT NULL,
-  `cliente` varchar(30) NOT NULL,
   `estado` varchar(15) NOT NULL COMMENT 'venta o disponible o arriendo',
   `barrio` varchar(25) NOT NULL,
   `direccion` varchar(50) NOT NULL,
   `nombre_Inmueble` varchar(100) NOT NULL,
-  `informacion_extra` varchar(500) NOT NULL
+  `informacion_extra` varchar(500) NOT NULL,
+  `Tipo` varchar(30) NOT NULL,
+  `ID_VENDEDOR` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Inmueble`
+--
+
+INSERT INTO `Inmueble` (`ID`, `triggers`, `suelos`, `paredes`, `ancho`, `largo`, `pisos`, `estado_inmueble`, `texturas`, `muebles`, `precio`, `estado`, `barrio`, `direccion`, `nombre_Inmueble`, `informacion_extra`, `Tipo`, `ID_VENDEDOR`) VALUES
+(1, '', '', '', 6, 12, 2, 'Usado', '', '', 250000000, 'venta', 'las cruces', 'cra 5 # 3-25 sur', 'casa', 'es una casa usada en el mejor barrio del mundo trae dinero y no policias "tienes pelotas de señorita" si no la compras', 'casa', 36),
+(2, '', '', '', 3, 10, 1, 'Nuevo', '', '', 150000000, 'venta', 'cubiolandia', 'cra cubio # 3-25 sur', 'casa', 'una casa donde hay cubios amarillos y redondos', 'casa', 6);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `inmueblexpersona`
+-- Table structure for table `inmueblexpersona`
 --
 
 CREATE TABLE `inmueblexpersona` (
@@ -98,7 +107,7 @@ CREATE TABLE `inmueblexpersona` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `notificaciones`
+-- Table structure for table `notificaciones`
 --
 
 CREATE TABLE `notificaciones` (
@@ -113,7 +122,7 @@ CREATE TABLE `notificaciones` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Persona`
+-- Table structure for table `Persona`
 --
 
 CREATE TABLE `Persona` (
@@ -123,44 +132,93 @@ CREATE TABLE `Persona` (
   `contrasena` varchar(50) DEFAULT NULL,
   `penalizacion` int(3) DEFAULT NULL,
   `confiabilidad` int(4) DEFAULT NULL,
-  `islogging` tinyint(1) NOT NULL
+  `islogging` tinyint(1) NOT NULL,
+  `registro` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `Persona`
+-- Dumping data for table `Persona`
 --
 
-INSERT INTO `Persona` (`ID`, `nombre`, `correo`, `contrasena`, `penalizacion`, `confiabilidad`, `islogging`) VALUES
-(1, 'otaku', 'kwolfp12@gmail.com', 'a814546dc77c65a2426107fd2e481861', NULL, NULL, 1),
-(6, 'Dwan', 'CubioMan@yahoo.com', '56a454ff9cde3e76749a337443c153d1', NULL, NULL, 1),
-(7, 'wendy', 'Huston25@yahoo.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', NULL, NULL, 1);
+INSERT INTO `Persona` (`ID`, `nombre`, `correo`, `contrasena`, `penalizacion`, `confiabilidad`, `islogging`, `registro`) VALUES
+(1, 'otaku', 'kwolfp12@gmail.com', 'a814546dc77c65a2426107fd2e481861', 0, 0, 0, '2020-01-19 06:17:18'),
+(6, 'Dwan', 'CubioMan@yahoo.com', '56a454ff9cde3e76749a337443c153d1', 0, 0, 0, '2020-01-21 10:17:15'),
+(36, 'Cartman', 'elcoon@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0, 0, 1, '2020-01-29 20:35:36'),
+(37, 'Usuario', 'user@ejemplo.com', '912ec803b2ce49e4a541068d495ab570', 0, 0, 1, '2020-02-04 19:40:50'),
+(38, 'Prueba', 'prueba@prueba.com', 'c893bad68927b457dbed39460e6afd62', 0, 0, 1, '2020-02-04 19:48:47'),
+(39, 'Sett', 'Sett@gmail.com', '912ec803b2ce49e4a541068d495ab570', 0, 0, 1, '2020-02-05 21:14:37'),
+(40, 'Test', 'test@test.com', '912ec803b2ce49e4a541068d495ab570', 0, 0, 1, '2020-02-06 12:08:47'),
+(41, 'Hola', 'mundo@algo.com', '912ec803b2ce49e4a541068d495ab570', 0, 0, 1, '2020-02-07 12:15:16'),
+(42, 'Alibaba', 'Ali@baba.com', '912ec803b2ce49e4a541068d495ab570', 0, 0, 0, '2020-02-07 20:39:41');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `telefonos`
+-- Table structure for table `PRUEBASOP`
+--
+
+CREATE TABLE `PRUEBASOP` (
+  `RECORD_ID` varchar(50) DEFAULT NULL,
+  `FLTCARRIER` varchar(50) DEFAULT NULL,
+  `FLTNUMBER` varchar(50) DEFAULT NULL,
+  `ESTACIONSALIDA` varchar(50) DEFAULT NULL,
+  `ESTACIONLLEGADA` varchar(50) DEFAULT NULL,
+  `ACSUBTYPE` varchar(50) DEFAULT NULL,
+  `FLTSTATE` varchar(50) DEFAULT NULL,
+  `DEPACTDATETIMEUTC` varchar(50) DEFAULT NULL,
+  `ARRACTDATETIMEUTC` varchar(50) DEFAULT NULL,
+  `DEPACTDATETIMELCL` varchar(50) DEFAULT NULL,
+  `ARRACTDATETIMELCL` varchar(50) DEFAULT NULL,
+  `OPERATINGCARRIER` varchar(50) DEFAULT NULL,
+  `DEPSKDDATETIMELCL` varchar(50) DEFAULT NULL,
+  `ARRSKDDATETIMELCL` varchar(50) DEFAULT NULL,
+  `ANNIO` varchar(50) DEFAULT NULL,
+  `MES` varchar(50) DEFAULT NULL,
+  `DIA` varchar(50) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `PRUEBASOP`
+--
+
+INSERT INTO `PRUEBASOP` (`RECORD_ID`, `FLTCARRIER`, `FLTNUMBER`, `ESTACIONSALIDA`, `ESTACIONLLEGADA`, `ACSUBTYPE`, `FLTSTATE`, `DEPACTDATETIMEUTC`, `ARRACTDATETIMEUTC`, `DEPACTDATETIMELCL`, `ARRACTDATETIMELCL`, `OPERATINGCARRIER`, `DEPSKDDATETIMELCL`, `ARRSKDDATETIMELCL`, `ANNIO`, `MES`, `DIA`) VALUES
+('36835173', 'AV', '064', 'SAL', 'LHR', 'AT7', 'ARR', '06/10/19', '06/10/19', '6/10/2019  2:20:00 p. m.', '06/10/2019 15:20', 'GU', '06/10/2019 14:30', '06/10/2019 15:40', '2019', '10', '06'),
+('36835173', 'AV', '064', 'SAL', 'LHR', 'AT7', 'ARR', '06/10/19', '06/10/19', '6/10/2019  2:20:00 p. m.', '06/10/2019 15:20', 'GU', '06/10/2019 14:30', '06/10/2019 15:40', '2019', '10', '06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `telefonos`
 --
 
 CREATE TABLE `telefonos` (
   `ID` int(11) NOT NULL,
-  `numero` int(11) NOT NULL,
+  `numero` varchar(13) NOT NULL,
   `ID_PERSONA` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `telefonos`
+-- Dumping data for table `telefonos`
 --
 
 INSERT INTO `telefonos` (`ID`, `numero`, `ID_PERSONA`) VALUES
-(1, 1223478635, 1),
-(2, 6589321, 6);
+(1, '1223478635', 1),
+(2, '6589321', 6),
+(3, '223446307', 1),
+(21, '4564534567', 36),
+(22, '456342', 37),
+(23, '3456234', 38),
+(24, '45634564', 39),
+(25, '345623', 40),
+(26, '45634', 41),
+(27, '35463', 42);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `comentarios`
+-- Indexes for table `comentarios`
 --
 ALTER TABLE `comentarios`
   ADD PRIMARY KEY (`ID`),
@@ -170,7 +228,7 @@ ALTER TABLE `comentarios`
   ADD KEY `ID_inmueble_4` (`ID_inmueble`);
 
 --
--- Indices de la tabla `fotos`
+-- Indexes for table `fotos`
 --
 ALTER TABLE `fotos`
   ADD PRIMARY KEY (`ID`),
@@ -178,7 +236,7 @@ ALTER TABLE `fotos`
   ADD KEY `ID_2` (`ID`);
 
 --
--- Indices de la tabla `fotoxinmueble`
+-- Indexes for table `fotoxinmueble`
 --
 ALTER TABLE `fotoxinmueble`
   ADD PRIMARY KEY (`ID`),
@@ -186,13 +244,14 @@ ALTER TABLE `fotoxinmueble`
   ADD KEY `ID_FOTO` (`ID_FOTO`);
 
 --
--- Indices de la tabla `Inmueble`
+-- Indexes for table `Inmueble`
 --
 ALTER TABLE `Inmueble`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ID_VENDEDOR` (`ID_VENDEDOR`);
 
 --
--- Indices de la tabla `inmueblexpersona`
+-- Indexes for table `inmueblexpersona`
 --
 ALTER TABLE `inmueblexpersona`
   ADD PRIMARY KEY (`ID`),
@@ -200,102 +259,109 @@ ALTER TABLE `inmueblexpersona`
   ADD KEY `ID_PERSONA` (`ID_PERSONA`);
 
 --
--- Indices de la tabla `notificaciones`
+-- Indexes for table `notificaciones`
 --
 ALTER TABLE `notificaciones`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `ID_persona` (`ID_persona`);
 
 --
--- Indices de la tabla `Persona`
+-- Indexes for table `Persona`
 --
 ALTER TABLE `Persona`
   ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `correo` (`correo`);
+  ADD UNIQUE KEY `correo` (`correo`),
+  ADD UNIQUE KEY `correo_2` (`correo`);
 
 --
--- Indices de la tabla `telefonos`
+-- Indexes for table `telefonos`
 --
 ALTER TABLE `telefonos`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `ID_PERSONA` (`ID_PERSONA`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `comentarios`
+-- AUTO_INCREMENT for table `comentarios`
 --
 ALTER TABLE `comentarios`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `fotos`
+-- AUTO_INCREMENT for table `fotos`
 --
 ALTER TABLE `fotos`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `fotoxinmueble`
+-- AUTO_INCREMENT for table `fotoxinmueble`
 --
 ALTER TABLE `fotoxinmueble`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `Inmueble`
+-- AUTO_INCREMENT for table `Inmueble`
 --
 ALTER TABLE `Inmueble`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT de la tabla `inmueblexpersona`
+-- AUTO_INCREMENT for table `inmueblexpersona`
 --
 ALTER TABLE `inmueblexpersona`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `notificaciones`
+-- AUTO_INCREMENT for table `notificaciones`
 --
 ALTER TABLE `notificaciones`
   MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `Persona`
+-- AUTO_INCREMENT for table `Persona`
 --
 ALTER TABLE `Persona`
-  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
--- AUTO_INCREMENT de la tabla `telefonos`
+-- AUTO_INCREMENT for table `telefonos`
 --
 ALTER TABLE `telefonos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `comentarios`
+-- Constraints for table `comentarios`
 --
 ALTER TABLE `comentarios`
   ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`ID_inmueble`) REFERENCES `Inmueble` (`ID`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `fotoxinmueble`
+-- Constraints for table `fotoxinmueble`
 --
 ALTER TABLE `fotoxinmueble`
   ADD CONSTRAINT `fotoxinmueble_ibfk_1` FOREIGN KEY (`ID_INMUEBLE`) REFERENCES `Inmueble` (`ID`),
   ADD CONSTRAINT `fotoxinmueble_ibfk_2` FOREIGN KEY (`ID_FOTO`) REFERENCES `fotos` (`ID`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `inmueblexpersona`
+-- Constraints for table `Inmueble`
+--
+ALTER TABLE `Inmueble`
+  ADD CONSTRAINT `Inmueble_ibfk_1` FOREIGN KEY (`ID_VENDEDOR`) REFERENCES `Persona` (`ID`);
+
+--
+-- Constraints for table `inmueblexpersona`
 --
 ALTER TABLE `inmueblexpersona`
   ADD CONSTRAINT `inmueblexpersona_ibfk_1` FOREIGN KEY (`ID_INMUEBLE`) REFERENCES `Inmueble` (`ID`) ON UPDATE CASCADE,
   ADD CONSTRAINT `inmueblexpersona_ibfk_2` FOREIGN KEY (`ID_PERSONA`) REFERENCES `Persona` (`ID`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `notificaciones`
+-- Constraints for table `notificaciones`
 --
 ALTER TABLE `notificaciones`
   ADD CONSTRAINT `notificaciones_ibfk_1` FOREIGN KEY (`ID_persona`) REFERENCES `Persona` (`ID`);
 
 --
--- Filtros para la tabla `telefonos`
+-- Constraints for table `telefonos`
 --
 ALTER TABLE `telefonos`
   ADD CONSTRAINT `telefonos_ibfk_1` FOREIGN KEY (`ID_PERSONA`) REFERENCES `Persona` (`ID`) ON UPDATE CASCADE;

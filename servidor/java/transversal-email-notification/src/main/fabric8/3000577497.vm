@@ -1,0 +1,12 @@
+<p>TAG_CUERPO_MENSAJE</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" align="left">
+<tbody>
+<tr>
+<td align="left"><img src="http://images-aviancataca.com/mail/templates/images/firma_correos_cargo_eng.png" width="197" border="0" data-imagetype="External" />
+${body}
+</td>
+</tr>
+</tbody>
+</table>

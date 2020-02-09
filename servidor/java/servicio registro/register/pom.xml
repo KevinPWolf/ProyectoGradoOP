@@ -33,6 +33,17 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-sql</artifactId>
+		</dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.45</version>
+        </dependency>    
+ 		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-spring</artifactId>
 		</dependency>
 		<dependency>
@@ -245,7 +256,7 @@
 							*
 						</Import-Package>
 						<DynamicImport-Package>org.apache.cxf.*,
-							org.springframework.beans.*, oracle.jdbc.*,oracle.*
+							org.springframework.beans.*, oracle.jdbc.*,oracle.*,mysql.*
 						</DynamicImport-Package>
 						<Embed-Dependency>*;scope=compile;inline=false;groupId=!org.springframework|org.springframework.osgi|org.apache.camel|org.ops4j.pax.logging|commons-logging|log4j|com.fasterxml.jackson.core|ojdbc6</Embed-Dependency>
 						<Embed-Directory>OSGI-INF/lib</Embed-Directory>

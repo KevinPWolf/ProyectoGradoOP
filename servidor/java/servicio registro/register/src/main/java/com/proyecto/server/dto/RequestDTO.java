@@ -9,24 +9,15 @@ import java.io.Serializable;
 @JsonSerialize
 public class RequestDTO implements Serializable {
 	private static final long serialVersionUID = 6872117570224011584L;
-	@JsonProperty("header")
-	private Header header;
-	@JsonProperty("flight")
-	private Flight flight;
+	@JsonProperty("person")
+	private Person person;
 
-	public Header getHeader() {
-		return this.header;
+
+	public Person getPerson() {
+		return this.person;
 	}
 
-	public void setHeader(Header header) {
-		this.header = header;
-	}
-
-	public Flight getFlight() {
-		return this.flight;
-	}
-
-	public void setFlight(Flight flight) {
-		this.flight = flight;
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 }

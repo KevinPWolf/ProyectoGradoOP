@@ -1,0 +1,31 @@
+{
+  "idAplication": 555,
+  "messageTemplate": "generic",
+  "mail": [
+    {
+      "destinatario": "jcastro@assertsolutions.com",
+      "parametros": [
+        [
+          "asunto",
+          "Prueba Adjuntos Notificaciones"
+        ],
+        [
+          "NombreServicio",
+          "Prueba Teradata 300"
+        ],
+        [
+          "TipoServicio",
+          "Transversal Mail Notification"
+        ],
+        [
+          "DescripcionError",
+          "Esta es una notificacion de pruebas"
+        ]
+      ],
+      "adjuntos": [
+        "ejemplo.csv",
+        "ejemplo2.xlsx"
+      ]
+    }
+  ]
+}

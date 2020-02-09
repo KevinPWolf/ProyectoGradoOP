@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ctx="http://www.springframework.org/schema/context"
+       xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd
+       	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <osgix:cm-properties id="sf.mail.props" persistent-id="transversal.mail.notification.conf"/>
+    <ctx:property-placeholder properties-ref="sf.mail.props"/>
+
+    <!-- load protocol profile -->
+    <osgi:reference id="resolverRef"
+                    interface="org.osgi.service.url.URLStreamHandlerService" filter="(url.handler.protocol=profile)"
+                    cardinality="1..1"/>
+
+    <bean class="com.avianca.esb.transversal.mail.processors.LoaderTemplatesProcessor" id="loaderTemplatesProcessor">
+        <constructor-arg type="java.lang.String" value="${transversal.mail.strTemplateList}"/>
+    </bean>
+
+</beans>

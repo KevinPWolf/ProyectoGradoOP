@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
+           xmlns:enc="http://karaf.apache.org/xmlns/jasypt/v1.0.0"
+           xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd">
+
+    <!-- configure properties -->
+    <cm:property-placeholder id="properties" persistent-id="proyecto.datasources"/>
+
+    <enc:property-placeholder>
+        <enc:encryptor class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+            <property name="config">
+                <bean class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+                    <property name="algorithm" value="${db.algorithm}"/>
+                    <property name="password" value="${db.key}"/>
+                </bean>
+            </property>
+        </enc:encryptor>
+    </enc:property-placeholder>
+
+    <!-- MDTH DATASOURCE CONFIGURATION -->
+    <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="mdthDataSource">
+        <property name="driverClassName" value="${mdth.driver}"/>
+        <property name="url" value="${mdth.url}"/>
+        <property name="username" value="${mdth.username}"/>
+        <property name="password" value="${mdth.password}"/>
+        <property name="validationQuery" value="${mdth.validationQuery}"/>
+        <property name="validationQueryTimeout">
+            <value type="int">${mdth.validationQueryTimeout}</value>
+        </property>
+        <property name="initialSize" value="${mdth.pool.initialSize}"/>
+        <property name="maxActive" value="${mdth.pool.maxActive}"/>
+        <property name="minIdle" value="${mdth.pool.minIdle}"/>
+        <property name="maxIdle" value="${mdth.pool.maxIdle}"/>
+        <property name="maxWait" value="${mdth.pool.maxWait}"/>
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="maxOpenPreparedStatements" value="${mdth.pool.maxOpenPreparedStatements}"/>
+    </bean>
+
+    <service interface="javax.sql.DataSource" ref="mdthDataSource">
+        <service-properties>
+            <entry key="osgi.jndi.service.name" value="${mdth.jndi}"/>
+            <entry key="datasource.name" value="${mdth.dsName}"/>
+            <entry key="name" value="${mdth.dsName}"/>
+        </service-properties>
+    </service>
+    <!-- MDTH DATASOURCE CONFIGURATION -->
+
+    <!-- APPS DATASOURCE CONFIGURATION -->
+    <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="appsDataSource">
+        <property name="driverClassName" value="${apps.driver}"/>
+        <property name="url" value="${apps.url}"/>
+        <property name="username" value="${apps.username}"/>
+        <property name="password" value="${apps.password}"/>
+        <property name="validationQuery" value="${apps.validationQuery}"/>
+        <property name="validationQueryTimeout">
+            <value type="int">${apps.validationQueryTimeout}</value>
+        </property>
+        <property name="initialSize" value="${apps.pool.initialSize}"/>
+        <property name="maxActive" value="${apps.pool.maxActive}"/>
+        <property name="minIdle" value="${apps.pool.minIdle}"/>
+        <property name="maxIdle" value="${apps.pool.maxIdle}"/>
+        <property name="maxWait" value="${apps.pool.maxWait}"/>
+        <property name="poolPreparedStatements" value="true"/>
+        <property name="maxOpenPreparedStatements" value="${apps.pool.maxOpenPreparedStatements}"/>
+    </bean>
+
+    <service interface="javax.sql.DataSource" ref="appsDataSource">
+        <service-properties>
+            <entry key="osgi.jndi.service.name" value="${apps.jndi}"/>
+            <entry key="datasource.name" value="${apps.dsName}"/>
+            <entry key="name" value="${apps.dsName}"/>
+        </service-properties>
+    </service>
+    <!-- APPS DATASOURCE CONFIGURATION -->
+
+</blueprint>

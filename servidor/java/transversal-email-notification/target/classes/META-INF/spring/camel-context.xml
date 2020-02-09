@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:cxf="http://camel.apache.org/schema/cxf"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+       http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd">
+
+    <import resource="properties-beans.xml"/>
+
+    <!--jasypt parser for use inside camel context-->
+    <bean class="org.apache.camel.component.jasypt.JasyptPropertiesParser" id="jasypt">
+        <property name="algorithm" value="${transversal.mail.jasypt.algorithm}"/>
+        <property name="password" value="${transversal.mail.jasypt.key}"/>
+    </bean>
+
+    <!--jasypt parser for use outside camel context-->
+    <bean id="configurationEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+        <property name="algorithm" value="${transversal.mail.jasypt.algorithm}"/>
+        <property name="password" value="${transversal.mail.jasypt.key}"/>
+    </bean>
+
+    <!-- ACTIVEMQ -->
+    <bean class="org.apache.activemq.camel.component.ActiveMQComponent" id="activemq">
+        <property name="Configuration" ref="jmsConfiguration"/>
+    </bean>
+
+    <bean class="org.apache.camel.component.jms.JmsConfiguration" id="jmsConfiguration">
+        <property name="connectionFactory" ref="pooledConnectionFactory"/>
+        <property name="requestTimeout" value="10000"/>
+        <property name="cacheLevelName" value="CACHE_CONSUMER"/>
+        <property name="transacted" value="true"/>
+        <property name="concurrentConsumers" value="10"/>
+    </bean>
+
+    <bean class="org.apache.activemq.pool.PooledConnectionFactory" destroy-method="stop" id="pooledConnectionFactory"
+          init-method="start">
+        <property name="maxConnections" value="10"/>
+        <property name="maximumActiveSessionPerConnection" value="60"/>
+        <property name="blockIfSessionPoolIsFull" value="false"/>
+        <property name="blockIfSessionPoolIsFullTimeout" value="10000"/>
+        <property name="connectionFactory" ref="jmsConnectionFactory"/>
+    </bean>
+
+    <bean class="org.springframework.jms.connection.JmsTransactionManager" id="jmsTransactionManager">
+        <property name="connectionFactory" ref="jmsConnectionFactory"/>
+    </bean>
+
+    <bean class="org.apache.activemq.ActiveMQConnectionFactory" id="jmsConnectionFactory">
+        <property name="brokerURL" value="${jms.url}"/>
+        <property name="userName"
+                  value="#{'${jms.userName}'.contains('ENC') ? configurationEncryptor.decrypt('${jms.userName}'.substring('${jms.userName}'.indexOf('(') + 1, '${jms.userName}'.indexOf(')'))) : '${jms.userName}'}"/>
+        <property name="password"
+                  value="#{'${jms.password}'.contains('ENC') ? configurationEncryptor.decrypt('${jms.password}'.substring('${jms.password}'.indexOf('(') + 1, '${jms.userName}'.indexOf(')'))) : '${jms.password}'}"/>
+        <property name="redeliveryPolicy">
+            <bean class="org.apache.activemq.RedeliveryPolicy">
+                <property name="maximumRedeliveries" value="1"/> <!--Total of executions 2 -->
+                <property name="useExponentialBackOff" value="true"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean class="org.apache.camel.spring.spi.SpringTransactionPolicy" id="required">
+        <property name="transactionManager" ref="jmsTransactionManager"/>
+        <property name="propagationBehaviorName" value="PROPAGATION_REQUIRED"/>
+    </bean>
+
+    <!-- ACTIVEMQ -->
+    <!-- PROCESSORS, AGGREGATORS -->
+    <bean class="com.avianca.esb.transversal.mail.processors.RequestValidatorProcessor" id="requestProcessor"/>
+    <bean class="com.avianca.esb.transversal.mail.processors.AttachmentsProcessor" id="attachmentsProcessor"/>
+    <bean class="com.avianca.esb.transversal.mail.midmail.CreateResponse" id="createResponse"/>
+    <bean class="com.avianca.esb.transversal.mail.midmail.DownloadFromFtpProcess" id="downloadFromFtpProcess"/>
+    <bean class="com.avianca.esb.transversal.mail.midmail.JoinAttachments" id="joinAttachments"/>
+    <bean class="com.avianca.esb.transversal.mail.midmail.CreateMessageFromWebService"
+          id="createMessageFromWebService"/>
+    <!-- PROCESSORS -->
+    <!-- LOGGING -->
+    <bean class="org.slf4j.LoggerFactory" factory-method="getLogger" id="mailLog">
+        <constructor-arg type="java.lang.String" value="MailNotification"/>
+    </bean>
+    <!-- call static method -->
+    <bean id="mcdlog" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass" value="org.slf4j.MDC"/>
+        <property name="targetMethod" value="put"/>
+        <property name="arguments">
+            <list>
+                <value>MailNotification</value>
+                <value>MailNotification</value>
+            </list>
+        </property>
+    </bean>
+    <!-- LOGGING -->
+
+    <!--midmail inherited configurations from middleware-notificaciones-2.0.6.2 profile midmail 1.6 PROD-->
+    <cxf:rsServer address="${transversal.mail.midmail.url}" id="rsServer" loggingFeatureEnabled="true"
+                  serviceClass="com.avianca.esb.transversal.mail.midmail.SentEmailService">
+        <cxf:providers>
+            <ref bean="jacksonJsonProvider"/>
+            <bean class="com.avianca.esb.transversal.mail.exception.EstructuraJSONExceptionMapper"/>
+            <bean class="com.avianca.esb.transversal.mail.exception.AtributoJSONExceptionMapper"/>
+        </cxf:providers>
+        <cxf:properties>
+            <entry key="receiveTimeout" value="1000000000"/>
+            <entry key="connectionTimeout" value="1000000000"/>
+        </cxf:properties>
+    </cxf:rsServer>
+
+    <bean id="jacksonJsonProvider" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
+        <property name="mapper" ref="jacksonObjectMapper"/>
+    </bean>
+
+    <bean id="jacksonObjectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
+
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" ref="jacksonObjectMapper"/>
+        <property name="targetMethod" value="configure"/>
+        <property name="arguments">
+            <list>
+                <value type="com.fasterxml.jackson.databind.DeserializationFeature">ACCEPT_SINGLE_VALUE_AS_ARRAY</value>
+                <value>true</value>
+            </list>
+        </property>
+    </bean>
+    <!--END midmail inherited configurations from middleware-notificaciones-2.0.6.2 profile midmail 1.6 PROD- -->
+
+    <camelContext id="context-transversal-mail-notification" useMDCLogging="true"
+                  xmlns="http://camel.apache.org/schema/spring" errorHandlerRef="errorHandler">
+        <propertyPlaceholder id="properties" location="ref:sf.mail.props" propertiesParserRef="jasypt"/>
+        <errorHandler id="errorHandler" type="LoggingErrorHandler" logName="mailLog"/>
+
+        <onException>
+            <exception>org.apache.camel.component.file.GenericFileOperationFailedException</exception>
+            <continued>
+                <simple>true</simple>
+            </continued>
+            <log message="Ha ocurrido un error de conexion con el ftp ${exception.message}" loggingLevel="ERROR"/>
+            <log message="${exception.stacktrace}"/>
+            <setHeader headerName="success">
+                <simple resultType="boolean">false</simple>
+            </setHeader>
+        </onException>
+
+        <onException>
+            <description>Error de validaciones en campos</description>
+            <exception>org.apache.camel.ValidationException</exception>
+            <handled>
+                <simple>true</simple>
+            </handled>
+            <log message="${exception.message}" loggingLevel="ERROR"/>
+            <log message="${exception.stacktrace}" loggingLevel="ERROR"/>
+            <setHeader headerName="SCodigo">
+                <constant>400</constant>
+            </setHeader>
+            <setHeader headerName="BOperacionExitosa">
+                <constant>false</constant>
+            </setHeader>
+            <setHeader headerName="SMensaje">
+                <simple>Error de validacion de entrada</simple>
+            </setHeader>
+            <setHeader headerName="SMensajeTecnico">
+                <simple>${exception.message}</simple>
+            </setHeader>
+            <removeHeaders pattern="*" excludePattern="SCodigo|BOperacionExitosa|SMensaje|SMensajeTecnico"/>
+            <setBody>
+                <simple>null</simple>
+            </setBody>
+        </onException>
+
+        <route customId="true" id="ROUTE-MESSAGE-FROM-DIRECTVM" streamCache="true" trace="true">
+            <description>Ruta que envia el mensaje a la cola desde un direct-vm</description>
+            <from uri="direct-vm:{{email.notification.route}}"/>
+            <log message="Enviando mensaje a la JMS de Notificaciones: \n ${body}" loggingLevel="INFO"
+                 loggerRef="mailLog"/>
+            <to uri="{{email.notification.queue.endpint.to}}" pattern="InOnly"/>
+        </route>
+
+        <!--configurations from com/avianca/esb/UploadToBlobAzure/1.0.41/-->
+        <!--configurations from middleware-notificaciones-2.0.6.2-->
+        <route id="ROUTE-MESSAGE-FROM-WS" streamCache="true">
+            <description>
+                Ruta que envia el mensaje desde un servicio web, basado en la ruta midmail
+            </description>
+            <from uri="cxfrs:bean:rsServer?bindingStyle=SimpleConsumer"/>
+            <to uri="bean-validator:validateRequest"/>
+            <log message="Se recibe un request html desde el web service: ${body}"/>
+            <!--this body is class com.avianca.esb.transversal.mail.midmail.RequestSentMessage-->
+            <setHeader headerName="idApp">
+                <simple>${body.getIdAplication()}</simple>
+            </setHeader>
+            <setHeader headerName="idTemp">
+                <simple>${body.getMessageTemplate()}</simple>
+            </setHeader>
+            <split strategyRef="createResponse">
+                <description>Se procesa cada elemento mail del idAplication</description>
+                <simple>${body.mail}</simple>
+                <!--set headers for sending message-->
+                <setHeader headerName="from">
+                    <simple>{{transversal.mail.midmail.from}}</simple>
+                </setHeader>
+                <log message="Procesando email con id ${body.idMessage}"/>
+                <setHeader headerName="hdrOriginalMail">
+                    <simple>${body}</simple>
+                </setHeader>
+                <setHeader headerName="flagDonwloadFTP">
+                    <simple>exito</simple>
+                </setHeader>
+                <to uri="direct:getAdjuntos"/>
+                <choice>
+                    <when>
+                        <simple>${headers.flagDonwloadFTP} == 'exito'</simple>
+                        <process ref="createMessageFromWebService"/>
+                        <!--evitar sobrecarga en la cola con adjuntos enviando el mensaje directamente a la ruta de email-->
+                        <to uri="direct:processMail" pattern="InOnly"/>
+                    </when>
+                    <otherwise>
+                        <log loggingLevel="WARN"
+                             message="No se realiza envio de email, hubieron errores al procesar los adjuntos"/>
+                    </otherwise>
+                </choice>
+            </split>
+            <log message="Respuesta del servicio: ${body.toString()}"/>
+            <removeHeaders pattern="*"/>
+        </route>
+
+        <!--configurations from middleware-notificaciones-2.0.6.2-->
+        <!--Cambios de la ruta original, no se invoca la ruta upload to azure sino que se obtienen los archivos
+            Directamente del ftp y se añaden como base64 al mensaje-->
+        <route id="ROUTE-GET-ADJUNTOS" streamCache="true">
+            <description>Ruta que obtiene los adjuntos a partir del request json del web service</description>
+            <from uri="direct:getAdjuntos"/>
+            <log message="Obteniendo Archivos Adjuntos"/>
+            <choice>
+                <when>
+                    <simple>${body.adjuntos} != null &amp;&amp; ${body.adjuntos.size()} != 0 &amp;&amp;
+                        ${body.adjuntos.get(0).length()} == 0
+                    </simple>
+                    <log message="El nombre de adjunto con comillas esta depreciado y deberia eliminarse"
+                         loggingLevel="WARN"/>
+                </when>
+                <otherwise>
+                    <split strategyRef="joinAttachments" stopOnException="true">
+                        <description>Se procesa cada nombre de adjunto</description>
+                        <simple>${body.adjuntos}</simple>
+                        <setHeader headerName="fileName">
+                            <simple>${body}</simple>
+                        </setHeader>
+                        <!--ruta donde se encuentran los adjuntos-->
+                        <setHeader headerName="path">
+                            <simple>MIDMAIL/${headers.idApp}/IN</simple>
+                        </setHeader>
+                        <setHeader headerName="success">
+                            <simple resultType="boolean">true</simple>
+                        </setHeader>
+                        <!--eliminar archivo del sftp-->
+                        <setHeader headerName="deleteMaster">
+                            <simple>{{transversal.mail.midmail.deleteMaster}}</simple>
+                        </setHeader>
+                        <process ref="downloadFromFtpProcess"/>
+                        <log message="Result for file ${headers.path}/${headers.fileName}: ${headers.flagDonwloadFTP}, ${headers.msgResult}"/>
+                        <!--this return a remote file-->
+                        <marshal>
+                            <base64/>
+                        </marshal>
+                    </split>
+                </otherwise>
+            </choice>
+
+            <setHeader headerName="maxFileSize">
+                <simple resultType="long">{{transversal.mail.midmail.maxFileSize}}</simple>
+            </setHeader>
+            <log message="File size for all attachments ${headers.CamelFileLength}"/>
+            <choice>
+                <when>
+                    <simple>${headers.CamelFileLength} &gt; ${headers.maxFileSize}</simple>
+                    <setHeader headerName="flagDonwloadFTP">
+                        <simple>fallido</simple>
+                    </setHeader>
+                    <setHeader headerName="msgResult">
+                        <simple>El tamaño total de los archivos adjuntos ha sido superado</simple>
+                    </setHeader>
+                    <log message="El tamaño total de los archivos adjuntos ha sido superado" loggingLevel="ERROR"/>
+                </when>
+            </choice>
+            <log message="Finaliza obtencion de adjuntos"/>
+        </route>
+
+        <route id="ROUTE-JMS-TO-MAIL">
+            <description>Ruta que recibe los mensajes del Amq y los envia para procesamiento</description>
+            <from uri="{{email.notification.queue.endpint.from}}"/>
+            <log loggerRef="mailLog" loggingLevel="INFO" message="Se lee mensaje de la cola: ${body}"/>
+            <transacted ref="required"/> <!-- if smtp fails, the message is returned to AMQ DLQ-->
+            <to uri="direct:processMail"/>
+        </route>
+
+        <route id="ROUTE-PROCESS-MAIL" trace="true">
+            <description>Ruta que lee el mensaje tipo Map y lo envia al correo electronico por medio de SMTP
+            </description>
+            <from uri="direct:processMail"/>
+            <process ref="requestProcessor">
+                <description>Validate request</description>
+            </process>
+            <setHeader headerName="from">
+                <simple>${body[from]}</simple>
+            </setHeader>
+            <setHeader headerName="to">
+                <simple>${body[to]}</simple>
+            </setHeader>
+            <setHeader headerName="cc">
+                <simple>${body[cc]}</simple>
+            </setHeader>
+            <setHeader headerName="bcc">
+                <simple>${body[bcc]}</simple>
+            </setHeader>
+            <setHeader headerName="subject">
+                <simple>${body[subject]}</simple>
+            </setHeader>
+            <choice>
+                <when>
+                    <simple>${body[template]} == null || ${body[template]} == ''</simple>
+                    <setHeader headerName="template" id="setTemplateDefault">
+                        <constant>generic</constant>
+                    </setHeader>
+                </when>
+                <otherwise>
+                    <setHeader headerName="template" id="setTemplate">
+                        <simple>${body[template]}</simple>
+                    </setHeader>
+                </otherwise>
+            </choice>
+            <process ref="attachmentsProcessor"/>
+            <bean ref="loaderTemplatesProcessor" method="loadTemplate"/>
+            <log loggerRef="mailLog" loggingLevel="DEBUG" message="Using Template: ${headers.CamelVelocityTemplate}"/>
+            <to uri="velocity:templateEmail?encoding=UTF-8"/>
+            <log loggerRef="mailLog" loggingLevel="DEBUG" message="body velocity: ${body} Headers: ${headers}"/>
+            <removeHeaders pattern="*" excludePattern="from|to|subject|cc|bcc"/>
+            <to id="sendEmail" uri="smtp://sendMail?{{smtp.options}}"/>
+            <log loggerRef="mailLog" loggingLevel="INFO" message="Message send successfully"/>
+        </route>
+    </camelContext>
+</beans>

@@ -1,0 +1,2 @@
+{"transactionResult":1,"messageResult":"El mensaje ha sido enviado exitosamente."},
+{"transactionResult":0,"messageResult":"El mensaje no ha sido enviado a Teradata. Se ha registrado en pendientes"}

@@ -1,0 +1,36 @@
+{
+  "requestSentMessage": {
+    "project": "simplify",
+    "storageProtocol": "sftp",
+    "messageTemplate": "generic",
+    "mail": [
+      {
+        "from": "notificacionesesb@avianca.com",
+        "to": "nombre.apellido@avianca.com",
+        "subject": "Notificacion email servicio simplify",
+        "params": {
+          "error": "Hello",
+          "param1": "Hello",
+          "Hola": "hola2"
+        },
+        "attachmentsPath": [
+          "/MIDMAIL/455/IN/archivo1.csv",
+          "/MIDMAIL/455/IN/archivo2.xls"
+        ],
+        //optional
+        "attachmentsBase64": [
+          {
+            "name": "archivo3.csv",
+            "mimeType": "text/csv",
+            "content": "asdiugasdkjh324872364987sad"
+          },
+          {
+            "name": "archivo4.xls",
+            "mimeType": "application/vnd.ms-excel",
+            "content": "yutetiurotiugtr546456546"
+          }
+        ]
+      }
+    ]
+  }
+}
