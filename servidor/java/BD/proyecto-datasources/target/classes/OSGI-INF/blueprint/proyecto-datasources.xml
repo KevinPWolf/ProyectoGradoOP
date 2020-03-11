@@ -21,59 +21,30 @@
     </enc:property-placeholder>
 
     <!-- MDTH DATASOURCE CONFIGURATION -->
-    <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="mdthDataSource">
-        <property name="driverClassName" value="${mdth.driver}"/>
-        <property name="url" value="${mdth.url}"/>
-        <property name="username" value="${mdth.username}"/>
-        <property name="password" value="${mdth.password}"/>
-        <property name="validationQuery" value="${mdth.validationQuery}"/>
+    <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="proyectoDataSource">
+        <property name="driverClassName" value="${proyecto.driver}"/>
+        <property name="url" value="${proyecto.url}"/>
+        <property name="username" value="${proyecto.username}"/>
+        <property name="password" value="${proyecto.password}"/>
+        <property name="validationQuery" value="${proyecto.validationQuery}"/>
         <property name="validationQueryTimeout">
-            <value type="int">${mdth.validationQueryTimeout}</value>
+            <value type="int">${proyecto.validationQueryTimeout}</value>
         </property>
-        <property name="initialSize" value="${mdth.pool.initialSize}"/>
-        <property name="maxActive" value="${mdth.pool.maxActive}"/>
-        <property name="minIdle" value="${mdth.pool.minIdle}"/>
-        <property name="maxIdle" value="${mdth.pool.maxIdle}"/>
-        <property name="maxWait" value="${mdth.pool.maxWait}"/>
+        <property name="initialSize" value="${proyecto.pool.initialSize}"/>
+        <property name="maxActive" value="${proyecto.pool.maxActive}"/>
+        <property name="minIdle" value="${proyecto.pool.minIdle}"/>
+        <property name="maxIdle" value="${proyecto.pool.maxIdle}"/>
+        <property name="maxWait" value="${proyecto.pool.maxWait}"/>
         <property name="poolPreparedStatements" value="true"/>
-        <property name="maxOpenPreparedStatements" value="${mdth.pool.maxOpenPreparedStatements}"/>
+        <property name="maxOpenPreparedStatements" value="${proyecto.pool.maxOpenPreparedStatements}"/>
     </bean>
 
-    <service interface="javax.sql.DataSource" ref="mdthDataSource">
+    <service interface="javax.sql.DataSource" ref="proyectoDataSource">
         <service-properties>
-            <entry key="osgi.jndi.service.name" value="${mdth.jndi}"/>
-            <entry key="datasource.name" value="${mdth.dsName}"/>
-            <entry key="name" value="${mdth.dsName}"/>
+            <entry key="osgi.jndi.service.name" value="${proyecto.jndi}"/>
+            <entry key="datasource.name" value="${proyecto.dsName}"/>
+            <entry key="name" value="${proyecto.dsName}"/>
         </service-properties>
     </service>
     <!-- MDTH DATASOURCE CONFIGURATION -->
-
-    <!-- APPS DATASOURCE CONFIGURATION -->
-    <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" id="appsDataSource">
-        <property name="driverClassName" value="${apps.driver}"/>
-        <property name="url" value="${apps.url}"/>
-        <property name="username" value="${apps.username}"/>
-        <property name="password" value="${apps.password}"/>
-        <property name="validationQuery" value="${apps.validationQuery}"/>
-        <property name="validationQueryTimeout">
-            <value type="int">${apps.validationQueryTimeout}</value>
-        </property>
-        <property name="initialSize" value="${apps.pool.initialSize}"/>
-        <property name="maxActive" value="${apps.pool.maxActive}"/>
-        <property name="minIdle" value="${apps.pool.minIdle}"/>
-        <property name="maxIdle" value="${apps.pool.maxIdle}"/>
-        <property name="maxWait" value="${apps.pool.maxWait}"/>
-        <property name="poolPreparedStatements" value="true"/>
-        <property name="maxOpenPreparedStatements" value="${apps.pool.maxOpenPreparedStatements}"/>
-    </bean>
-
-    <service interface="javax.sql.DataSource" ref="appsDataSource">
-        <service-properties>
-            <entry key="osgi.jndi.service.name" value="${apps.jndi}"/>
-            <entry key="datasource.name" value="${apps.dsName}"/>
-            <entry key="name" value="${apps.dsName}"/>
-        </service-properties>
-    </service>
-    <!-- APPS DATASOURCE CONFIGURATION -->
-
 </blueprint>

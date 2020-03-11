@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://camel.apache.org/schema/cxf" xmlns:ctx="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee" xmlns:osgix="http://www.springframework.org/schema/osgi-compendium"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+        http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
+
+     	<!-- From -->
+	<cxf:rsServer address="/prueba" id="restServer" serviceClass="com.proyecto.server.rest.restTest" staticSubresourceResolution="true">
+		<cxf:providers>
+			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>  
+       
+    <bean id="getProceso" class="com.proyecto.server.prueba.proceso" /> 
+    
+    <camelContext xmlns="http://camel.apache.org/schema/spring">
+    	<endpoint id="rsServerEndpoint" uri="cxfrs://bean://restServer">
+			<property key="bindingStyle" value="SimpleConsumer" />
+			<property key="loggingFeatureEnabled" value="true" />
+		</endpoint>
+        <route id="myRoute">
+            <from  uri="ref:rsServerEndpoint" />
+            <log logName="prueba" loggingLevel="INFO" message="entra a proceso  ${body} ademas ${body.idApp}" id="log_l"/>
+			<process ref="getProceso" />
+            <to uri="seda:end" />
+        </route>
+    </camelContext>
+</beans>

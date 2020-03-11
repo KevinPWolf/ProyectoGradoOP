@@ -51,11 +51,11 @@ public class registerTest extends CamelSpringTestSupport {
 	MockEndpoint mockEndpoint = getMockEndpoint("mock://endroute");
 	
 	Person person = new Person();
-	person.setEmail("otakumk@gmail.com");
+	person.setEmail("pepinosamk@gmail.com");
 	//person.setEmail("kwolfp12@gmail.com");
-	person.setPassword("8382");
-	person.setName("otakumk");
-	person.setPhone("58964756");
+	person.setPassword("rata");
+	person.setName("pepinosa");
+	person.setPhone("589647567");
 	
 	RequestDTO request = new RequestDTO();
 	request.setPerson(person);

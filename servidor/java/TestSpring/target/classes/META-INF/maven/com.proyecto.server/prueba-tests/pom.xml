@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.proyecto.server</groupId>
+  <artifactId>prueba-tests</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+
+   <dependencies>		
+		<dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-core</artifactId>
+		    <version>2.25.0</version>
+		</dependency>
+<!-- 		cameltestsupport -->
+		<dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-test</artifactId>
+		    <version>2.25.0</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.25</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-log4j12</artifactId>
+		    <version>1.7.25</version> 
+		    <scope>test</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-jackson</artifactId>
+		    <version>2.25.0</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson</artifactId>
+			<version>2.25.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.jaxrs</groupId>
+		    <artifactId>jackson-jaxrs-json-provider</artifactId>
+		    <version>2.10.2</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-cxf -->
+		<dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-cxf</artifactId>
+		    <version>2.25.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.camel</groupId>
+		    <artifactId>camel-test-spring</artifactId>
+		    <version>2.25.0</version>
+		    <scope>test</scope>
+		</dependency>
+    </dependencies>
+
+</project>

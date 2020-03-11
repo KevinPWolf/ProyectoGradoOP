@@ -67,13 +67,13 @@
 			<artifactId>camel-test-blueprint</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- Oracle JDBC driver -->
+		<!-- MYSQL JDBC driver -->
 		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc7</artifactId>
-			<version>12.1.0</version>
-			<scope>provided</scope>
-		</dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.45</version>
+            <scope>provided</scope>
+        </dependency> 
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>
@@ -226,7 +226,8 @@
 					<features>camel-jdbc camel-sql jndi spring-jdbc jdbc
 						jasypt-encryption camel-jasypt
 					</features>
-					<bundles>wrap:mvn:com.oracle/ojdbc7/12.1.0</bundles>
+<!-- 					<bundles>wrap:mvn:com.oracle/ojdbc7/12.1.0</bundles> -->
+					<bundles>wrap:mvn:mysql.mysql-connector-java/5.1.45</bundles>
 					<generateSummaryFile>false</generateSummaryFile>
 					<!--<jolokiaUrl>http://172.20.1.132:8181/jolokia</jolokiaUrl> -->
 					<uniqueVersion>false</uniqueVersion>

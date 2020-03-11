@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.proyecto.server</groupId>
 	<artifactId>register</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>bundle</packaging>
 	<name>register</name>
 
@@ -215,11 +215,11 @@
 						<addMavenDescriptor>false</addMavenDescriptor>
 					</archive>
 					<instructions>
-						<Bundle-Vendor>Proyecto VR</Bundle-Vendor>
-						<Bundle-SymbolicName>proyecto-VR</Bundle-SymbolicName>
+						<Bundle-Vendor>Avianca ITAyD - Java Fenix</Bundle-Vendor>
+						<Bundle-SymbolicName>avianca-opain</Bundle-SymbolicName>
 						<Private-Package>{local-packages}</Private-Package>
 						<Import-Package>
-							!com.proyecto.server,!com.proyecto.server.*,
+							!com.avianca.opain,!com.avianca.opain.*,
 							antlr.*;resolution:=optional,
 							bsh.*;resolution:=optional,
 							com.apple.mrj.*;resolution:=optional,

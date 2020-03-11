@@ -1,0 +1,58 @@
+2020-03-10 21:14:05,124 [main           ] INFO  testprueba                     - ********************************************************************************
+2020-03-10 21:14:05,133 [main           ] INFO  testprueba                     - Testing: testP(com.proyecto.server.prueba.testprueba)
+2020-03-10 21:14:05,137 [main           ] INFO  testprueba                     - ********************************************************************************
+2020-03-10 21:14:20,790 [main           ] INFO  SpringCamelContext             - Apache Camel 2.25.0 (CamelContext: camel-1) is starting
+2020-03-10 21:14:20,814 [main           ] INFO  ManagedManagementStrategy      - JMX is enabled
+2020-03-10 21:14:21,866 [main           ] INFO  DefaultTypeConverter           - Type converters loaded (core: 195, classpath: 22)
+2020-03-10 21:14:22,749 [main           ] INFO  SpringCamelContext             - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2020-03-10 21:14:24,856 [main           ] INFO  ServerImpl                     - Setting the server's publish address to be /prueba
+2020-03-10 21:14:25,254 [main           ] INFO  SedaEndpoint                   - Endpoint seda://end is using shared queue: seda://end with size: 1000
+2020-03-10 21:14:25,680 [main           ] INFO  SpringCamelContext             - Route: myRoute started and consuming from: cxfrs://bean://restServer?bindingStyle=SimpleConsumer&loggingFeatureEnabled=true
+2020-03-10 21:14:25,684 [main           ] INFO  SpringCamelContext             - Total 1 routes, of which 1 are started
+2020-03-10 21:14:25,775 [main           ] INFO  SpringCamelContext             - Apache Camel 2.25.0 (CamelContext: camel-1) started in 4.920 seconds
+2020-03-10 21:14:27,552 [main           ] INFO  DefaultShutdownStrategy        - Starting to graceful shutdown 1 routes (timeout 10 seconds)
+2020-03-10 21:14:27,568 [ - ShutdownTask] INFO  DefaultShutdownStrategy        - Route: myRoute shutdown complete, was consuming from: cxfrs://bean://restServer?bindingStyle=SimpleConsumer&loggingFeatureEnabled=true
+2020-03-10 21:14:27,569 [main           ] INFO  DefaultShutdownStrategy        - Graceful shutdown of 1 routes completed in 0 seconds
+2020-03-10 21:14:27,572 [main           ] INFO  SpringCamelContext             - Route: myRoute is stopped, was consuming from: cxfrs://bean://restServer?bindingStyle=SimpleConsumer&loggingFeatureEnabled=true
+2020-03-10 21:14:27,578 [main           ] INFO  SpringCamelContext             - Route: myRoute is shutdown and removed, was consuming from: cxfrs://bean://restServer?bindingStyle=SimpleConsumer&loggingFeatureEnabled=true
+2020-03-10 21:14:27,581 [main           ] INFO  AdviceWithTasks                - AdviceWith replace input from [ref:rsServerEndpoint] --> [direct:inicio]
+2020-03-10 21:14:27,585 [main           ] INFO  AdviceWithTasks                - AdviceWith (log_l) : [Log[entra a proceso  ${body} ademas ${body.idApp}]] --> after [pipeline -> [[Log[jodase]]]]
+2020-03-10 21:14:27,586 [main           ] INFO  AdviceWithTasks                - AdviceWith (*) : [To[seda:end]] --> after [pipeline -> [[To[mock://endRoute]]]]
+2020-03-10 21:14:27,588 [main           ] INFO  RouteDefinition                - AdviceWith route after: Route(myRoute)[[From[direct:inicio]] -> [Log[entra a proceso  ${body} ademas ${body.idApp}], pipeline -> [[Log[jodase]]], process[ref:getProceso], To[seda:end], pipeline -> [[To[mock://endRoute]]]]]
+2020-03-10 21:14:28,631 [main           ] INFO  RouteDefinition                - Adviced route before/after as XML:
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<route xmlns="http://camel.apache.org/schema/spring" customId="true" id="myRoute">
+    <from uri="ref:rsServerEndpoint"/>
+    <log customId="true" id="log_l" logName="prueba" loggingLevel="INFO" message="entra a proceso  ${body} ademas ${body.idApp}"/>
+    <process id="process1" ref="getProceso"/>
+    <to id="to1" uri="seda:end"/>
+</route>
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<route xmlns="http://camel.apache.org/schema/spring" customId="true" id="myRoute">
+    <from uri="direct:inicio"/>
+    <log customId="true" id="log_l" logName="prueba" loggingLevel="INFO" message="entra a proceso  ${body} ademas ${body.idApp}"/>
+    <pipeline>
+        <log message="jodase"/>
+    </pipeline>
+    <process id="process1" ref="getProceso"/>
+    <to id="to1" uri="seda:end"/>
+    <pipeline>
+        <to uri="mock://endRoute"/>
+    </pipeline>
+</route>
+
+2020-03-10 21:14:28,731 [main           ] INFO  SedaEndpoint                   - Endpoint seda://end is using shared queue: seda://end with size: 1000
+2020-03-10 21:14:28,842 [main           ] INFO  SpringCamelContext             - Route: myRoute started and consuming from: direct://inicio
+2020-03-10 21:14:30,023 [main           ] INFO  prueba                         - entra a proceso  com.proyecto.server.Dto.prueba@7e7e5302 ademas id
+2020-03-10 21:14:30,026 [main           ] INFO  myRoute                        - jodase
+2020-03-10 21:14:30,036 [main           ] INFO  testprueba                     - ********************************************************************************
+2020-03-10 21:14:30,037 [main           ] INFO  testprueba                     - Testing done: testP(com.proyecto.server.prueba.testprueba)
+2020-03-10 21:14:30,038 [main           ] INFO  testprueba                     - Took: 4.257 seconds (4257 millis)
+2020-03-10 21:14:30,039 [main           ] INFO  testprueba                     - ********************************************************************************
+2020-03-10 21:14:30,060 [main           ] INFO  SpringCamelContext             - Apache Camel 2.25.0 (CamelContext: camel-1) is shutting down
+2020-03-10 21:14:30,061 [main           ] INFO  DefaultShutdownStrategy        - Starting to graceful shutdown 1 routes (timeout 10 seconds)
+2020-03-10 21:14:30,063 [ - ShutdownTask] INFO  DefaultShutdownStrategy        - Route: myRoute shutdown complete, was consuming from: direct://inicio
+2020-03-10 21:14:30,065 [main           ] INFO  DefaultShutdownStrategy        - Graceful shutdown of 1 routes completed in 0 seconds
+2020-03-10 21:14:30,160 [main           ] INFO  SpringCamelContext             - Apache Camel 2.25.0 (CamelContext: camel-1) uptime 9.393 seconds
+2020-03-10 21:14:30,160 [main           ] INFO  SpringCamelContext             - Apache Camel 2.25.0 (CamelContext: camel-1) is shutdown in 0.100 seconds
