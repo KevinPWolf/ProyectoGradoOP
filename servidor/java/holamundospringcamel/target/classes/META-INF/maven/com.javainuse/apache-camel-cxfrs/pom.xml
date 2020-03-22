@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.javainuse</groupId>
+	<artifactId>apache-camel-cxfrs</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-    <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.proyecto.server</groupId>
-    <artifactId>prueba-spring</artifactId>
-    <version>1.0-SNAPSHOT</version>
 
-    <name>Fabric8 :: Quickstarts :: Spring-Boot :: CXF JAXRS XML</name>
-    <description>Spring Boot example running a CXF JAXRS XML endpoint</description>
-
-    <properties>
+ <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -26,8 +22,8 @@
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
     </properties>
-
-    <dependencyManagement>
+    
+ <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.fabric8</groupId>
@@ -53,62 +49,20 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
+
+	<dependencies>
 		<dependency>
-		    <groupId>org.apache.camel</groupId>
-		    <artifactId>camel-core</artifactId>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-core</artifactId>
+
 		</dependency>
 		<dependency>
 			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-jackson</artifactId>
+			<artifactId>camel-cxf</artifactId>
 		</dependency>
-		
-		<dependency>
-		    <groupId>com.fasterxml.jackson.jaxrs</groupId>
-		    <artifactId>jackson-jaxrs-json-provider</artifactId>
-		</dependency>
-		
-		
-		<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-cxf -->
-		<dependency>
-		    <groupId>org.apache.camel</groupId>
-		    <artifactId>camel-cxf</artifactId>
-		</dependency>
-		
-		
 		
 		
 		<dependency>
-		    <groupId>org.apache.camel</groupId>
-		    <artifactId>camel-test-spring</artifactId>
-		    <scope>test</scope>
-		</dependency>
-		<dependency>
-		    <groupId>org.apache.camel</groupId>
-		    <artifactId>camel-test</artifactId>
-		    <scope>test</scope>
-		</dependency>
-		<dependency>
-		    <groupId>org.slf4j</groupId>
-		    <artifactId>slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.slf4j</groupId>
-		    <artifactId>slf4j-log4j12</artifactId>
-		    <scope>test</scope>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.apache.camel</groupId>
-		    <artifactId>camel-jackson</artifactId>
-		    <scope>test</scope>
-		</dependency>
-		
-		
-		
-		
-		
-        <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
             <exclusions>
@@ -139,14 +93,13 @@
             <groupId>io.swagger</groupId>
             <artifactId>swagger-jaxrs</artifactId>
         </dependency>
-    </dependencies>
-
-    <build>
-        <defaultGoal>spring-boot:run</defaultGoal>
-
-        <plugins>
-
-            <plugin>
+		
+		
+	</dependencies>
+	<build>
+		<defaultGoal>spring-boot:run</defaultGoal>
+		<plugins>
+			<plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
@@ -180,11 +133,24 @@
                     </execution>
                 </executions>
             </plugin>
+		
+		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+			</plugin>
 
-        </plugins>
-    </build>
-
-    <pluginRepositories>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<version>2.4.0</version>
+			</plugin>
+		</plugins>
+	</build>
+	
+	 <pluginRepositories>
         <pluginRepository>
             <id>redhat-ga-repository</id>
             <url>https://maven.repository.redhat.com/ga</url>
@@ -206,5 +172,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
 </project>
