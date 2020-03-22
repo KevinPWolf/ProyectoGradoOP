@@ -18,7 +18,7 @@
 	</cxf:rsServer>
 
 	<bean id="processor" class="com.proyecto.server.process.helloWorld" />
-
+	
 	<camelContext id="camelId" xmlns="http://camel.apache.org/schema/spring">
 		<route>
 			<from uri="cxfrs://bean://restService" />
