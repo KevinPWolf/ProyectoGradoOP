@@ -17,15 +17,10 @@ package com.proyecto.server.services;
 
 import io.swagger.annotations.Api;
 
-@Api("/sayHello")
+@Api("/")
 public class ServicioHola implements RestServices {
-
-    public String welcome() {
-        return "Welcome to the CXF RS Spring Boot application, append /{name} to call the hello service";
-    }
-
-    public String sayHello(String a) {
-        return "Hello " + a + ", Welcome to CXF RS Spring Boot World!!!";
-    }
-    
+	@Override
+	public String getCustomer(String name) {
+		return null;
+	}
 }

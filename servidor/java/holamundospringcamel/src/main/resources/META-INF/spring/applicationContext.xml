@@ -8,8 +8,13 @@
        http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-	<cxf:rsServer id="restService" address="/"
+	<!-- <cxf:rsServer id="restService" address="/"
 		serviceClass="com.proyecto.server.services.RestServices">
+	</cxf:rsServer> -->
+	
+	
+		<cxf:rsServer id="restService" address="/"
+		serviceClass="com.proyecto.server.services.ServicioHola">
 	</cxf:rsServer>
 
 	<bean id="processor" class="com.proyecto.server.process.helloWorld" />
@@ -17,7 +22,10 @@
 	<camelContext id="camelId" xmlns="http://camel.apache.org/schema/spring">
 		<route>
 			<from uri="cxfrs://bean://restService" />
+			<!--
 			<process ref="processor" />
+			  -->
+			  <process ref="processor" />
 		</route>
 	</camelContext>
 

@@ -5,15 +5,12 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
 @Path("/")
-public class RestServices {
+public interface RestServices {
 
-	public RestServices() {
-	}
+
 
 	@GET
-	@Path("/employees/{name}/")
-	public String getCustomer(@PathParam("name") String name) {
-		return "Welcome " + name;
-	}
+	@Path("/{name}/")
+	String getCustomer(@PathParam("name") String name);
 
 }
