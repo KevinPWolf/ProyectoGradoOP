@@ -25,18 +25,8 @@
 	<camelContext id="camelId" xmlns="http://camel.apache.org/schema/spring">
 		<route id="myRoute">
 			<from uri="cxfrs://bean://restService" />
-							
-				 <log logName="prueba" loggingLevel="INFO" message="entra a proceso  ${body} " id="log_l"/>
-				<!--  <log logName="prueba" loggingLevel="INFO" message="entra a proceso  ${body} ademas ${body.idApp}" id="log_l"/>-->
-				 <!-- <setHeader headerName="hola"> -->
-			  	<!--	<simple>${body.idApp}</simple>-->
-				<!--  </setHeader>	  -->
-				
-				<setHeader headerName="hola">
-			  		<simple>${body}</simple>
-				 </setHeader>
 				 	 <process ref="processor" />
-			 
+			 <bean ref="responseHandler" />
 		</route>
 	</camelContext>
 
