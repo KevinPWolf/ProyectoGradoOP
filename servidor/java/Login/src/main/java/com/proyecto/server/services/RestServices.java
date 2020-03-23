@@ -4,7 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
-import com.proyecto.server.Dto.prueba;
+import com.proyecto.server.Dto.Persona;
 
 import javax.ws.rs.POST;
 import javax.ws.rs.Produces;
@@ -17,7 +17,7 @@ public interface RestServices {
 	@Path("/")
 	@Consumes({"application/json"})
 	@Produces({"application/json"})
-	public abstract Response getMethod(prueba paramRequestDTO);
+	public abstract Response getMethod(Persona paramRequestDTO);
 
 	//@GET
 	//@Path("pruebaget/{name}/")

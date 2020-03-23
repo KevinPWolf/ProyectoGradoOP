@@ -2,31 +2,72 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://camel.apache.org/schema/cxf"
 	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:jee="http://www.springframework.org/schema/jee"
 	xsi:schemaLocation="
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
        http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-	<!-- <cxf:rsServer id="restService" address="/"
-		serviceClass="com.proyecto.server.services.RestServices">
-	</cxf:rsServer> -->
-	
-	
+
 	<cxf:rsServer id="restService" address="/" serviceClass="com.proyecto.server.services.ServicioHola">
 		<cxf:providers>
 			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
 		</cxf:providers>
 	</cxf:rsServer>
+	
+	<jee:jndi-lookup expected-type="javax.sql.DataSource" id="dsRegister" jndi-name="osgi:service/jdbc/RegisterBD" />
+	<bean class="com.proyecto.server.sql.ConsultasBD" id="consultasBD" />
+	
+	<bean id="processor" class="com.proyecto.server.process.Registro" />
+	<bean id="responseHandler" class="com.proyecto.server.process.ResponseHandler" />
 
-	<bean id="processor" class="com.proyecto.server.process.helloWorld" />
-	
-	
 	<camelContext id="camelId" xmlns="http://camel.apache.org/schema/spring">
 		<route id="myRoute">
 			<from uri="cxfrs://bean://restService" />
-				 	 <process ref="processor" />
-			 <bean ref="responseHandler" />
+			 <process ref="processor" />
+			 <log logName="RegisterLog" loggingLevel="INFO" message="${body}" />
+			<choice>
+				<when>
+					<simple>${property.email} != null || ${property.password} != null || ${property.name} != null || ${property.phone} != null </simple>					
+					<setHeader headerName="email">
+						<simple>${property.email}</simple>
+					</setHeader>
+					<setHeader headerName="password">
+						<simple>${property.password}</simple>
+					</setHeader>
+					<setHeader headerName="name">
+						<simple>${property.name}</simple>
+					</setHeader>
+					<setHeader headerName="phone">
+						<simple>${property.phone}</simple>
+					</setHeader>
+
+					<to uri="direct:fechaActual" />
+					
+					<bean ref="consultasBD" />
+					<setBody>
+						<simple>insercion exitosa</simple>
+					</setBody>
+					<process ref="responseHandler" />
+				</when>
+				<otherwise>
+					<setBody>
+						<simple>insercion fallida</simple>
+					</setBody>
+					<process ref="responseHandler" />
+				</otherwise>
+			</choice>	
+		</route>
+		<route id="ROUTE-DATE" streamCache="true">
+			<from uri="direct:fechaActual">
+				<description>fecha Actual del registro de la persona</description>
+			</from>
+			<setHeader headerName="hora">
+						<simple>${date:now:YYYY-MM-dd HH:mm:ss}</simple>
+			</setHeader>
+			<log logName="RegisterLog" loggingLevel="INFO" message="fecha actual ${headers.hora}" />
 		</route>
 	</camelContext>
 

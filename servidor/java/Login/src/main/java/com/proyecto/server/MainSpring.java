@@ -23,7 +23,7 @@ import org.springframework.context.annotation.ImportResource;
 @ImportResource({"classpath:META-INF/spring/applicationContext.xml"})
 public class MainSpring {
 
-//http://localhost:8080/services/helloservice//employees/hermanos-casimiro2
+//http://localhost:8080/proyecto/vr/
     public static void main(String[] args) {
         SpringApplication.run(MainSpring.class, args);
     }

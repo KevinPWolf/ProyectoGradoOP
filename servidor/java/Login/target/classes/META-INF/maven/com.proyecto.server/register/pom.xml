@@ -51,6 +51,27 @@
 
 
 	<dependencies>
+		<!-- camel-database -->
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.5</version>
+		</dependency>
+			<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-sql</artifactId>
+		</dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.45</version>
+        </dependency>  
+ 		
+	
+	
+	<!-- camel -->
+	
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-core</artifactId>
@@ -61,6 +82,16 @@
 			<artifactId>camel-cxf</artifactId>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.jaxrs</groupId>
+		    <artifactId>jackson-jaxrs-json-provider</artifactId>
+		</dependency>
+		<!-- camel-spring -->
 		
 		<dependency>
             <groupId>org.apache.cxf</groupId>
@@ -95,36 +126,26 @@
         </dependency>
 		
 		
+		
+		<!-- camel-test-->
 		<dependency>
 		    <groupId>org.apache.camel</groupId>
 		    <artifactId>camel-jackson</artifactId>
 		    <scope>test</scope>
 		</dependency>
-		
 		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-jackson</artifactId>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<scope>test</scope>
 		</dependency>
-		
-		<dependency>
-		    <groupId>com.fasterxml.jackson.jaxrs</groupId>
-		    <artifactId>jackson-jaxrs-json-provider</artifactId>
-		</dependency>
-		
-		
-		
-		
-		
 		<dependency>
 		    <groupId>org.apache.camel</groupId>
 		    <artifactId>camel-test</artifactId>
-	
 		    <scope>test</scope>
 		</dependency>
 		<dependency>
 		    <groupId>org.apache.camel</groupId>
 		    <artifactId>camel-test-spring</artifactId>
-
 		    <scope>test</scope>
 		</dependency>
 		
