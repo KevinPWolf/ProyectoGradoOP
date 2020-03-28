@@ -20,9 +20,13 @@ import org.apache.log4j.Logger;
 public class ConsultasBD
 {
   private static final Logger LOG = Logger.getLogger("RegisterLog");
-  @BeanInject("dsRegister")
+  //@BeanInject("dsRegister")
+  //private DataSource dataSource;
+  
+  @BeanInject("dataSource")
   private DataSource dataSource;
-
+  
+  
   private  String sqlsearch;
   private String sqlinsert;
   private  String sqlsearch2;

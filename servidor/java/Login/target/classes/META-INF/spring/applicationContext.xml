@@ -17,11 +17,25 @@
 		</cxf:providers>
 	</cxf:rsServer>
 	
-	<jee:jndi-lookup expected-type="javax.sql.DataSource" id="dsRegister" jndi-name="osgi:service/jdbc/RegisterBD" />
+	
+	
+	  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		   destroy-method="close">
+		   <property name="driverClassName" value="org.gjt.mm.mysql.Driver" />
+		   <property name="url" value="jdbc:mysql://remotemysql.com:3306/Ah7yd8cjwB" />
+		   <property name="username" value="Ah7yd8cjwB" />
+		   <property name="password" value="IRuHkHIOCG" />
+  		</bean>
+	
+	
+	<!-- <jee:jndi-lookup expected-type="javax.sql.DataSource" id="dsRegister" jndi-name="osgi:service/jdbc/RegisterBD" /> -->
+	
 	<bean class="com.proyecto.server.sql.ConsultasBD" id="consultasBD" />
 	
 	<bean id="processor" class="com.proyecto.server.process.Registro" />
 	<bean id="responseHandler" class="com.proyecto.server.process.ResponseHandler" />
+
+
 
 	<camelContext id="camelId" xmlns="http://camel.apache.org/schema/spring">
 		<route id="myRoute">

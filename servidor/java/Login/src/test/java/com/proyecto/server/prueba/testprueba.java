@@ -56,7 +56,7 @@ public class testprueba extends CamelSpringTestSupport{
 	    
 	    @BeforeClass
 	   	public static void setUpDatasourceJNDI() throws Exception {
-	   		try {
+	   		try {//
 	   			// Create initial context
 	   			System.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.naming.java.javaURLContextFactory");
 	   			System.setProperty(Context.URL_PKG_PREFIXES, "org.apache.naming");
