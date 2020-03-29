@@ -20,9 +20,9 @@
 	  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		   destroy-method="close">
 		   <property name="driverClassName" value="org.gjt.mm.mysql.Driver" />
-		   <property name="url" value="jdbc:mysql://remotemysql.com:3306/Ah7yd8cjwB" />
-		   <property name="username" value="Ah7yd8cjwB" />
-		   <property name="password" value="IRuHkHIOCG" />
+		   <property name="url" value="jdbc:mysql://viewerrealm.cst0lr1fnijg.us-east-2.rds.amazonaws.com:3306/viewerrealmdb" />
+		   <property name="username" value="RandyMarsh" />
+		   <property name="password" value="thebestaround" />
   		</bean>
 	
 		
