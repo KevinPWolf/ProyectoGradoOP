@@ -17,7 +17,7 @@ package com.proyecto.server.services;
 
 import javax.ws.rs.core.Response;
 
-import com.proyecto.server.Dto.Persona;
+import com.proyecto.server.Dto.Request;
 
 import io.swagger.annotations.Api;
 
@@ -29,7 +29,7 @@ public class ServicioHola implements RestServices {
 	//}
 
 	@Override
-	public Response getMethod(Persona paramRequestDTO) {
+	public Response getMethod(Request paramRequestDTO) {
 		return null;
 	}
 }

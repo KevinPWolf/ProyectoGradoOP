@@ -17,8 +17,6 @@
 		</cxf:providers>
 	</cxf:rsServer>
 	
-	
-	
 	  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		   destroy-method="close">
 		   <property name="driverClassName" value="org.gjt.mm.mysql.Driver" />
@@ -27,9 +25,7 @@
 		   <property name="password" value="IRuHkHIOCG" />
   		</bean>
 	
-	
-	<!-- <jee:jndi-lookup expected-type="javax.sql.DataSource" id="dsRegister" jndi-name="osgi:service/jdbc/RegisterBD" /> -->
-	
+		
 	<bean class="com.proyecto.server.sql.ConsultasBD" id="consultasBD" />
 	
 	<bean id="processor" class="com.proyecto.server.process.Registro" />

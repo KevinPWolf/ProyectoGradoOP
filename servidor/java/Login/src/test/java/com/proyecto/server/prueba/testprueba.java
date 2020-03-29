@@ -16,6 +16,7 @@ import org.springframework.mock.jndi.SimpleNamingContextBuilder;
 
 import com.proyecto.server.Dto.Persona;
 import com.proyecto.server.Dto.Request;
+import com.proyecto.server.Dto.Request;
 
 
 
@@ -43,7 +44,7 @@ public class testprueba extends CamelSpringTestSupport{
 			person.setPhone("589647567");
 			
 			Request request = new Request();
-			request.setPerson(person);
+			request.setPersona(person);
 						
 			template.sendBody("direct:inicio", request);
 		}
