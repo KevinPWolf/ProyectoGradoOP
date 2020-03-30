@@ -57,9 +57,19 @@
 					<to uri="direct:fechaActual" />
 					
 					<bean ref="consultasBD" />
-					<setBody>
-						<simple>insercion exitosa</simple>
-					</setBody>
+					<choice>
+						<when>
+							<simple>${property.bandera} == 1</simple>
+							<setBody>
+								<simple>usuario ya registrado</simple>
+							</setBody>					
+						</when>
+						<otherwise>
+							<setBody>
+								<simple>insercion exitosa</simple>
+							</setBody>
+						</otherwise>
+					</choice>
 					<process ref="responseHandler" />
 				</when>
 				<otherwise>

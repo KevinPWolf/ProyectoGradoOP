@@ -34,6 +34,7 @@ public class ConsultasBD
   
   public void process(Exchange exchange) throws Exception {
 	  
+	  int bandera=0;
 	   this.sqlsearch="SELECT correo FROM Persona WHERE correo = 'usuario'";
 	  this.sqlinsert="INSERT INTO Persona(nombre,correo, contrasena, penalizacion, confiabilidad, islogging, registro) VALUE('name','user', 'password','0','0','0','date')";
 	  this.sqlsearch2="SELECT ID FROM Persona WHERE correo = 'usuario'";
@@ -63,10 +64,10 @@ public class ConsultasBD
         
         
         String phone = (String) exchange.getIn().getHeader("phone");
-	  	conexion(email,phone);
-	  	
+	  	bandera=conexion(email,phone,bandera);
+	  	exchange.setProperty("bandera",bandera);
 	}
-  public void conexion(String username,String phone)
+  public int conexion(String username,String phone,int bandera)
     throws Exception
   {
     Connection connection = null;
@@ -81,6 +82,8 @@ public class ConsultasBD
 
       if(cont(resultSet)>0) {
     	  LOG.info("usuario ya existe");
+    	 return bandera=1;
+    	  
       }else {
           statement.executeUpdate(this.sqlinsert);
            resultSet = statement.executeQuery(this.sqlsearch2);       
@@ -91,6 +94,7 @@ public class ConsultasBD
           this.sqlinsert2 = this.sqlinsert2.replaceAll("IDE", ID);
           statement.executeUpdate(this.sqlinsert2);
           LOG.info("usuario registrado");
+         return bandera=0;
       }
     }
     finally
@@ -133,7 +137,6 @@ public class ConsultasBD
     try
     {
       conn = this.dataSource.getConnection();
-    	//conn = DriverManager.getConnection("jdbc:mysql://fdb19.awardspace.net:3306/3296648_viewerrealm", "3296648_viewerrealm", "123456789an");
     }
     catch (SQLException e)
     {
