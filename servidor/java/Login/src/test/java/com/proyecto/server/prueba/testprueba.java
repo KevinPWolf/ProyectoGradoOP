@@ -40,8 +40,7 @@ public class testprueba extends CamelSpringTestSupport{
 			person.setEmail("pepinosamk@gmail.com");
 			//person.setEmail("kwolfp12@gmail.com");
 			person.setPassword("rata");
-			person.setName("pepinosa");
-			person.setPhone("589647567");
+	
 			
 			Request request = new Request();
 			request.setPersona(person);

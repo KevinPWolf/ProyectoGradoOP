@@ -25,7 +25,9 @@ import org.springframework.context.annotation.ImportResource;
 public class MainSpring {
 
 //http://localhost:8080/proyecto/vr/
-    public static void main(String[] args) {
+	//https://proyectovr-registro.herokuapp.com/proyecto/vr/
+    //https://proyectovr-login.herokuapp.com/proyecto/vr/login
+	public static void main(String[] args) {
         SpringApplication.run(MainSpring.class, args);
     }
 }

@@ -28,24 +28,20 @@ public class ConsultasBD
   
   
   private  String sqlsearch;
-  private String sqlinsert;
+  private String sqlUpdate;
   private  String sqlsearch2;
-  private String sqlinsert2;
+  private String sqlUpdate2;
   
   public void process(Exchange exchange) throws Exception {
 	  
 	  int bandera=0;
-	   this.sqlsearch="SELECT correo FROM Persona WHERE correo = 'usuario'";
-	  this.sqlinsert="INSERT INTO Persona(nombre,correo, contrasena, penalizacion, confiabilidad, islogging, registro) VALUE('name','user', 'password','0','0','0','date')";
-	  this.sqlsearch2="SELECT ID FROM Persona WHERE correo = 'usuario'";
-	  this.sqlinsert2="INSERT INTO telefonos(numero,ID_PERSONA) VALUE('phone','IDE')";
+	   this.sqlsearch="SELECT * FROM Persona WHERE correo = 'usuario'";
+	  this.sqlUpdate="UPDATE Persona SET islogging = '1' WHERE correo = 'usuario'";
 	  
 	    String email = (String) exchange.getIn().getHeader("email");
 	    String password = (String) exchange.getIn().getHeader("password");
-	    String name = (String) exchange.getIn().getHeader("name");
-	    String date = (String) exchange.getIn().getHeader("hora");
+
 	   this.sqlsearch = this.sqlsearch.replaceAll("usuario", email);
-	   
 	    
 	    MessageDigest md = MessageDigest.getInstance("MD5");
         byte[] hashInBytes = md.digest(password.getBytes(StandardCharsets.UTF_8));
@@ -55,52 +51,54 @@ public class ConsultasBD
             sb.append(String.format("%02x", b));
         }
         password=sb.toString();
-	    
-        this.sqlinsert = this.sqlinsert.replaceAll("name", name);
-        this.sqlinsert = this.sqlinsert.replaceAll("user", email);
-        this.sqlinsert = this.sqlinsert.replaceAll("password", password);
-        this.sqlinsert = this.sqlinsert.replaceAll("date", date);        
-        this.sqlsearch2 = this.sqlsearch2.replaceAll("usuario", email);
-        
-        
-        String phone = (String) exchange.getIn().getHeader("phone");
-	  	bandera=conexion(email,phone,bandera);
+        this.sqlUpdate = this.sqlUpdate.replaceAll("usuario", email);       
+	  	bandera=conexion(email,password,bandera);
 	  	exchange.setProperty("bandera",bandera);
 	}
-  public int conexion(String username,String phone,int bandera)
+  public int conexion(String username,String password,int bandera)
     throws Exception
   {
     Connection connection = null;
     Statement statement =null;
     ResultSet resultSet = null;
-    String ID=null;
+    int islogging;
+    String contrase=null;
     try
     {
       connection = getConnection();
       statement  =  connection.createStatement();
       resultSet = statement.executeQuery(this.sqlsearch);    
-
-      if(cont(resultSet)>0) {
-    	  LOG.info("usuario ya existe");
-    	 return bandera=1;
-    	  
-      }else {
-          statement.executeUpdate(this.sqlinsert);
-           resultSet = statement.executeQuery(this.sqlsearch2);       
-    	  while(resultSet.next()) {
-    		  ID =resultSet.getString("ID");  
-    	  } 
-          this.sqlinsert2 = this.sqlinsert2.replaceAll("phone", phone);
-          this.sqlinsert2 = this.sqlinsert2.replaceAll("IDE", ID);
-          statement.executeUpdate(this.sqlinsert2);
-          LOG.info("usuario registrado");
-         return bandera=0;
-      }
+      int resul=cont(resultSet);
+      System.out.println(resul); 
+      if(resul>0) { 
+    	  resultSet = statement.executeQuery(this.sqlsearch); 
+	   	  while(resultSet.next()) {
+	   		islogging =resultSet.getInt("islogging");
+	   		contrase=resultSet.getString("contrasena");
+	   		if(islogging==0) {
+	   			if(password.equals(contrase)) {
+	   		     statement.executeUpdate(this.sqlUpdate);
+	   				LOG.info("login-success");
+	   				return bandera=3;	
+	   			}else {
+	   				LOG.info("usuario o contraseña incorrectos");
+	   				return bandera=1;
+	   			}
+	   		}else {
+	   			LOG.info("usuario actualmente ingresado");
+	   			return bandera=2;	
+	   		}
+	   	  }  
+	   }else { 
+		   LOG.info("usuario o contraseña incorrectos");
+	       return bandera=1;
+	   }
     }
     finally
     {
       closeCon(connection, statement, resultSet);
     }
+	return 6;
   }
   
   private int cont(ResultSet rs) throws SQLException {

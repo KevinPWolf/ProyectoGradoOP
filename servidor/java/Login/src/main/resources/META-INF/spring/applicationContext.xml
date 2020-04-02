@@ -11,7 +11,7 @@
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
 
-	<cxf:rsServer id="restService" address="/" serviceClass="com.proyecto.server.services.ServicioHola">
+	<cxf:rsServer id="restService" address="/" serviceClass="com.proyecto.server.services.ServicioLogin">
 		<cxf:providers>
 			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
 		</cxf:providers>
@@ -28,8 +28,8 @@
 		
 	<bean class="com.proyecto.server.sql.ConsultasBD" id="consultasBD" />
 	
-	<bean id="processor" class="com.proyecto.server.process.Registro" />
-	<bean id="responseHandler" class="com.proyecto.server.process.ResponseHandler" />
+	<bean id="processor" class="com.proyecto.server.process.Login" />
+	<bean id="responseHandler" class="com.proyecto.server.process.LoginHandler" />
 
 
 
@@ -37,7 +37,6 @@
 		<route id="myRoute">
 			<from uri="cxfrs://bean://restService" />
 			 <process ref="processor" />
-			 <log logName="RegisterLog" loggingLevel="INFO" message="${body}" />
 			<choice>
 				<when>
 					<simple>${property.email} != null || ${property.password} != null || ${property.name} != null || ${property.phone} != null </simple>					
@@ -46,27 +45,30 @@
 					</setHeader>
 					<setHeader headerName="password">
 						<simple>${property.password}</simple>
-					</setHeader>
-					<setHeader headerName="name">
-						<simple>${property.name}</simple>
-					</setHeader>
-					<setHeader headerName="phone">
-						<simple>${property.phone}</simple>
-					</setHeader>
-
-					<to uri="direct:fechaActual" />
-					
+					</setHeader>			
 					<bean ref="consultasBD" />
 					<choice>
 						<when>
 							<simple>${property.bandera} == 1</simple>
 							<setBody>
-								<simple>usuario ya registrado</simple>
+								<simple>usuario incorrecto</simple>
+							</setBody>					
+						</when>
+						<when>
+							<simple>${property.bandera} == 2</simple>
+							<setBody>
+								<simple>usuario actualmente ingresado</simple>
+							</setBody>					
+						</when>
+						<when>
+							<simple>${property.bandera} == 3</simple>
+							<setBody>
+								<simple>login-success</simple>
 							</setBody>					
 						</when>
 						<otherwise>
 							<setBody>
-								<simple>insercion exitosa</simple>
+								<simple>un error</simple>
 							</setBody>
 						</otherwise>
 					</choice>
@@ -74,21 +76,11 @@
 				</when>
 				<otherwise>
 					<setBody>
-						<simple>insercion fallida</simple>
+						<simple>campos vacios</simple>
 					</setBody>
 					<process ref="responseHandler" />
 				</otherwise>
 			</choice>	
 		</route>
-		<route id="ROUTE-DATE" streamCache="true">
-			<from uri="direct:fechaActual">
-				<description>fecha Actual del registro de la persona</description>
-			</from>
-			<setHeader headerName="hora">
-						<simple>${date:now:YYYY-MM-dd HH:mm:ss}</simple>
-			</setHeader>
-			<log logName="RegisterLog" loggingLevel="INFO" message="fecha actual ${headers.hora}" />
-		</route>
 	</camelContext>
-
 </beans>
