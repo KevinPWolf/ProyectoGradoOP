@@ -1,8 +1,18 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.24",
+	"EngineAssociation": "{F072F00D-4BE2-4702-68AD-FF8368FDAEDB}",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "VRArchi",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "OculusVR",
@@ -25,6 +35,10 @@
 			"Name": "VaRest",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/e47be161e7a24e928560290abd5dcc4f"
+		},
+		{
+			"Name": "AndroidCamera",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

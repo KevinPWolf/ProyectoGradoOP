@@ -1,0 +1,65 @@
+#include <Runtime/Core/Public/Misc/FileHelper.h>
+#include "Engine/DataTable.h"
+
+
+
+/**
+ * 
+ */
+UCLASS()
+class SERVER_API ADataTableActor : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	ADataTableActor();
+ 
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+ 
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+ 
+	UFUNCTION(BlueprintCallable, Category = "MySocket")
+		UDataTable* ReadCsvFile(FString csvPath);
+	
+ 
+	class UDataTable* mydatatable;
+}
+
+
+
+#include <Runtime/Core/Public/Misc/Paths.h>
+#include <Runtime/Core/Public/Misc/FileHelper.h>
+#include <Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h>
+#include <Runtime/Engine/Classes/Engine/Engine.h>
+
+UDataTable* ULoadFileManager::ReadCsvFile(FString csvPath)
+{
+	FString csvFile = FPaths::ProjectContentDir() + csvPath;
+	if (FPaths::FileExists(csvFile))
+	{
+		FString FileContent;
+		//Read the csv file  
+		FFileHelper::LoadFileToString(FileContent, *csvFile);
+		TArray<FString> problems = mydatatable->CreateTableFromCSVString(FileContent);
+
+		if (problems.Num() > 0)
+		{
+			for (int32 ProbIdx = 0; ProbIdx < problems.Num(); ProbIdx++)
+			{
+				//Log the errors  
+				UE_LOG(LogTemp, Warning, TEXT("Problem with reimport!"));
+			}
+		}
+		else
+		{
+			//Updated Successfully  
+			UE_LOG(LogTemp, Warning, TEXT("Successful reimport!"));
+		}
+	}
+	return mydatatable;
+}
