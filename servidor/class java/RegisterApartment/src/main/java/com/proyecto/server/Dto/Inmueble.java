@@ -1,7 +1,7 @@
 package com.proyecto.server.Dto;
 
 import java.io.Serializable;
-
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -92,30 +92,25 @@ public class Inmueble implements Serializable{
 	public void setInformacion_extra(String informacion_extra) {
 		this.informacion_extra = informacion_extra;
 	}
-
-	public String getParedes() {
-		return paredes;
+	
+	public String getCorreo() {
+		return correo;
 	}
 
-	public void setParedes(String paredes) {
-		this.paredes = paredes;
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+	
+	public List<pisos> getPisos() {
+		return pisos;
 	}
 
-	public String getHabitaciones() {
-		return habitaciones;
-	}
 
-	public void setHabitaciones(String habitaciones) {
-		this.habitaciones = habitaciones;
+	public void setPisos(List<pisos> pisos) {
+		this.pisos = pisos;
 	}
-
-	public String getMuebles() {
-		return muebles;
-	}
-
-	public void setMuebles(String muebles) {
-		this.muebles = muebles;
-	}
+	
+	
 	
 	@JsonProperty("nombre")
 	private String nombre;
@@ -147,35 +142,9 @@ public class Inmueble implements Serializable{
 	@JsonProperty("informacion_extra")
 	private String informacion_extra;
 	
-	@JsonProperty("paredes")
-	private String paredes;
-	
-	@JsonProperty("habitaciones")
-	private String habitaciones;
-	
-	public String getCorreo() {
-		return correo;
-	}
-
-	public void setCorreo(String correo) {
-		this.correo = correo;
-	}
-
-	@JsonProperty("muebles")
-	private String muebles;
-	
 	@JsonProperty("correo")
 	private String correo;
 	
 	@JsonProperty("pisos")
-	private String pisos;
-
-
-	public String getPisos() {
-		return pisos;
-	}
-
-	public void setPisos(String pisos) {
-		this.pisos = pisos;
-	}
+	private List<pisos> pisos;
 }

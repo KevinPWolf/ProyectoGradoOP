@@ -23,9 +23,6 @@ public class Registro implements Processor {
 		exchange.setProperty("ancho",inmueble.getInmueble().getAncho());
 		exchange.setProperty("largo",inmueble.getInmueble().getLargo());
 		exchange.setProperty("informacion_extra",inmueble.getInmueble().getInformacion_extra());
-		exchange.setProperty("paredes",inmueble.getInmueble().getParedes());
-		exchange.setProperty("habitaciones",inmueble.getInmueble().getHabitaciones());
-		exchange.setProperty("muebles",inmueble.getInmueble().getMuebles());
 		exchange.setProperty("correo",inmueble.getInmueble().getCorreo());
 		exchange.setProperty("pisos",inmueble.getInmueble().getPisos());
 	}

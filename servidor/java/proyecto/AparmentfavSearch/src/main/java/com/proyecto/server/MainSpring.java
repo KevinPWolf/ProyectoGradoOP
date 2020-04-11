@@ -13,19 +13,20 @@
  *  implied.  See the License for the specific language governing
  *  permissions and limitations under the License.
  */
-package com.proyecto.server.services;
+package com.proyecto.server;
 
-import javax.ws.rs.core.Response;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.annotation.ImportResource;
 
-import com.proyecto.server.Dto.Request;
+@SpringBootApplication
+@ImportResource({"classpath:META-INF/spring/applicationContext.xml"})
+public class MainSpring {
 
-import io.swagger.annotations.Api;
-
-@Api("/")
-public class ServicioRegistro implements RestServices {
-
-	@Override
-	public Response getMethod(Request paramRequestDTO) {
-		return null;
-	}
+//http://localhost:8080/proyecto/vr/apartmentDataSearch
+//https://apartmentdata-vr.herokuapp.com/proyecto/vr/apartmentDataSearch
+	public static void main(String[] args) {
+        SpringApplication.run(MainSpring.class, args);
+    }
 }

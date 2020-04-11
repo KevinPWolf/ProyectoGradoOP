@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.Statement;
+import java.util.List;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,6 +15,9 @@ import org.apache.camel.BeanInject;
 import org.apache.camel.Exchange;
 import org.apache.camel.PropertyInject;
 import org.apache.log4j.Logger;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.proyecto.server.Dto.pisos;
 
 
 
@@ -37,7 +41,7 @@ public class ConsultasBD
 	   this.sqlsearch="SELECT direccion FROM Inmueble WHERE direccion = 'address'";
 	  this.sqlinsert="INSERT INTO Inmueble(ancho,largo, estado_inmueble, precio, estado, barrio, direccion,nombre_inmueble,informacion_extra,Tipo,ID_VENDEDOR) VALUE('width','depth', 'state_property','price','state','neighborhood','address','name','inext','type','correo')";
 	  this.sqlsearch2="SELECT ID FROM Inmueble WHERE direccion = 'address'";
-	  this.sqlinsert2="INSERT INTO Pisos(paredes,habitaciones,muebles,texturas,posiciones_muebles,ID_inmueble) VALUE('walls','rooms','furniture','','','Ifuri')";
+	  this.sqlinsert2="INSERT INTO Pisos(paredes,habitaciones,muebles,texturas,posiciones_muebles,ID_inmueble) VALUE('walls','rooms','furniture','texg','posfur','Ifuri')";
 	  
 	    String nombre = (String) exchange.getIn().getHeader("nombre");
 	    String tipo = (String) exchange.getIn().getHeader("tipo");
@@ -49,14 +53,12 @@ public class ConsultasBD
 	    String ancho = (String) exchange.getIn().getHeader("ancho");
 	    String largo = (String) exchange.getIn().getHeader("largo");
 	    String informacion_extra = (String) exchange.getIn().getHeader("informacion_extra");
-	    String paredes = (String) exchange.getIn().getHeader("paredes");
-	    String habitaciones = (String) exchange.getIn().getHeader("habitaciones");
-	    String muebles = (String) exchange.getIn().getHeader("muebles");
 	    String correo = (String) exchange.getIn().getHeader("correo");
-	    String piso = (String) exchange.getIn().getHeader("pisos");
+
+		List<pisos> piso =(List<pisos>) exchange.getIn().getHeader("pisos");
 	    this.sqlsearch = this.sqlsearch.replaceAll("address", direccion);
-	   System.out.println("el piso "+piso);
-	    int pisos=Integer.parseInt(piso);
+	   //System.out.println("el piso "+piso);
+	    
 	  
 	    
         this.sqlinsert = this.sqlinsert.replaceAll("width", ancho);
@@ -78,10 +80,10 @@ public class ConsultasBD
                 
         
        // String phone = (String) exchange.getIn().getHeader("phone");
-	  	bandera=conexion(bandera,paredes,habitaciones,muebles,pisos);
+	  	bandera=conexion(bandera,piso);
 	  	exchange.setProperty("bandera",bandera);
 	}
-  public int conexion(int bandera,String paredes,String habitaciones,String muebles,int pisos)
+  public int conexion(int bandera,List<pisos> pisos)
     throws Exception
   {
     Connection connection = null;
@@ -99,7 +101,7 @@ public class ConsultasBD
       this.sqlinsert = this.sqlinsert.replaceAll("correo", ID); 
       resultSet = statement.executeQuery(this.sqlsearch); 
       int cont=cont(resultSet);
-      if(cont>0 && pisos==1 ) {
+      if(cont>0) {
     	  LOG.info("inmueble ya registrado");
     	 return bandera=1;
       }else {
@@ -114,11 +116,18 @@ public class ConsultasBD
     	  while(resultSet.next()) {
     		  ID =resultSet.getString("ID");  
     	  } 
-          this.sqlinsert2 = this.sqlinsert2.replaceAll("walls", paredes);
-          this.sqlinsert2 = this.sqlinsert2.replaceAll("rooms", habitaciones);
-          this.sqlinsert2 = this.sqlinsert2.replaceAll("furniture", muebles);
-          this.sqlinsert2 = this.sqlinsert2.replaceAll("Ifuri", ID);
-          statement.executeUpdate(this.sqlinsert2);
+    	  
+    	  for(int i=0;i<pisos.size();i++) {  
+    		  String sqlinsert3= this.sqlinsert2;
+    		  sqlinsert3 = sqlinsert3.replaceAll("walls", pisos.get(i).getParedes());
+              sqlinsert3 = sqlinsert3.replaceAll("rooms", pisos.get(i).getHabitaciones());
+              sqlinsert3 = sqlinsert3.replaceAll("furniture", pisos.get(i).getMuebles());
+              sqlinsert3 = sqlinsert3.replaceAll("texg", pisos.get(i).getTexturas());
+              sqlinsert3 = sqlinsert3.replaceAll("posfur", pisos.get(i).getPosiciones_muebles());
+              sqlinsert3 = sqlinsert3.replaceAll("Ifuri", ID);
+              statement.executeUpdate(sqlinsert3);
+               
+    	  }
           LOG.info("Inmueble registrado");
          return bandera=0;
       }

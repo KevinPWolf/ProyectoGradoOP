@@ -22,7 +22,11 @@ import com.proyecto.server.Dto.Request;
 import io.swagger.annotations.Api;
 
 @Api("/")
-public class ServicioRegistro implements RestServices {
+public class ServicioUserData implements RestServices {
+	//@Override
+	//public String getCustomer(String name) {
+	//	return null;
+	//}
 
 	@Override
 	public Response getMethod(Request paramRequestDTO) {
