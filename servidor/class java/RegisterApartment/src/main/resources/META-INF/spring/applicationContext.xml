@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+       http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+
+	<cxf:rsServer id="restService" address="/" serviceClass="com.proyecto.server.services.ServicioRegistro">
+		<cxf:providers>
+			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>
+	
+	  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		   destroy-method="close">
+		   <property name="driverClassName" value="org.gjt.mm.mysql.Driver" />
+		   <property name="url" value="jdbc:mysql://viewerrealm.cst0lr1fnijg.us-east-2.rds.amazonaws.com:3306/viewerrealmdb" />
+		   <property name="username" value="RandyMarsh" />
+		   <property name="password" value="thebestaround" />
+  		</bean>
+	
+		
+	<bean class="com.proyecto.server.sql.ConsultasBD" id="consultasBD" />
+	
+	<bean id="processor" class="com.proyecto.server.process.Registro" />
+	<bean id="responseHandler" class="com.proyecto.server.process.ResponseHandler" />
+
+
+
+	<camelContext id="camelId" xmlns="http://camel.apache.org/schema/spring">
+		<route id="myRoute">
+			<from uri="cxfrs://bean://restService" />
+			 <process ref="processor" />
+			<choice>
+				<when>
+					<simple>${property.nombre} != null || ${property.tipo} != null || ${property.estado} != null || ${property.estado_inmueble} != null || ${property.precio} != null  || ${property.direccion} != null || ${property.barrio} != null  || ${property.ancho} != null || ${property.largo} != null || ${property.informacion_extra} != null || ${property.paredes} != null || ${property.habitaciones} != null || ${property.muebles} != null ${property.pisos} != null</simple>					
+					<setHeader headerName="nombre">
+						<simple>${property.nombre}</simple>
+					</setHeader>
+					<setHeader headerName="tipo">
+						<simple>${property.tipo}</simple>
+					</setHeader>
+					<setHeader headerName="estado">
+						<simple>${property.estado}</simple>
+					</setHeader>
+					<setHeader headerName="estado_inmueble">
+						<simple>${property.estado_inmueble}</simple>
+					</setHeader>
+					<setHeader headerName="precio">
+						<simple>${property.precio}</simple>
+					</setHeader>
+					<setHeader headerName="direccion">
+						<simple>${property.direccion}</simple>
+					</setHeader>
+					<setHeader headerName="barrio">
+						<simple>${property.barrio}</simple>
+					</setHeader>
+					<setHeader headerName="ancho">
+						<simple>${property.ancho}</simple>
+					</setHeader>
+					<setHeader headerName="largo">
+						<simple>${property.largo}</simple>
+					</setHeader>
+					<setHeader headerName="informacion_extra">
+						<simple>${property.informacion_extra}</simple>
+					</setHeader>
+					<setHeader headerName="paredes">
+						<simple>${property.paredes}</simple>
+					</setHeader>
+					<setHeader headerName="habitaciones">
+						<simple>${property.habitaciones}</simple>
+					</setHeader>
+					<setHeader headerName="muebles">
+						<simple>${property.muebles}</simple>
+					</setHeader>
+					<setHeader headerName="correo">
+						<simple>${property.correo}</simple>
+					</setHeader>
+					<setHeader headerName="pisos">
+						<simple>${property.pisos}</simple>
+					</setHeader>
+					<bean ref="consultasBD" />
+					<choice>
+						<when>
+							<simple>${property.bandera} == 1</simple>
+							<setBody>
+								<simple>inmueble ya registrado</simple>
+							</setBody>					
+						</when>
+						<otherwise>
+							<setBody>
+								<simple>insercion exitosa</simple>
+							</setBody>
+						</otherwise>
+					</choice>
+					<process ref="responseHandler" />
+				</when>
+				<otherwise>
+					<setBody>
+						<simple>insercion fallida</simple>
+					</setBody>
+					<process ref="responseHandler" />
+				</otherwise>
+			</choice>	
+		</route>
+	</camelContext>
+</beans>

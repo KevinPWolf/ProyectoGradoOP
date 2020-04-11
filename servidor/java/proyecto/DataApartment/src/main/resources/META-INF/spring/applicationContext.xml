@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+       http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<cxf:rsServer id="restService" address="/" serviceClass="com.proyecto.server.services.ServicioUserData">
+		<cxf:providers>
+			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>
+	
+	  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		   destroy-method="close">
+		   <property name="driverClassName" value="org.gjt.mm.mysql.Driver" />
+		   <property name="url" value="jdbc:mysql://viewerrealm.cst0lr1fnijg.us-east-2.rds.amazonaws.com:3306/viewerrealmdb" />
+		   <property name="username" value="RandyMarsh" />
+		   <property name="password" value="thebestaround" />
+  		</bean>
+		
+	<bean class="com.proyecto.server.sql.ConsultasBD" id="consultasBD" />
+	<bean id="processor" class="com.proyecto.server.process.ApartmentData" />
+	<bean id="responseHandler" class="com.proyecto.server.process.ApartmentDataHandler" />
+
+
+	<camelContext id="camelId" xmlns="http://camel.apache.org/schema/spring">
+		<route id="myRoute">
+			<from uri="cxfrs://bean://restService" />
+			 <process ref="processor" />
+			<choice>
+				<when>
+					<simple>${property.id} != null</simple>					
+					<setHeader headerName="id">
+						<simple>${property.id}</simple>
+					</setHeader>
+							
+					<bean ref="consultasBD" />
+					<choice>
+						<when>
+							<simple>${property.bandera} == 0</simple>
+							<setHeader headerName="bandera">
+								<simple>${property.bandera}</simple>
+							</setHeader>	
+							<setHeader headerName="counter">
+								<simple>${property.counter}</simple>
+							</setHeader>				
+						</when>
+						<otherwise>
+							<setHeader headerName="bandera">
+								<simple>${property.bandera}</simple>
+							</setHeader>
+							<setBody>
+								<simple>no existe en la base de datos el inmueble</simple>
+							</setBody>
+						</otherwise>
+					</choice>	
+					<process ref="responseHandler" />
+				</when>
+				<otherwise>
+					<setHeader headerName="bandera">
+						<simple>5</simple>
+					</setHeader>
+					<setBody>
+						<simple>error</simple>
+					</setBody>
+					<process ref="responseHandler" />
+				</otherwise>
+			</choice>	
+		</route>
+	</camelContext>
+</beans>
