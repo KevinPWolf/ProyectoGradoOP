@@ -21,32 +21,34 @@ import com.proyecto.server.process.Counter;
 
 
 
-public class ConsultasBD
+public class ConsultasBD2
 {
   private static final Logger LOG = Logger.getLogger("FavoriteDataLog");
-  //@BeanInject("dsRegister")
-  //private DataSource dataSource;
+
   
   @BeanInject("dataSource")
   private DataSource dataSource;
-  private  String sqlinsert, sqlsearch;
-
+  private  String sqlsearch, sqlsearch2;
+  Counter count=new Counter();
+  List<List> map = new ArrayList<List>();
 
   public void process(Exchange exchange) throws Exception {
 	  int bandera=0;
-	  this.sqlinsert="INSERT INTO inmueblexpersona(ID_INMUEBLE, ID_PERSONA) VALUE('inmuid','perid')";
 	  this.sqlsearch = "SELECT ID FROM Persona WHERE correo = 'usuario'"; 
-	  String id_inmueble = (String) exchange.getIn().getHeader("inmueble");
-	   
+	  this.sqlsearch2= "SELECT inmueblexpersona.ID_INMUEBLE, Inmueble.nombre_Inmueble, Inmueble.precio, Inmueble.Tipo , Inmueble.estado_inmueble, Inmueble.estado, Inmueble.barrio FROM inmueblexpersona INNER JOIN Inmueble ON Inmueble.ID = inmueblexpersona.ID_INMUEBLE WHERE inmueblexpersona.ID_PERSONA = 'persoid'";
 	    
 	    this.sqlsearch = this.sqlsearch.replaceAll("usuario", (String) exchange.getIn().getHeader("email"));
 	    
 	      
 	    
-	   bandera=conexion(bandera,id_inmueble);
+	   bandera=conexion(bandera);
 	  	exchange.setProperty("bandera",bandera);
+	  	exchange.getIn().setBody(this.map);
+	  	exchange.setProperty("counter",count);
 	}
-  public int conexion(int bandera,String id_inmueble)
+  
+  
+  public int conexion(int bandera)
     throws Exception
   {
     Connection connection = null;
@@ -66,20 +68,48 @@ public class ConsultasBD
 	   	  while(resultSet.next()) {
 	   		id_persona=resultSet.getString("ID");	
 	   	  }
-	   	 this.sqlinsert = this.sqlinsert.replaceAll("inmuid", id_inmueble);
-	   	this.sqlinsert = this.sqlinsert.replaceAll("perid", id_persona);
-         statement.executeUpdate(this.sqlinsert);
-         LOG.info("inmueble agregado");
+	   	 this.sqlsearch2 = this.sqlsearch2.replaceAll("persoid",id_persona );
+	   	  
+	   	 
+	   	resultSet = statement.executeQuery(this.sqlsearch2);   
+	      resul=cont(resultSet); 
+	     count.setCount(resul);
+	      if(resul>0) { 
+	    	  resultSet = statement.executeQuery(this.sqlsearch2); 
+	    	  List<List> map = new ArrayList<List>();
+		   	  while(resultSet.next()) {
+		   		List<String> data = new ArrayList<String>();
+		   		data.add(resultSet.getString("ID_INMUEBLE"));
+		   		data.add(resultSet.getString("nombre_Inmueble"));
+		   		data.add(resultSet.getString("precio"));
+		   		data.add(resultSet.getString("Tipo"));
+		   		data.add(resultSet.getString("estado_inmueble"));
+		   		data.add(resultSet.getString("estado"));
+		   		data.add(resultSet.getString("barrio"));
+		   		map.add(data);
+		   	  }
+		   this.map=map;
+	   	 
+
+         LOG.info("inmuebles mostrados");
          return bandera=0;
-      }else { 
+      }
+	      else { 
+			   LOG.info("no existe apartamentos favoritos");
+		       return bandera=1;
+		   }
+	      }
+      else { 
 		   LOG.info("no existe ese usuario");
 	       return bandera=1;
 	   }
+     
     }
     finally
     {
       closeCon(connection, statement,resultSet);
     }
+	
   }
   
   private int cont(ResultSet rs) throws SQLException {

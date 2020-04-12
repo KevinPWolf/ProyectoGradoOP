@@ -9,18 +9,15 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonAutoDetect
 @JsonSerialize
-public class response2 implements Serializable{
+public class response implements Serializable{
 	private static final long serialVersionUID = 3L;
 	
-	@JsonProperty("respuesta")
-	private String respuesta;
-
-	public String getRespuesta() {
-		return respuesta;
+	@JsonProperty("inmuebles")
+	private inmuebles inmuebles;
+	public inmuebles getInmuebles() {
+		return inmuebles;
 	}
-
-	public void setRespuesta(String respuesta) {
-		this.respuesta = respuesta;
+	public void setInmuebles(inmuebles inmuebles) {
+		this.inmuebles = inmuebles;
 	}
-
 }
