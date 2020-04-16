@@ -29,22 +29,23 @@ public class ConsultasBD
   
   @BeanInject("dataSource")
   private DataSource dataSource;
-  private  String sqlsearch;
-  private int numero, numero2;
+  private  String sqlsearch,sqlsearch2;
+  private int numeros, numero2;
   Counter count=new Counter();
   List<List> map = new ArrayList<List>();
   public void process(Exchange exchange) throws Exception {
 	  int bandera=0;
-	   this.sqlsearch="SELECT inmu.ID,inmu.nombre_Inmueble,inmu.precio,inmu.Tipo,inmu.estado_inmueble,inmu.estado,inmu.barrio,inmu.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble ORDER BY fecha_registro DESC LIMIT number) inmu WHERE inmu.direccion NOT IN (SELECT DISTINCT inm.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble ORDER BY fecha_registro DESC LIMIT numo) inm)";
+	   this.sqlsearch="SELECT inmu.ID,inmu.nombre_Inmueble,inmu.precio,inmu.Tipo,inmu.estado_inmueble,inmu.estado,inmu.barrio,inmu.direccion FROM (SELECT ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble  WHERE ID_VENDEDOR=(SELECT ID FROM Persona WHERE correo='numidve') ORDER BY fecha_registro DESC LIMIT number) inmu WHERE inmu.direccion NOT IN (SELECT DISTINCT inm.direccion FROM (SELECT ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble  WHERE ID_VENDEDOR=(SELECT ID FROM Persona WHERE correo='numidve') ORDER BY fecha_registro DESC LIMIT numo) inm)";
+	    String correo = (String) exchange.getIn().getHeader("correo");
 	    String numerot = (String) exchange.getIn().getHeader("numero");
-	   
-	    numero=Integer.parseInt(numerot);
-	    numero=numero*10;
-	    numero2=numero-10;
+	    numeros=Integer.parseInt(numerot);
+	    numeros=numeros*10;
+	    numero2=numeros-10;
 	    
-	    	
-	    this.sqlsearch = this.sqlsearch.replaceAll("number", Integer.toString(numero));
+	    this.sqlsearch = this.sqlsearch.replaceAll("number", Integer.toString(numeros));
 	    this.sqlsearch = this.sqlsearch.replaceAll("numo", Integer.toString(numero2));
+	    this.sqlsearch = this.sqlsearch.replaceAll("numidve", correo);
+	
 
 	   
 	    
