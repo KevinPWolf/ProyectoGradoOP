@@ -36,7 +36,7 @@ public class ConsultasBD
   @BeanInject("dataSource")
   private DataSource dataSource;
   
-  private  String sqlsearch1;
+  private  String sqlsearch1, sqlsearch;
   Counter count=new Counter();
   List<List> map = new ArrayList<List>();
   private int numero, numero2;
@@ -45,6 +45,9 @@ public class ConsultasBD
 	   this.sqlsearch1="SELECT inmu.ID,inmu.nombre_Inmueble,inmu.precio,inmu.Tipo,inmu.estado_inmueble,inmu.estado,inmu.barrio,inmu.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble where Tipo=tieru AND estado=esteru AND estado_inmueble=estinmeru AND barrio=bareru AND localidad=locaeru AND precio BETWEEN cezro AND enormegrgr ORDER BY fecha_registro DESC LIMIT number) inmu"
 	   		+ " WHERE inmu.direccion NOT IN (SELECT DISTINCT inm.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble where Tipo=tieru AND estado=esteru AND estado_inmueble=estinmeru AND barrio=bareru AND localidad=locaeru AND precio BETWEEN cezro AND enormegrgr  ORDER BY fecha_registro DESC LIMIT numo) inm)";
 	 
+	   this.sqlsearch="SELECT COUNT(total.barrio) FROM (SELECT inmu.ID,inmu.nombre_Inmueble,inmu.precio,inmu.Tipo,inmu.estado_inmueble,inmu.estado,inmu.barrio,inmu.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble where Tipo=tieru AND estado=esteru "
+	   		+ "AND estado_inmueble=estinmeru AND barrio=bareru AND localidad=locaeru AND precio BETWEEN cezro AND enormegrgr ORDER BY fecha_registro DESC) inmu) total";
+	   
 	    String tipo = (String) exchange.getIn().getHeader("tipo");
 	    String estado = (String) exchange.getIn().getHeader("estado");
 	    String estado_inmueble = (String) exchange.getIn().getHeader("estado_inmueble");
@@ -67,6 +70,7 @@ public class ConsultasBD
        // String phone = (String) exchange.getIn().getHeader("phone");
 	  	bandera=conexion(bandera,tipo, estado,estado_inmueble,precio,precio_mayor,barrio,localidad);
 	  	exchange.setProperty("bandera",bandera);
+	  	exchange.setProperty("contb",contb);
 	  	exchange.getIn().setBody(this.map);
 	  	exchange.setProperty("counter",count);
 	}
@@ -112,7 +116,7 @@ public class ConsultasBD
        }
       return hmap2;
   }
-  
+  String contb="";
   public int conexion(int bandera,String tipo, String estado,  String estado_inmueble,String precio,String precio_mayor, String barrio, String localidad)
     throws Exception
   {
@@ -128,29 +132,37 @@ public class ConsultasBD
       
       Set set = hmap.entrySet();
       Iterator iterator = set.iterator();
+      
       while(iterator.hasNext()) {
          Map.Entry mentry = (Map.Entry)iterator.next();
          switch ((String)mentry.getKey()) {
 	         case "Tipo":
 	        	 this.sqlsearch1=this.sqlsearch1.replaceAll("tieru", (String) mentry.getValue());
+	        	 this.sqlsearch=this.sqlsearch.replaceAll("tieru", (String) mentry.getValue());
 	           break;
 	         case "estado":
 	        	 this.sqlsearch1=this.sqlsearch1.replaceAll("esteru", (String) mentry.getValue());
+	        	 this.sqlsearch=this.sqlsearch.replaceAll("esteru", (String) mentry.getValue());
 	           break;
 	         case "estado_inmueble":
 	        	 this.sqlsearch1=this.sqlsearch1.replaceAll("estinmeru", (String) mentry.getValue());
+	        	 this.sqlsearch=this.sqlsearch.replaceAll("estinmeru", (String) mentry.getValue());
 	           break;
 	         case "precio":
 	        	 this.sqlsearch1=this.sqlsearch1.replaceAll("cezro", (String) mentry.getValue());
+	        	 this.sqlsearch=this.sqlsearch.replaceAll("cezro", (String) mentry.getValue());
 	           break;
 	         case "precio_mayor":
 	        	 this.sqlsearch1=this.sqlsearch1.replaceAll("enormegrgr", (String) mentry.getValue());
+	        	 this.sqlsearch=this.sqlsearch.replaceAll("enormegrgr", (String) mentry.getValue());
 	           break;
 	         case "barrio":
 	        	 this.sqlsearch1=this.sqlsearch1.replaceAll("bareru", (String) mentry.getValue());
+	        	 this.sqlsearch=this.sqlsearch.replaceAll("bareru", (String) mentry.getValue());
 	           break;
 	         case "localidad":
 	        	 this.sqlsearch1=this.sqlsearch1.replaceAll("locaeru", (String) mentry.getValue());
+	        	 this.sqlsearch=this.sqlsearch.replaceAll("locaeru", (String) mentry.getValue());
 	           break;
 	       }
    
@@ -175,9 +187,16 @@ public class ConsultasBD
 	   		map.add(data);
 	   	  }
 	   this.map=map;
+	   resultSet = statement.executeQuery(this.sqlsearch);
+	   
+	   while(resultSet.next()) {		
+		   contb=resultSet.getString("COUNT(total.barrio)");
+	   }
+	     
 	   return bandera=0;
       }else { 
 		   LOG.info("no existen inmuebles");
+		   contb="0";
 	       return bandera=1;
 	   }
     }

@@ -77,5 +77,4 @@ public class inmueble implements Serializable{
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
 }

@@ -73,6 +73,9 @@
 							</setHeader>	
 							<setHeader headerName="counter">
 								<simple>${property.counter}</simple>
+							</setHeader>
+							<setHeader headerName="contb">
+								<simple>${property.contb}</simple>
 							</setHeader>				
 						</when>
 						<otherwise>

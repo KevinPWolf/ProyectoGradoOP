@@ -24,6 +24,7 @@ public class ResponseHandler implements Processor {
 			inmuebles inmuebles=new inmuebles();
 			
 			Counter count=(Counter) exchange.getIn().getHeader("counter");
+			String cont=(String) exchange.getIn().getHeader("contb");
 			//inmueble [] inmueble = new inmueble [6];
 			List<inmueble> inmueble =new ArrayList<inmueble>();
 			
@@ -43,7 +44,7 @@ public class ResponseHandler implements Processor {
 			inmuebles.setInmueble(inmueble);
 
 			responseDTO.setInmuebles(inmuebles);
-
+			responseDTO.setTotal(cont);
 			ObjectMapper objectMapper = new ObjectMapper();
 			String jsonResponse = objectMapper.writeValueAsString(responseDTO);
 
