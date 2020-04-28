@@ -42,6 +42,25 @@
 		</cxf:providers>
 	</cxf:rsServer>
 	
+	<cxf:rsServer id="restServiceComentario" address="/Comentario" serviceClass="com.proyecto.server.services.ServicioUserData">
+		<cxf:providers>
+			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>
+	
+	<cxf:rsServer id="restServiceRegisterComentario" address="/RegisterComentario" serviceClass="com.proyecto.server.services.ServicioUserData3">
+		<cxf:providers>
+			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>
+	
+	<cxf:rsServer id="restServiceFoto" address="/fotoUsuario" serviceClass="com.proyecto.server.services.ServicioUserData2">
+		<cxf:providers>
+			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>
+	
+	
 	  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		   destroy-method="close">
 		   <property name="driverClassName" value="org.gjt.mm.mysql.Driver" />
@@ -55,13 +74,17 @@
 	<bean class="com.proyecto.server.sql.ConsultasBDeleteFavorito" id="consultasBDeleteFavorito" />
 	<bean class="com.proyecto.server.sql.ConsultasForgot" id="CorreoConsultas" />
 	<bean class="com.proyecto.server.sql.EliminarInmueble" id="EliminarInmueble" />
+	<bean class="com.proyecto.server.sql.ConsultasComentarios" id="consultasComentarios" />
+	<bean class="com.proyecto.server.sql.ConsultasComentarios2" id="consultasComentarios2" />
+	<bean class="com.proyecto.server.sql.Updatefoto" id="updateFoto" />
 	
-	
+	<bean id="correoProcessor3" class="com.proyecto.server.process.CorreoData3" />
 	<bean id="correoProcessor2" class="com.proyecto.server.process.CorreoData2" />
 	<bean id="processor" class="com.proyecto.server.process.ApartmentData" />
 	<bean id="correoProcessor" class="com.proyecto.server.process.CorreoData" />
 	<bean id="password" class="com.proyecto.server.process.Password" />
 	<bean id="responseHandler" class="com.proyecto.server.process.ApartmentDataHandler" />
+	<bean id="Handler" class="com.proyecto.server.process.DataHandler" />
 	<bean id="mail" class="com.proyecto.server.process.mail" />
 
 	<camelContext id="camelId" xmlns="http://camel.apache.org/schema/spring">
@@ -198,6 +221,117 @@
 				</otherwise>
 			</choice>	
 		</route>
+		
+		
+		<route id="myRouteComentario">
+			<from uri="cxfrs://bean://restServiceComentario" />
+			 <process ref="processor" />
+			<choice>
+				<when>
+					<simple>${property.id} != null</simple>					
+					<setHeader headerName="id">
+						<simple>${property.id}</simple>
+					</setHeader>
+	
+					<bean ref="consultasComentarios" />
+					<choice>
+						<when>
+							<simple>${property.bandera} == 0</simple>
+							<setHeader headerName="bandera">
+								<simple>${property.bandera}</simple>
+							</setHeader>	
+							<setHeader headerName="counter">
+								<simple>${property.counter}</simple>
+							</setHeader>				
+						</when>
+						<otherwise>
+							<setHeader headerName="bandera">
+								<simple>${property.bandera}</simple>
+							</setHeader>
+							<setBody>
+								<simple>no existe en la base de datos comentarios</simple>
+							</setBody>
+						</otherwise>
+					</choice>	
+					<process ref="Handler" />
+				</when>
+				<otherwise>
+					<setHeader headerName="bandera">
+						<simple>5</simple>
+					</setHeader>
+					<setBody>
+						<simple>error</simple>
+					</setBody>
+					<process ref="Handler" />
+				</otherwise>
+			</choice>	
+		</route>
+		
+		<route id="myRouteRegisterComentario">
+			<from uri="cxfrs://bean://restServiceRegisterComentario" />
+			 <process ref="correoProcessor3" />
+			<choice>
+				<when>
+					<simple>${property.id} != null || ${property.correo} != null || ${property.contexto} != null</simple>					
+					<setHeader headerName="id">
+						<simple>${property.id}</simple>
+					</setHeader>
+					<setHeader headerName="correo">
+						<simple>${property.correo}</simple>
+					</setHeader>
+					<setHeader headerName="contexto">
+						<simple>${property.contexto}</simple>
+					</setHeader>
+
+					<bean ref="consultasComentarios2" />
+					<setBody>
+						<simple>se registro el comentario a la bd</simple>
+					</setBody>	
+					<process ref="responseHandler" />
+				</when>
+				<otherwise>
+					<setHeader headerName="bandera">
+						<simple>5</simple>
+					</setHeader>
+					<setBody>
+						<simple>error</simple>
+					</setBody>
+					<process ref="responseHandler" />
+				</otherwise>
+			</choice>	
+		</route>
+		
+		
+		<route id="myRouteRegisterFoto">
+			<from uri="cxfrs://bean://restServiceFoto" />
+			 <process ref="correoProcessor2" />
+			<choice>
+				<when>
+					<simple>${property.correo} != null</simple>					
+					<setHeader headerName="correo">
+						<simple>${property.correo}</simple>
+					</setHeader>
+
+					<setHeader headerName="pass">
+						<simple>${property.pass}</simple>
+					</setHeader>
+					
+					<bean ref="updateFoto" />
+					<setBody>
+						<simple>se envia foto </simple>
+					</setBody>
+					<process ref="responseHandler" />
+				</when>
+				<otherwise>
+					<setBody>
+						<simple>error en el envio foto</simple>
+					</setBody>
+					<process ref="responseHandler" />
+				</otherwise>
+			</choice>
+		</route>
+		
+		
 		
 		
 		<route id="myRouteCha">
