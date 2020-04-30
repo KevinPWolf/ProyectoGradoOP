@@ -2,17 +2,16 @@ package com.proyecto.server.process;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
+import org.apache.log4j.Logger;
 
 import com.proyecto.server.Dto.Request;
 
 
 public class Registro implements Processor {
-
 	public void process(Exchange exchange) throws Exception {
 	
 		Request inmueble= exchange.getIn().getBody(Request.class);
-		
-		
+
 		exchange.setProperty("nombre",inmueble.getInmueble().getNombre());
 		exchange.setProperty("tipo",inmueble.getInmueble().getTipo());
 		exchange.setProperty("estado",inmueble.getInmueble().getEstado());
@@ -30,7 +29,6 @@ public class Registro implements Processor {
 		exchange.setProperty("green",inmueble.getInmueble().getFoto().getGreen());
 		exchange.setProperty("blue",inmueble.getInmueble().getFoto().getBlue());
 		exchange.setProperty("aplha",inmueble.getInmueble().getFoto().getAlpha());
-	
 	}
 
 }

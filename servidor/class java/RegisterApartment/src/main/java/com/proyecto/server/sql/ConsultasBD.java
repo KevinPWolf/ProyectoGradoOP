@@ -44,7 +44,7 @@ public class ConsultasBD
 	  this.sqlsearch2="SELECT ID FROM Inmueble WHERE direccion = 'address'";
 	  this.sqlinsert2="INSERT INTO Pisos(paredes,habitaciones,muebles,texturas,posiciones_muebles,ID_inmueble) VALUE('walls','rooms','furniture','texg','posfur','Ifuri')";
 	  
-	  this.sqlinsert3="INSERT INTO fotos(green,blue,red,apha,ID_INMUEBLE) VALUE('verde','azul','rojo','alf','Ifuri')";
+	  this.sqlinsert3="INSERT INTO fotos(green,blue,red,alpha,ID_INMUEBLE) VALUE('verde','azul','rojo','alf','Ifuri')";
 	  
 	    String nombre = (String) exchange.getIn().getHeader("nombre");
 	    String tipo = (String) exchange.getIn().getHeader("tipo");
@@ -58,19 +58,17 @@ public class ConsultasBD
 	    String informacion_extra = (String) exchange.getIn().getHeader("informacion_extra");
 	    String correo = (String) exchange.getIn().getHeader("correo");
 	    String localidad= (String) exchange.getIn().getHeader("localidad");
-	    
 	    String red = (String) exchange.getIn().getHeader("red");
 	    String green = (String) exchange.getIn().getHeader("green");
 	    String blue = (String) exchange.getIn().getHeader("blue");
 	    String alpha= (String) exchange.getIn().getHeader("aplha");
-	    
+
 	    
 		List<pisos> piso =(List<pisos>) exchange.getIn().getHeader("pisos");
 	    this.sqlsearch = this.sqlsearch.replaceAll("address", direccion);
 	   //System.out.println("el piso "+piso);
 	    
-	  
-	    
+
         this.sqlinsert = this.sqlinsert.replaceAll("width", ancho);
         this.sqlinsert = this.sqlinsert.replaceAll("depth", largo);
         this.sqlinsert = this.sqlinsert.replaceAll("state_property", estado_inmueble);
@@ -82,7 +80,7 @@ public class ConsultasBD
         this.sqlinsert = this.sqlinsert.replaceAll("inext", informacion_extra);
         this.sqlinsert = this.sqlinsert.replaceAll("type", tipo);
         this.sqlinsert = this.sqlinsert.replaceAll("stlo", localidad);
-        
+
         this.sqlinsert3 = this.sqlinsert3.replaceAll("rojo", red);
         this.sqlinsert3 = this.sqlinsert3.replaceAll("verde", green);
         this.sqlinsert3 = this.sqlinsert3.replaceAll("azul", blue);
@@ -93,8 +91,7 @@ public class ConsultasBD
         
         
         this.sqlsearch2 = this.sqlsearch2.replaceAll("address", direccion);
-                
-        
+
        // String phone = (String) exchange.getIn().getHeader("phone");
 	  	bandera=conexion(bandera,piso);
 	  	exchange.setProperty("bandera",bandera);
