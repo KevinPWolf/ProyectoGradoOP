@@ -36,7 +36,7 @@ public class ConsultasBD
   @BeanInject("dataSource")
   private DataSource dataSource;
   
-  private  String sqlsearch1, sqlsearch;
+  private  String sqlsearch1, sqlsearch, sqlsearch3;
   Counter count=new Counter();
   List<List> map = new ArrayList<List>();
   private int numero, numero2;
@@ -47,6 +47,8 @@ public class ConsultasBD
 	 
 	   this.sqlsearch="SELECT COUNT(total.barrio) FROM (SELECT inmu.ID,inmu.nombre_Inmueble,inmu.precio,inmu.Tipo,inmu.estado_inmueble,inmu.estado,inmu.barrio,inmu.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble where Tipo=tieru AND estado=esteru "
 	   		+ "AND estado_inmueble=estinmeru AND barrio=bareru AND localidad=locaeru AND precio BETWEEN cezro AND enormegrgr ORDER BY fecha_registro DESC) inmu) total";
+	   
+	   this.sqlsearch3="SELECT green, blue, red, alpha FROM fotos where ID_INMUEBLE='idein'";
 	   
 	    String tipo = (String) exchange.getIn().getHeader("tipo");
 	    String estado = (String) exchange.getIn().getHeader("estado");
@@ -123,6 +125,7 @@ public class ConsultasBD
     Connection connection = null;
     Statement statement =null;
     ResultSet resultSet = null;
+    ResultSet resultSet2 = null;
     String ID=null;
     try
     {
@@ -171,6 +174,7 @@ public class ConsultasBD
       int resul=cont(resultSet);
      
      count.setCount(resul);
+  
      
       if(resul>0) { 
     	  resultSet = statement.executeQuery(this.sqlsearch1); 
@@ -184,8 +188,19 @@ public class ConsultasBD
 	   		data.add(resultSet.getString("estado_inmueble"));
 	   		data.add(resultSet.getString("estado"));
 	   		data.add(resultSet.getString("barrio"));
+	   		this.sqlsearch3 = this.sqlsearch3.replaceAll("idein", resultSet.getString("ID"));
+		   	  resultSet2 = statement.executeQuery(this.sqlsearch3);
+		   	while(resultSet2.next()) {
+		   		data.add(resultSet2.getString("green"));
+		   		data.add(resultSet2.getString("blue"));
+		   		data.add(resultSet2.getString("red"));
+		   		data.add(resultSet2.getString("alpha"));
+		   	}
 	   		map.add(data);
+
 	   	  }
+	   	  
+	   	 
 	   this.map=map;
 	   resultSet = statement.executeQuery(this.sqlsearch);
 	   

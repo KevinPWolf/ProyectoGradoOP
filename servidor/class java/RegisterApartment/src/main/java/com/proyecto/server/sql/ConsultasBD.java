@@ -34,14 +34,17 @@ public class ConsultasBD
   private String sqlinsert;
   private  String sqlsearch2;
   private String sqlinsert2;
+  private String sqlinsert3;
   
   public void process(Exchange exchange) throws Exception {
 	  int bandera=0;
 	   this.sqlsearch1="SELECT ID FROM Persona WHERE correo = 'email'";
 	   this.sqlsearch="SELECT direccion FROM Inmueble WHERE direccion = 'address'";
-	  this.sqlinsert="INSERT INTO Inmueble(ancho,largo, estado_inmueble, precio, estado, barrio, direccion,nombre_inmueble,informacion_extra,Tipo,ID_VENDEDOR) VALUE('width','depth', 'state_property','price','state','neighborhood','address','name','inext','type','correo')";
+	  this.sqlinsert="INSERT INTO Inmueble(ancho,largo, estado_inmueble, precio, estado, barrio, direccion,nombre_inmueble,informacion_extra,Tipo,localidad,ID_VENDEDOR) VALUE('width','depth', 'state_property','price','state','neighborhood','address','name','inext','type','stlo','correo')";
 	  this.sqlsearch2="SELECT ID FROM Inmueble WHERE direccion = 'address'";
 	  this.sqlinsert2="INSERT INTO Pisos(paredes,habitaciones,muebles,texturas,posiciones_muebles,ID_inmueble) VALUE('walls','rooms','furniture','texg','posfur','Ifuri')";
+	  
+	  this.sqlinsert3="INSERT INTO fotos(green,blue,red,apha,ID_INMUEBLE) VALUE('verde','azul','rojo','alf','Ifuri')";
 	  
 	    String nombre = (String) exchange.getIn().getHeader("nombre");
 	    String tipo = (String) exchange.getIn().getHeader("tipo");
@@ -54,7 +57,14 @@ public class ConsultasBD
 	    String largo = (String) exchange.getIn().getHeader("largo");
 	    String informacion_extra = (String) exchange.getIn().getHeader("informacion_extra");
 	    String correo = (String) exchange.getIn().getHeader("correo");
-
+	    String localidad= (String) exchange.getIn().getHeader("localidad");
+	    
+	    String red = (String) exchange.getIn().getHeader("red");
+	    String green = (String) exchange.getIn().getHeader("green");
+	    String blue = (String) exchange.getIn().getHeader("blue");
+	    String alpha= (String) exchange.getIn().getHeader("aplha");
+	    
+	    
 		List<pisos> piso =(List<pisos>) exchange.getIn().getHeader("pisos");
 	    this.sqlsearch = this.sqlsearch.replaceAll("address", direccion);
 	   //System.out.println("el piso "+piso);
@@ -71,7 +81,13 @@ public class ConsultasBD
         this.sqlinsert = this.sqlinsert.replaceAll("name", nombre); 
         this.sqlinsert = this.sqlinsert.replaceAll("inext", informacion_extra);
         this.sqlinsert = this.sqlinsert.replaceAll("type", tipo);
+        this.sqlinsert = this.sqlinsert.replaceAll("stlo", localidad);
         
+        this.sqlinsert3 = this.sqlinsert3.replaceAll("rojo", red);
+        this.sqlinsert3 = this.sqlinsert3.replaceAll("verde", green);
+        this.sqlinsert3 = this.sqlinsert3.replaceAll("azul", blue);
+        this.sqlinsert3 = this.sqlinsert3.replaceAll("alf", alpha);
+
         
         this.sqlsearch1=this.sqlsearch1.replaceAll("email", correo);
         
@@ -128,6 +144,8 @@ public class ConsultasBD
               statement.executeUpdate(sqlinsert3);
                
     	  }
+    	  this.sqlinsert3 = this.sqlinsert3.replaceAll("Ifuri", ID);
+    	  statement.executeUpdate(this.sqlinsert3);
           LOG.info("Inmueble registrado");
          return bandera=0;
       }

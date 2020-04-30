@@ -35,6 +35,10 @@ public class ApartmentDataHandler implements Processor {
 				inmu.setEstado_inmueble((String) map.get(i).get(4));
 				inmu.setEstado((String) map.get(i).get(5));
 				inmu.setBarrio((String) map.get(i).get(6));
+				inmu.setGreen((String) map.get(i).get(7));
+				inmu.setBlue((String) map.get(i).get(8));
+				inmu.setRed((String) map.get(i).get(9));
+				inmu.setAlpha((String) map.get(i).get(10));
 				inmueble.add(inmu);
 			}
 

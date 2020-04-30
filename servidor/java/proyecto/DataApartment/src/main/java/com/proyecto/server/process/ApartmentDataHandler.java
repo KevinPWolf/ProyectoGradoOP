@@ -48,7 +48,10 @@ public class ApartmentDataHandler implements Processor {
 			inmueble.setInformacion_extra((String) map.get(0).get(8));
 			inmueble.setTipo((String) map.get(0).get(9));
 			inmueble.setTelefono((String) map.get(0).get(10));
-			
+			inmueble.setGreen((String) map.get(0).get(16));
+			inmueble.setBlue((String) map.get(0).get(17));
+			inmueble.setRed((String) map.get(0).get(18));
+			inmueble.setAlpha((String) map.get(0).get(19));
 			responseDTO.setInmueble(inmueble);
 
 

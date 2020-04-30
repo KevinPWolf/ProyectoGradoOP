@@ -29,7 +29,7 @@ public class ConsultasBD
   
   @BeanInject("dataSource")
   private DataSource dataSource;
-  private  String sqlsearch,sqlsearch2;
+  private  String sqlsearch,sqlsearch2,sqlsearch3;
   private int numeros, numero2;
   Counter count=new Counter();
   List<List> map = new ArrayList<List>();
@@ -46,6 +46,7 @@ public class ConsultasBD
 	    this.sqlsearch = this.sqlsearch.replaceAll("numo", Integer.toString(numero2));
 	    this.sqlsearch = this.sqlsearch.replaceAll("numidve", correo);
 	
+		   this.sqlsearch3="SELECT green, blue, red, alpha FROM fotos where ID_INMUEBLE='idein'";
 
 	   
 	    
@@ -60,6 +61,7 @@ public class ConsultasBD
     Connection connection = null;
     Statement statement =null;
     ResultSet resultSet = null;
+    ResultSet resultSet2 = null;
     try
     {
       connection = getConnection();
@@ -81,6 +83,14 @@ public class ConsultasBD
 	   		data.add(resultSet.getString("estado_inmueble"));
 	   		data.add(resultSet.getString("estado"));
 	   		data.add(resultSet.getString("barrio"));
+	   		this.sqlsearch3 = this.sqlsearch3.replaceAll("idein", resultSet.getString("ID"));
+		   	  resultSet2 = statement.executeQuery(this.sqlsearch3);
+		   	while(resultSet2.next()) {
+		   		data.add(resultSet2.getString("green"));
+		   		data.add(resultSet2.getString("blue"));
+		   		data.add(resultSet2.getString("red"));
+		   		data.add(resultSet2.getString("alpha"));
+		   	}
 	   		map.add(data);
 	   	  }
 	   this.map=map;

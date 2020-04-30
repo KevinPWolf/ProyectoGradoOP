@@ -111,6 +111,22 @@ public class Inmueble implements Serializable{
 	}
 	
 	
+	public String getLocalidad() {
+		return localidad;
+	}
+
+	public void setLocalidad(String localidad) {
+		this.localidad = localidad;
+	}
+
+	public Imagen getFoto() {
+		return foto;
+	}
+
+	public void setFoto(Imagen foto) {
+		this.foto = foto;
+	}
+
 	
 	@JsonProperty("nombre")
 	private String nombre;
@@ -133,6 +149,9 @@ public class Inmueble implements Serializable{
 	@JsonProperty("barrio")
 	private String barrio;
 	
+	@JsonProperty("localidad")
+	private String localidad;
+
 	@JsonProperty("ancho")
 	private String ancho;
 	
@@ -147,4 +166,7 @@ public class Inmueble implements Serializable{
 	
 	@JsonProperty("pisos")
 	private List<pisos> pisos;
+	
+	@JsonProperty("foto")
+	private Imagen foto;
 }

@@ -77,5 +77,37 @@ public class inmueble implements Serializable{
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	@JsonProperty("green")
+	private String green;
+	@JsonProperty("blue")
+	private String blue;
+	@JsonProperty("red")
+	private String red;
+	@JsonProperty("alpha")
+	private String alpha;
 	
+	public String getGreen() {
+		return green;
+	}
+	public void setGreen(String green) {
+		this.green = green;
+	}
+	public String getBlue() {
+		return blue;
+	}
+	public void setBlue(String blue) {
+		this.blue = blue;
+	}
+	public String getRed() {
+		return red;
+	}
+	public void setRed(String red) {
+		this.red = red;
+	}
+	public String getAlpha() {
+		return alpha;
+	}
+	public void setAlpha(String alpha) {
+		this.alpha = alpha;
+	}
 }

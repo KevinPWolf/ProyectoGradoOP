@@ -31,19 +31,20 @@ public class ConsultasBD
   private DataSource dataSource;
   
   
-  private  String sqlsearch;
+  private  String sqlsearch,sqlsearch3;
   
   private int numero, numero2;
   Counter count=new Counter();
   List<List> map = new ArrayList<List>();
   public void process(Exchange exchange) throws Exception {
 	  int bandera=0;
-	   this.sqlsearch="SELECT Inmueble.ancho, Inmueble.largo, Inmueble.estado_inmueble, Inmueble.precio, Inmueble.estado, Inmueble.barrio, Inmueble.direccion, Inmueble.nombre_Inmueble, Inmueble.informacion_extra, Inmueble.Tipo, telefonos.numero, Pisos.paredes, Pisos.habitaciones, Pisos.muebles, Pisos.texturas, Pisos.posiciones_muebles FROM Inmueble INNER JOIN telefonos ON Inmueble.ID_VENDEDOR = telefonos.ID_PERSONA INNER JOIN Pisos ON Inmueble.ID = Pisos.ID_inmueble where Inmueble.ID=numinid";
+	   this.sqlsearch="SELECT Inmueble.ID,Inmueble.ancho, Inmueble.largo, Inmueble.estado_inmueble, Inmueble.precio, Inmueble.estado, Inmueble.barrio, Inmueble.direccion, Inmueble.nombre_Inmueble, Inmueble.informacion_extra, Inmueble.Tipo, telefonos.numero, Pisos.paredes, Pisos.habitaciones, Pisos.muebles, Pisos.texturas, Pisos.posiciones_muebles FROM Inmueble INNER JOIN telefonos ON Inmueble.ID_VENDEDOR = telefonos.ID_PERSONA INNER JOIN Pisos ON Inmueble.ID = Pisos.ID_inmueble where Inmueble.ID=numinid";
 	    String numerot = (String) exchange.getIn().getHeader("id");
 	   
 	    this.sqlsearch = this.sqlsearch.replaceAll("numinid", numerot);
 
-	   
+		   this.sqlsearch3="SELECT green, blue, red, alpha FROM fotos where ID_INMUEBLE='idein'";
+
 	    
 	   bandera=conexion(bandera);
 	  	exchange.setProperty("bandera",bandera);
@@ -56,6 +57,7 @@ public class ConsultasBD
     Connection connection = null;
     Statement statement =null;
     ResultSet resultSet = null;
+    ResultSet resultSet2 = null;
     try
     {
       connection = getConnection();
@@ -86,6 +88,14 @@ public class ConsultasBD
 	   		data.add(resultSet.getString("muebles"));
 	   		data.add(resultSet.getString("texturas"));
 	   		data.add(resultSet.getString("posiciones_muebles"));
+	   		this.sqlsearch3 = this.sqlsearch3.replaceAll("idein", resultSet.getString("ID"));
+		   	  resultSet2 = statement.executeQuery(this.sqlsearch3);
+		   	while(resultSet2.next()) {
+		   		data.add(resultSet2.getString("green"));
+		   		data.add(resultSet2.getString("blue"));
+		   		data.add(resultSet2.getString("red"));
+		   		data.add(resultSet2.getString("alpha"));
+		   	}
 	   		map.add(data);
 	   	  }
 	   this.map=map;
