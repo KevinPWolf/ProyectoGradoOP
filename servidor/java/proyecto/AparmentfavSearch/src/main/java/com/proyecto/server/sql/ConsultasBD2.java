@@ -91,7 +91,7 @@ public class ConsultasBD2
 		   		data.add(resultSet.getString("estado"));
 		   		data.add(resultSet.getString("barrio"));
 		   		String query=this.sqlsearch3;
-		   		query = query.replaceAll("idein", resultSet.getString("ID"));
+		   		query = query.replaceAll("idein", resultSet.getString("ID_INMUEBLE"));
 			   	  resultSet2 = statement2.executeQuery(query);
 			   	while(resultSet2.next()) {
 			   			data.add(resultSet2.getString("green"));
