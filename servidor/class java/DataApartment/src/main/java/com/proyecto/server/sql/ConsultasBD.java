@@ -63,6 +63,7 @@ public class ConsultasBD
     {
       connection = getConnection();
       statement  =  connection.createStatement();
+      statement2  =  connection.createStatement();
       resultSet = statement.executeQuery(this.sqlsearch);   
       int resul=cont(resultSet);
      
