@@ -124,6 +124,7 @@ public class ConsultasBD
   {
     Connection connection = null;
     Statement statement =null;
+    Statement statement2 =null;
     ResultSet resultSet = null;
     ResultSet resultSet2 = null;
     String ID=null;
@@ -131,6 +132,7 @@ public class ConsultasBD
     {
       connection = getConnection();
       statement  =  connection.createStatement();
+      statement2  =  connection.createStatement();
       HashMap<String, String> hmap =permu(tipo,estado,estado_inmueble,precio,precio_mayor,barrio,localidad);
       
       Set set = hmap.entrySet();
@@ -179,6 +181,7 @@ public class ConsultasBD
       if(resul>0) { 
     	  resultSet = statement.executeQuery(this.sqlsearch1); 
     	  List<List> map = new ArrayList<List>();
+    	 
 	   	  while(resultSet.next()) {
 	   		List<String> data = new ArrayList<String>();
 	   		data.add(resultSet.getString("ID"));
@@ -188,22 +191,20 @@ public class ConsultasBD
 	   		data.add(resultSet.getString("estado_inmueble"));
 	   		data.add(resultSet.getString("estado"));
 	   		data.add(resultSet.getString("barrio"));
-	   		this.sqlsearch3 = this.sqlsearch3.replaceAll("idein", resultSet.getString("ID"));
-		   	  resultSet2 = statement.executeQuery(this.sqlsearch3);
+	   		String query=this.sqlsearch3;
+	   		query = query.replaceAll("idein", resultSet.getString("ID"));
+		   	  resultSet2 = statement2.executeQuery(query);
 		   	while(resultSet2.next()) {
-		   		data.add(resultSet2.getString("green"));
-		   		data.add(resultSet2.getString("blue"));
-		   		data.add(resultSet2.getString("red"));
-		   		data.add(resultSet2.getString("alpha"));
+		   			data.add(resultSet2.getString("green"));
+			   		data.add(resultSet2.getString("blue"));
+			   		data.add(resultSet2.getString("red"));
+			   		data.add(resultSet2.getString("alpha"));
 		   	}
 	   		map.add(data);
-
+	   		
 	   	  }
-	   	  
-	   	 
 	   this.map=map;
 	   resultSet = statement.executeQuery(this.sqlsearch);
-	   
 	   while(resultSet.next()) {		
 		   contb=resultSet.getString("COUNT(total.barrio)");
 	   }

@@ -54,6 +54,7 @@ public class ConsultasBD2
   {
     Connection connection = null;
     Statement statement =null;
+    Statement statement2 =null;
     ResultSet resultSet = null;
     ResultSet resultSet2 = null;
     String id_persona="";
@@ -88,13 +89,14 @@ public class ConsultasBD2
 		   		data.add(resultSet.getString("estado_inmueble"));
 		   		data.add(resultSet.getString("estado"));
 		   		data.add(resultSet.getString("barrio"));
-		   		this.sqlsearch3 = this.sqlsearch3.replaceAll("idein", resultSet.getString("ID"));
-			   	  resultSet2 = statement.executeQuery(this.sqlsearch3);
+		   		String query=this.sqlsearch3;
+		   		query = query.replaceAll("idein", resultSet.getString("ID"));
+			   	  resultSet2 = statement2.executeQuery(query);
 			   	while(resultSet2.next()) {
-			   		data.add(resultSet2.getString("green"));
-			   		data.add(resultSet2.getString("blue"));
-			   		data.add(resultSet2.getString("red"));
-			   		data.add(resultSet2.getString("alpha"));
+			   			data.add(resultSet2.getString("green"));
+				   		data.add(resultSet2.getString("blue"));
+				   		data.add(resultSet2.getString("red"));
+				   		data.add(resultSet2.getString("alpha"));
 			   	}
 		   		map.add(data);
 		   	  }
