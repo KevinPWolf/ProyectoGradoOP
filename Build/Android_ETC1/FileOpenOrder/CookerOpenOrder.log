@@ -104,554 +104,595 @@
 "../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Radio/radio_low_7_low.uasset" 103
 "../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Radio/radio_low_8_low.uasset" 104
 "../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Radio/radio_low_9_low.uasset" 105
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/door-wooden-close-a-h6-ms.uasset" 106
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/dropping-wood-c.uasset" 107
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/candy_jazz.uasset" 108
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/cocktail_jazz_party.uasset" 109
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/morning_coffee_jazz.uasset" 110
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/MPlaylist.uasset" 111
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/wood-bucket.uasset" 112
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/wood-on-wood.uasset" 113
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/wood-step-sample-1.uasset" 114
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/wooddebrisfall1.uasset" 115
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/arabic-dance-2020.uasset" 116
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/opa-191008-0073.uasset" 117
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/dropping-wood-c.uasset" 118
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/wooddebrisfall1.uasset" 119
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/floor_tiles_tx.uasset" 120
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/WoodFloor_tx.uasset" 121
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Crosses_Tiles/Tiles_033_ambientOcclusion.uasset" 122
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Crosses_Tiles/Tiles_033_normal.uasset" 123
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Crosses_Tiles/Tiles_033_roughness.uasset" 124
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Marble_Tiles/Marble_Tiles_001_ambientOcclusion.uasset" 125
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Marble_Tiles/Marble_Tiles_001_roughness.uasset" 126
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/OldyTiles/Tiles_Azulejos_004_NORM.uasset" 127
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/OldyTiles/Tiles_Azulejos_004_OCC.uasset" 128
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/OldyTiles/Tiles_Azulejos_004_ROUGH.uasset" 129
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/RubberTiles/Rubber_Floor_001_basecolor.uasset" 130
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/RubberTiles/Rubber_Floor_001_normal.uasset" 131
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/RubberTiles/Rubber_Floor_001_roughness.uasset" 132
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Stars_Tiles/Tiles_Star_and_Cross_001_ambientOcclusion.uasset" 133
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Stars_Tiles/Tiles_Star_and_Cross_001_normal.uasset" 134
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Stars_Tiles/Tiles_Star_and_Cross_001_roughness.uasset" 135
-"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 136
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/ActionInterface.uasset" 137
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_MenuButton.uasset" 138
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_InventorySlot.uasset" 139
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InventoryStruct.uasset" 140
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/WhiteSquareTexture.uasset" 141
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ControlMapping.uasset" 142
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_BasicHUD.uasset" 143
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.uasset" 144
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.uasset" 145
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorToRadialValue.uasset" 146
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/RadialMaterial.uasset" 147
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_RadialTimer.uasset" 148
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_RadialTimer.uasset" 149
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Brick_tx.uasset" 150
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/brick.uasset" 151
-"../../../Engine/Content/BasicShapes/BasicShapeMaterial.uasset" 152
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Cube.uasset" 153
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_InteractiveBase.uasset" 154
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Components/ImpactStructure.uasset" 155
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/PhysicalMaterials/HeavyWoodPM.uasset" 156
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/PhysicalMaterials/LightWoodPM.uasset" 157
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/PhysicalMaterials/MetalPM.uasset" 158
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/PhysicalMaterials/PlasticPM.uasset" 159
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/ObjectSoundAttenuation.uasset" 160
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/door-wooden-close-a-h6-ms.uasset" 161
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/wood-bucket.uasset" 162
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/wood-on-wood.uasset" 163
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/wood-step-sample-1.uasset" 164
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Components/BP_Impact.uasset" 165
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble.uasset" 166
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/fliesen2.uasset" 167
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Baldosa_Inst.uasset" 168
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ColorTiles/Tiles_028_ambientOcclusion.uasset" 169
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ColorTiles/Tiles_028_basecolor.uasset" 170
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ColorTiles/Tiles_028_normal.uasset" 171
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ColorTiles/Tiles_028_roughness.uasset" 172
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/ColorTiles.uasset" 173
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/ColorTiles_Inst.uasset" 174
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Crosses_Tiles/Tiles_033_basecolor.uasset" 175
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/M_Cross_Tiles.uasset" 176
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/M_Cross_Tiles_Inst.uasset" 177
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Stars_Tiles/Tiles_Star_and_Cross_001_basecolor.uasset" 178
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/M_Stars_Tiles.uasset" 179
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/M_Stars_Tiles_Inst.uasset" 180
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Marble_Tiles/Marble_Tiles_001_basecolor.uasset" 181
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Marble_Tiles.uasset" 182
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Marble_Tiles_Inst.uasset" 183
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/OldyTiles/Tiles_Azulejos_004_COLOR.uasset" 184
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Oldy_Tiles.uasset" 185
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Oldy_Tiles_Inst.uasset" 186
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/RubberTiles/Rubber_Floor_001_ambientOcclusion.uasset" 187
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Rubber_Tiles.uasset" 188
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Rubber_Tiles_Inst.uasset" 189
-"../../../Engine/Content/EngineMaterials/BlendFunc_DefBase.uasset" 190
-"../../../Engine/Content/EngineMaterials/BlendFunc_DefBlend.uasset" 191
-"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Blends/Blend_Overlay.uasset" 192
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Wall_tx1.uasset" 193
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/walltapiz2.uasset" 194
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/walltapiz2_Inst.uasset" 195
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Dark_Wood_Floor.uasset" 196
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/wooden.uasset" 197
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/wooden_Inst.uasset" 198
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/TextureStruct.uasset" 199
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_FloorTexturePicker.uasset" 200
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_FloorTexturePicker.uasset" 201
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/ObjectStruct.uasset" 202
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/NextBtn.uasset" 203
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Cabinete2Text.uasset" 204
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Mat_Cabinete2.uasset" 205
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Cabinete2.uasset" 206
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Lamp.uasset" 207
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Marble_Tiles/Marble_Tiles_001_normal.uasset" 208
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_ObjectPicker.uasset" 209
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_ObjectPicker.uasset" 210
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Heavy/Concrete_Wall_001_Ambient_Occlusion.uasset" 211
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Heavy/Concrete_Wall_001_Base_Color.uasset" 212
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Heavy/Concrete_Wall_001_Normal.uasset" 213
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Heavy/Concrete_Wall_001_Roughness.uasset" 214
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Concret_Heavy.uasset" 215
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Concret_Heavy_Inst.uasset" 216
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Light/Concrete_Wall_002_ambient_occlusion.uasset" 217
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Light/Concrete_Wall_002_basecolor.uasset" 218
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Light/Concrete_Wall_002_normal.uasset" 219
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Light/Concrete_Wall_002_roughness.uasset" 220
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Concret_Light.uasset" 221
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Concret_Light_Inst.uasset" 222
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Wall_tx2.uasset" 223
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/WallStones.uasset" 224
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/WallStones_Inst.uasset" 225
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Wall_tx3.uasset" 226
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/walltapiz.uasset" 227
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/walltapiz_Inst.uasset" 228
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_WallTexturePicker.uasset" 229
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_WallTexturePicker.uasset" 230
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Walls/Wall3.uasset" 231
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/AbstractProduct.uasset" 232
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Floor1.uasset" 233
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/FloorCellarProduct.uasset" 234
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Toilet/Toilet1.uasset" 235
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/ObjectProduct.uasset" 236
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/WallProduct.uasset" 237
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Glas.uasset" 238
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/M_FlatBlue.uasset" 239
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/M_FlatOrange.uasset" 240
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/MovementBase.uasset" 241
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_PlayerBase.uasset" 242
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_GameMode.uasset" 243
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_TexturePicker.uasset" 244
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_TexturePicker.uasset" 245
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BaseBox.uasset" 246
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_ChangebleBase.uasset" 247
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_FloorChangeble.uasset" 248
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Floor.uasset" 249
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_NightStand2.uasset" 250
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/eb_nightstand_01_Inst.uasset" 251
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/NightStand2.uasset" 252
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_NightStand2.uasset" 253
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_Child.uasset" 254
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/M_lamp_Inst.uasset" 255
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Lamp/eb_lamp_01_c_low.uasset" 256
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/LampLight.uasset" 257
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_Starter.uasset" 258
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_BasicContainer.uasset" 259
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_ColorPicker.uasset" 260
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_Generator.uasset" 261
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/candy_jazz2.uasset" 262
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/cocktail_jazz2_party.uasset" 263
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/creepy-music-box.uasset" 264
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/ghosts-of-mountains.uasset" 265
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/morning_coffee_jazz2.uasset" 266
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Components/SongsStructure.uasset" 267
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_GameInstance.uasset" 268
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_ConnectionManager.uasset" 269
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/LogoProyecto.uasset" 270
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/WBP_Login.uasset" 271
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_Login.uasset" 272
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/TriggerProduct.uasset" 273
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Walls/Material.uasset" 274
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/BathSink1/simple_sink_3d_model.uasset" 275
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/WoodFineDark004_COL_3K.uasset" 276
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/WoodPlanksWorn33_COL_VAR2_3K.uasset" 277
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_003.uasset" 278
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_004.uasset" 279
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_007.uasset" 280
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_008.uasset" 281
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_014.uasset" 282
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_015.uasset" 283
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_018.uasset" 284
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_019.uasset" 285
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_021.uasset" 286
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_022.uasset" 287
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_023.uasset" 288
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Wardrobe.uasset" 289
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Texture/Metallic.uasset" 290
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Texture/Samsung_Fridge_low_Samsung_Fridge_Diffuse.uasset" 291
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Texture/Samsung_Fridge_low_Samsung_Fridge_Emissive.uasset" 292
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Texture/Samsung_Fridge_low_Samsung_Fridge_Normal.uasset" 293
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Samsung_Fridge.uasset" 294
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/FridgeUltimate.uasset" 295
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Aluminum_Blurry.uasset" 296
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Black_Kick_Board.uasset" 297
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/Cherry.uasset" 298
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Cherry_Veneer.uasset" 299
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Chrome_Polished.uasset" 300
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Cold_Tap.uasset" 301
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Hot_Tap.uasset" 302
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/Marble_Carrara_003_SD/Marble_Carrara_003_COLOR.uasset" 303
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Marble_Carrera_CCO_JP.uasset" 304
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/Material_1.uasset" 305
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/Tap_Seal.uasset" 306
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/KitchenSilk.uasset" 307
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Oven.uasset" 308
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door1.uasset" 309
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door2.uasset" 310
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door3.uasset" 311
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door4.uasset" 312
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door5.uasset" 313
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door6.uasset" 314
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Walls/Wall1.uasset" 315
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Walls/Wall2.uasset" 316
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/WindowBase/Window1.uasset" 317
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/BuildingGenerator.uasset" 318
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/WallsGeneratorTest.uasset" 319
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/WallsGeneratorTest.uasset" 320
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/AbstractFactory.uasset" 321
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Floor.uasset" 322
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/WallBaseColor.uasset" 323
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Material_001.uasset" 324
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Window_Cube.uasset" 325
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Material.uasset" 326
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Window_Plane.uasset" 327
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/DoorBaseColor.uasset" 328
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Material.uasset" 329
-"../../../Engine/Content/Animation/DefaultAnimCurveCompressionSettings.uasset" 330
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.uasset" 331
-"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_M.uasset" 332
-"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_N.uasset" 333
-"../../../Engine/Content/EngineMaterials/WorldGridMaterial.uasset" 334
-"../../../Engine/Content/ArtTools/RenderToTexture/Meshes/S_1_Unit_Plane.uasset" 335
-"../../../Engine/Content/EngineMaterials/DefaultMaterial.uasset" 336
-"../../../Engine/Content/BasicShapes/Cone.uasset" 337
-"../../../Engine/Content/BasicShapes/Cube.uasset" 338
-"../../../Engine/Content/BasicShapes/Cylinder.uasset" 339
-"../../../Engine/Content/BasicShapes/Plane.uasset" 340
-"../../../Engine/Content/BasicShapes/Sphere.uasset" 341
-"../../../Engine/Content/EditorLandscapeResources/DataLayer.uasset" 342
-"../../../Engine/Content/EditorMaterials/MAT_Groups_Toggle.uasset" 343
-"../../../Engine/Content/EditorMaterials/MAT_Groups_Visibility.uasset" 344
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 345
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 346
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_ColorTrack.uasset" 347
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Anim.uasset" 348
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_AudioMaster.uasset" 349
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Director.uasset" 350
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Event.uasset" 351
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Fade.uasset" 352
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Float.uasset" 353
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Move.uasset" 354
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Slomo.uasset" 355
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Sound.uasset" 356
-"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Vector.uasset" 357
-"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_NoImage.uasset" 358
-"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_OOD.uasset" 359
-"../../../Engine/Content/EditorMaterials/Camera/CineMat.uasset" 360
-"../../../Engine/Content/EditorMaterials/Camera/MI_CineMat_Rig.uasset" 361
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Arm.uasset" 362
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Base.uasset" 363
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Body.uasset" 364
-"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Mount.uasset" 365
-"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Mount.uasset" 366
-"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.uasset" 367
-"../../../Engine/Content/EditorResources/BSPVertex.uasset" 368
-"../../../Engine/Content/EditorResources/EmptyActor.uasset" 369
-"../../../Engine/Content/EditorResources/S_Actor.uasset" 370
-"../../../Engine/Content/EditorResources/S_Note.uasset" 371
-"../../../Engine/Content/EditorResources/S_Solver.uasset" 372
-"../../../Engine/Content/EditorResources/S_Trigger.uasset" 373
-"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 374
-"../../../Engine/Content/EditorResources/SequenceRecorder/Countdown.uasset" 375
-"../../../Engine/Content/EditorResources/SequenceRecorder/RecordingIndicator.uasset" 376
-"../../../Engine/Content/EditorSounds/Notifications/CompileFailed.uasset" 377
-"../../../Engine/Content/EditorSounds/Notifications/CompileFailed_Cue.uasset" 378
-"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess.uasset" 379
-"../../../Engine/Content/EditorSounds/Notifications/CompileStart_Cue.uasset" 380
-"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess_Cue.uasset" 381
-"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset" 382
-"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 383
-"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 384
-"../../../Engine/Content/EngineDebugMaterials/M_SimpleTranslucent.uasset" 385
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.uasset" 386
-"../../../Engine/Content/EngineDebugMaterials/VolumeToRender.uasset" 387
-"../../../Engine/Content/EngineDebugMaterials/M_VolumeRenderSphereTracePP.uasset" 388
-"../../../Engine/Content/EngineDebugMaterials/WireframeMaterial.uasset" 389
-"../../../Engine/Content/EngineFonts/Faces/DroidSansFallback.uasset" 390
-"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uasset" 391
-"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset" 392
-"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uasset" 393
-"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uasset" 394
-"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uasset" 395
-"../../../Engine/Content/EngineFonts/Roboto.uasset" 396
-"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap.uasset" 397
-"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap.uasset" 398
-"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap.uasset" 399
-"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap.uasset" 400
-"../../../Engine/Content/EngineMaterials/BaseFlattenMaterial.uasset" 401
-"../../../Engine/Content/EngineMaterials/BlueNoise.uasset" 402
-"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uasset" 403
-"../../../Engine/Content/EngineMaterials/DefaultBokeh.uasset" 404
-"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uasset" 405
-"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset" 406
-"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset" 407
-"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 408
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset" 409
-"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset" 410
-"../../../Engine/Content/EngineFonts/RobotoDistanceField.uasset" 411
-"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset" 412
-"../../../Engine/Content/EngineMaterials/DefaultVirtualTextureMaterial.uasset" 413
-"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid.uasset" 414
-"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid_Low.uasset" 415
-"../../../Engine/Content/EngineMaterials/EmissiveMeshMaterial.uasset" 416
-"../../../Engine/Content/EngineMaterials/GizmoMaterial.uasset" 417
-"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 418
-"../../../Engine/Content/EngineMaterials/HairDefaultMaterial.uasset" 419
-"../../../Engine/Content/EngineMaterials/MiniFont.uasset" 420
-"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 421
-"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 422
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/CameraOffset.uasset" 423
-"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset" 424
-"../../../Engine/Content/EngineMaterials/PreintegratedSkinBRDF.uasset" 425
-"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 426
-"../../../Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.uasset" 427
-"../../../Engine/Content/EngineResources/WhiteSquareTexture.uasset" 428
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uasset" 429
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 430
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset" 431
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 432
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset" 433
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 434
-"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset" 435
-"../../../Engine/Content/EngineMeshes/Cylinder.uasset" 436
-"../../../Engine/Content/EngineMeshes/Sphere.uasset" 437
-"../../../Engine/Content/EngineResources/Black.uasset" 438
-"../../../Engine/Content/EngineResources/DefaultTexture.uasset" 439
-"../../../Engine/Content/EngineResources/DefaultTextureCube.uasset" 440
-"../../../Engine/Content/EngineResources/DefaultVolumeTexture2D.uasset" 441
-"../../../Engine/Content/EngineResources/DefaultVolumeTexture.uasset" 442
-"../../../Engine/Content/EngineResources/GradientTexture0.uasset" 443
-"../../../Engine/Content/EngineSounds/Master.uasset" 444
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec.uasset" 445
-"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uasset" 446
-"../../../Engine/Content/Maps/Templates/Thumbnails/Default.uasset" 447
-"../../../Engine/Content/Maps/Templates/Thumbnails/TimeOfDay.uasset" 448
-"../../../Engine/Content/Maps/Templates/Thumbnails/VR-Basic.uasset" 449
-"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 450
-"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 451
-"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 452
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 453
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 454
-"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 455
-"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 456
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 457
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 458
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 459
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 460
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 461
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 462
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 463
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 464
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 465
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 466
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 467
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 468
-"../../../Engine/Content/Tutorial/ContentIntroCurve.uasset" 469
-"../../../Engine/Content/Tutorial/Basics/LevelEditorAttract.uasset" 470
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Blueprint_64x.uasset" 471
-"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintEditorTutorial.uasset" 472
-"../../../Engine/Content/VREditor/LaserPointer/VR_LaserPower_01.uasset" 473
-"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial.uasset" 474
-"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.uasset" 475
-"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.uasset" 476
-"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxEdge.uasset" 477
-"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uasset" 478
-"../../../Engine/Content/VREditor/TransformGizmo/Main.uasset" 479
-"../../../Engine/Content/VREditor/TransformGizmo/Xray.uasset" 480
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Key.uasset" 481
-"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Node.uasset" 482
-"../../Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.uasset" 483
-"../../Plugins/2D/Paper2D/Content/DummySprite.uasset" 484
-"../../Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uasset" 485
-"../../Plugins/2D/Paper2D/Content/DummySpriteTexture.uasset" 486
-"../../Plugins/2D/Paper2D/Content/DefaultSpriteMaterial.uasset" 487
-"../../Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset" 488
-"../../Plugins/2D/Paper2D/Content/OpaqueUnlitSpriteMaterial.uasset" 489
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorAlmostFull.uasset" 490
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorCharging.uasset" 491
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorCriticalLow.uasset" 492
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorFull.uasset" 493
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorLow.uasset" 494
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorMaterial.uasset" 495
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorMedium.uasset" 496
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorUnknown.uasset" 497
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerParameters.uasset" 498
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerIdleTexture.uasset" 499
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerBaseMaterial.uasset" 500
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerAppTexture.uasset" 501
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerAppMaterial.uasset" 502
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerIdleMaterial.uasset" 503
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerMesh.uasset" 504
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerPadTexture.uasset" 505
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerPadMaterial.uasset" 506
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerReticleTexture.uasset" 507
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerRetMaterial.uasset" 508
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerSysTexture.uasset" 509
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerSysMaterial.uasset" 510
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SplitComponents.uasset" 511
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.uasset" 512
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/GazeReticleMaterial.uasset" 513
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/GazeReticleMesh.uasset" 514
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.uasset" 515
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/LocalPosition.uasset" 516
-"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uasset" 517
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/LaserPointerTexture.uasset" 518
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/LaserPlaneMaterial.uasset" 519
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/LaserPlane.uasset" 520
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/TooltipTextMaterial.uasset" 521
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/TouchTexture.uasset" 522
-"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/TouchMaterial.uasset" 523
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/LoginScreen_BuiltData.uasset" 524
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/LoginScreen.umap" 525
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_SesionManager.uasset" 526
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Empty.uasset" 527
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WhiteSquare.uasset" 528
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Widgets/ButtonsStructure.uasset" 529
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/M_Furnitures.uasset" 530
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/M_Furnitures_Inst.uasset" 531
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Widgets/ButtonImage.uasset" 532
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Widgets/ButtonContainer.uasset" 533
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Door.uasset" 534
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Door2.uasset" 535
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Door3.uasset" 536
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Door4.uasset" 537
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWall.uasset" 538
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWall2.uasset" 539
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWall3.uasset" 540
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWall4.uasset" 541
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWallWall.uasset" 542
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWallWall2.uasset" 543
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWallWall3.uasset" 544
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWallWall4.uasset" 545
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoubleWall.uasset" 546
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoubleWall2.uasset" 547
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoubleWall3.uasset" 548
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoubleWall4.uasset" 549
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Lavamanos1.uasset" 550
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Lavamanos2.uasset" 551
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Lavamanos3.uasset" 552
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Lavamanos4.uasset" 553
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Mesera1.uasset" 554
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Mesera2.uasset" 555
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Mesera3.uasset" 556
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Mesera4.uasset" 557
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Toilet1.uasset" 558
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Toilet2.uasset" 559
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Toilet3.uasset" 560
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Toilet4.uasset" 561
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/TripleWall.uasset" 562
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/TripleWall2.uasset" 563
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/TripleWall3.uasset" 564
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/TripleWall4.uasset" 565
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Wall.uasset" 566
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Wall2.uasset" 567
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Wall3.uasset" 568
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Wall4.uasset" 569
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoor.uasset" 570
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoor2.uasset" 571
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoor3.uasset" 572
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoor4.uasset" 573
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoorWall.uasset" 574
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoorWall2.uasset" 575
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoorWall3.uasset" 576
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoorWall4.uasset" 577
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallWallDoor.uasset" 578
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallWallDoor2.uasset" 579
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallWallDoor3.uasset" 580
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallWallDoor4.uasset" 581
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Window.uasset" 582
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Window2.uasset" 583
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Window3.uasset" 584
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Window4.uasset" 585
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Widgets/WBP_Generator.uasset" 586
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/M_Retainer.uasset" 587
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/BackMarkerBase.uasset" 588
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/BackMarkerNoSelected.uasset" 589
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/BackMarkerSelected.uasset" 590
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/HammerImage.uasset" 591
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Hand.uasset" 592
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/LupaImage.uasset" 593
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization0.uasset" 594
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization1.uasset" 595
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization2.uasset" 596
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization3.uasset" 597
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization4.uasset" 598
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization5.uasset" 599
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/ProfileImage.uasset" 600
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating0.uasset" 601
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating1.uasset" 602
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating2.uasset" 603
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating3.uasset" 604
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating4.uasset" 605
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating5.uasset" 606
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/StarImage.uasset" 607
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/ApartmentInfoStructure.uasset" 608
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/WBP_ApartmentInfo.uasset" 609
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/WBP_Sesion.uasset" 610
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/MainScreen.umap" 611
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/Pruebas.umap" 612
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Control.uasset" 613
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_MovementSelector.uasset" 614
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_MovementSelector.uasset" 615
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_RadioPlayer.uasset" 616
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/MP_radio.uasset" 617
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_MusicSelector.uasset" 618
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Radio_Inst.uasset" 619
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Radio.uasset" 620
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_InteractiveBase_Radio.uasset" 621
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_InteractiveMovMachine.uasset" 622
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Wood_Table_Inst.uasset" 623
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_NightStand.uasset" 624
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/NightStand.uasset" 625
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_NightStand.uasset" 626
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_WallChangeble.uasset" 627
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/StartUp_Map.umap" 628
-"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 629
-"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 630
-"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 631
-"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 632
-"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 633
-"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 634
-"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 635
-"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 636
-"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 637
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Components/BP_MusicPlayer.uasset" 638
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_CDPlayer.uasset" 639
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/CDPlayer/CD_Player_v1_diffuse1.uasset" 640
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/CD_Player_v1_diffuse.uasset" 641
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/CD_Player_v1_diffuse_Inst.uasset" 642
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/CDPlayer/CD_Player.uasset" 643
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_CDPlayer.uasset" 644
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_Lamp.uasset" 645
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_Lamp.uasset" 646
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_Radio.uasset" 647
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_Radio.uasset" 648
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/StructureBase.uasset" 649
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_InteractiveTeleportPad.uasset" 650
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/TelepCSV.uasset" 651
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/ObjectsGenerator.uasset" 652
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/Viewer_BuiltData.uasset" 653
-"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/Viewer.umap" 654
-"../../../Engine/Content/Maps/Entry_BuiltData.uasset" 655
-"../../../Engine/Content/Maps/Entry.umap" 656
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.uasset" 106
+"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_M.uasset" 107
+"../../../Engine/Content/EngineMaterials/T_Default_Material_Grid_N.uasset" 108
+"../../../Engine/Content/EngineMaterials/WorldGridMaterial.uasset" 109
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Stairs/3d-model.uasset" 110
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Stairs/M_Metal.uasset" 111
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Stairs/Marble_900_x_634_px_mfr_14.uasset" 112
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Stairs/wire_153214228.uasset" 113
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Stairs/StairCase2.uasset" 114
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Stairs/StairCase_Object01.uasset" 115
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Stairs/StairCase_Object02.uasset" 116
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Stairs/StairCase_sub04.uasset" 117
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/door-wooden-close-a-h6-ms.uasset" 118
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/dropping-wood-c.uasset" 119
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/candy_jazz.uasset" 120
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/cocktail_jazz_party.uasset" 121
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/morning_coffee_jazz.uasset" 122
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/MPlaylist.uasset" 123
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/wood-bucket.uasset" 124
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/wood-on-wood.uasset" 125
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/wood-step-sample-1.uasset" 126
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/wooddebrisfall1.uasset" 127
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/arabic-dance-2020.uasset" 128
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/opa-191008-0073.uasset" 129
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/dropping-wood-c.uasset" 130
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/wooddebrisfall1.uasset" 131
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Control.uasset" 132
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/floor_tiles_tx.uasset" 133
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/WoodFloor_tx.uasset" 134
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Crosses_Tiles/Tiles_033_ambientOcclusion.uasset" 135
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Crosses_Tiles/Tiles_033_normal.uasset" 136
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Crosses_Tiles/Tiles_033_roughness.uasset" 137
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Marble_Tiles/Marble_Tiles_001_ambientOcclusion.uasset" 138
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Marble_Tiles/Marble_Tiles_001_roughness.uasset" 139
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/OldyTiles/Tiles_Azulejos_004_NORM.uasset" 140
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/OldyTiles/Tiles_Azulejos_004_OCC.uasset" 141
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/OldyTiles/Tiles_Azulejos_004_ROUGH.uasset" 142
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/RubberTiles/Rubber_Floor_001_basecolor.uasset" 143
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/RubberTiles/Rubber_Floor_001_normal.uasset" 144
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/RubberTiles/Rubber_Floor_001_roughness.uasset" 145
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Stars_Tiles/Tiles_Star_and_Cross_001_ambientOcclusion.uasset" 146
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Stars_Tiles/Tiles_Star_and_Cross_001_normal.uasset" 147
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Stars_Tiles/Tiles_Star_and_Cross_001_roughness.uasset" 148
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/PlayerParts/Hand_Skeleton.uasset" 149
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/PlayerParts/Hand_GrabAnimation.uasset" 150
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/PlayerParts/Hand_Idle.uasset" 151
+"../../../Engine/Content/EditorBlueprintResources/StandardMacros.uasset" 152
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/PlayerParts/NewAnimBlueprint.uasset" 153
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/ActionInterface.uasset" 154
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/candy_jazz2.uasset" 155
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/cocktail_jazz2_party.uasset" 156
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/creepy-music-box.uasset" 157
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/ghosts-of-mountains.uasset" 158
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/BackgroundSongs/morning_coffee_jazz2.uasset" 159
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Components/SongsStructure.uasset" 160
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/FloorInfoStructure.uasset" 161
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/ApartmentInfoStructure.uasset" 162
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Empty.uasset" 163
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WhiteSquare.uasset" 164
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Widgets/ButtonsStructure.uasset" 165
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_GameInstance.uasset" 166
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_MenuButton.uasset" 167
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_InventorySlot.uasset" 168
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InventoryStruct.uasset" 169
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/WhiteSquareTexture.uasset" 170
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_TutorialGuide.uasset" 171
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_BasicHUD.uasset" 172
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.uasset" 173
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.uasset" 174
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorToRadialValue.uasset" 175
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/RadialMaterial.uasset" 176
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_RadialTimer.uasset" 177
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_RadialTimer.uasset" 178
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Brick_tx.uasset" 179
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/brick.uasset" 180
+"../../../Engine/Content/BasicShapes/BasicShapeMaterial.uasset" 181
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Cube.uasset" 182
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_InteractiveBase.uasset" 183
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Components/ImpactStructure.uasset" 184
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/PhysicalMaterials/HeavyWoodPM.uasset" 185
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/PhysicalMaterials/LightWoodPM.uasset" 186
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/PhysicalMaterials/MetalPM.uasset" 187
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/PhysicalMaterials/PlasticPM.uasset" 188
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/ObjectSoundAttenuation.uasset" 189
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/door-wooden-close-a-h6-ms.uasset" 190
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/wood-bucket.uasset" 191
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/wood-on-wood.uasset" 192
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/wood-step-sample-1.uasset" 193
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Components/BP_Impact.uasset" 194
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble.uasset" 195
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/fliesen2.uasset" 196
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Baldosa_Inst.uasset" 197
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ColorTiles/Tiles_028_ambientOcclusion.uasset" 198
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ColorTiles/Tiles_028_basecolor.uasset" 199
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ColorTiles/Tiles_028_normal.uasset" 200
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ColorTiles/Tiles_028_roughness.uasset" 201
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/ColorTiles.uasset" 202
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/ColorTiles_Inst.uasset" 203
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Crosses_Tiles/Tiles_033_basecolor.uasset" 204
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/M_Cross_Tiles.uasset" 205
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/M_Cross_Tiles_Inst.uasset" 206
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Stars_Tiles/Tiles_Star_and_Cross_001_basecolor.uasset" 207
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/M_Stars_Tiles.uasset" 208
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/M_Stars_Tiles_Inst.uasset" 209
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Marble_Tiles/Marble_Tiles_001_basecolor.uasset" 210
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Marble_Tiles.uasset" 211
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Marble_Tiles_Inst.uasset" 212
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/OldyTiles/Tiles_Azulejos_004_COLOR.uasset" 213
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Oldy_Tiles.uasset" 214
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Oldy_Tiles_Inst.uasset" 215
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/RubberTiles/Rubber_Floor_001_ambientOcclusion.uasset" 216
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Rubber_Tiles.uasset" 217
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Rubber_Tiles_Inst.uasset" 218
+"../../../Engine/Content/EngineMaterials/BlendFunc_DefBase.uasset" 219
+"../../../Engine/Content/EngineMaterials/BlendFunc_DefBlend.uasset" 220
+"../../../Engine/Content/Functions/Engine_MaterialFunctions03/Blends/Blend_Overlay.uasset" 221
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Wall_tx1.uasset" 222
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/walltapiz2.uasset" 223
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/walltapiz2_Inst.uasset" 224
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Dark_Wood_Floor.uasset" 225
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/wooden.uasset" 226
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/wooden_Inst.uasset" 227
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/TextureStruct.uasset" 228
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_FloorTexturePicker.uasset" 229
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_FloorTexturePicker.uasset" 230
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/ObjectStruct.uasset" 231
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/NextBtn.uasset" 232
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Cabinete2Text.uasset" 233
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Mat_Cabinete2.uasset" 234
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Cabinete2.uasset" 235
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Lamp.uasset" 236
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Marble_Tiles/Marble_Tiles_001_normal.uasset" 237
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_ObjectPicker.uasset" 238
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_ObjectPicker.uasset" 239
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Heavy/Concrete_Wall_001_Ambient_Occlusion.uasset" 240
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Heavy/Concrete_Wall_001_Base_Color.uasset" 241
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Heavy/Concrete_Wall_001_Normal.uasset" 242
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Heavy/Concrete_Wall_001_Roughness.uasset" 243
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Concret_Heavy.uasset" 244
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Concret_Heavy_Inst.uasset" 245
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Light/Concrete_Wall_002_ambient_occlusion.uasset" 246
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Light/Concrete_Wall_002_basecolor.uasset" 247
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Light/Concrete_Wall_002_normal.uasset" 248
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Concret_Light/Concrete_Wall_002_roughness.uasset" 249
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Concret_Light.uasset" 250
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Concret_Light_Inst.uasset" 251
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Wall_tx2.uasset" 252
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/WallStones.uasset" 253
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/WallStones_Inst.uasset" 254
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/Wall_tx3.uasset" 255
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/walltapiz.uasset" 256
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/walltapiz_Inst.uasset" 257
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_WallTexturePicker.uasset" 258
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_WallTexturePicker.uasset" 259
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Walls/Wall3.uasset" 260
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/AbstractProduct.uasset" 261
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Floor1.uasset" 262
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/FloorCellarProduct.uasset" 263
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Toilet/Toilet1.uasset" 264
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/ObjectProduct.uasset" 265
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/WallProduct.uasset" 266
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/Glas.uasset" 267
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/M_FlatBlue.uasset" 268
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/PlayerParts/FeetMat.uasset" 269
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/PlayerParts/Feet.uasset" 270
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/PlayerParts/Material.uasset" 271
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/PlayerParts/Hand_Physics.uasset" 272
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/PlayerParts/Hand_Mesh.uasset" 273
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_RadioPlayer.uasset" 274
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Textures/ControlMapping.uasset" 275
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_OptionsMenu.uasset" 276
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_PlayerBase.uasset" 277
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_GameMode.uasset" 278
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Components/BP_MusicPlayer.uasset" 279
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BaseBox.uasset" 280
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_ChangebleBase.uasset" 281
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_FloorChangeble.uasset" 282
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Floor.uasset" 283
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_MovementSelector.uasset" 284
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/MP_radio.uasset" 285
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_MusicSelector.uasset" 286
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Radio_Inst.uasset" 287
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Radio.uasset" 288
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_InteractiveBase_Radio.uasset" 289
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_InteractiveMovMachine.uasset" 290
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_CDPlayer.uasset" 291
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/CDPlayer/CD_Player_v1_diffuse1.uasset" 292
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/BaseMaterials/CD_Player_v1_diffuse.uasset" 293
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/CD_Player_v1_diffuse_Inst.uasset" 294
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/CDPlayer/CD_Player.uasset" 295
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_CDPlayer.uasset" 296
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_NightStand2.uasset" 297
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/eb_nightstand_01_Inst.uasset" 298
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/NightStand2.uasset" 299
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_NightStand2.uasset" 300
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_Child.uasset" 301
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/M_lamp_Inst.uasset" 302
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_Lamp.uasset" 303
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_Lamp.uasset" 304
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/MatelialInstances/Wood_Table_Inst.uasset" 305
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_NightStand.uasset" 306
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/NightStand.uasset" 307
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_NightStand.uasset" 308
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/IC_Radio.uasset" 309
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_Moveble_Radio.uasset" 310
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Walls/Wall1.uasset" 311
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_WallChangeble.uasset" 312
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Lamp/eb_lamp_01_c_low.uasset" 313
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/LampLight.uasset" 314
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/BP_BasicContainer.uasset" 315
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_ConnectionManager.uasset" 316
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/LogoProyecto.uasset" 317
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/WBP_Login.uasset" 318
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/WBP_Login.uasset" 319
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/TriggerProduct.uasset" 320
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Walls/Material.uasset" 321
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/BathSink1/simple_sink_3d_model.uasset" 322
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/WoodFineDark004_COL_3K.uasset" 323
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/WoodPlanksWorn33_COL_VAR2_3K.uasset" 324
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_003.uasset" 325
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_004.uasset" 326
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_007.uasset" 327
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_008.uasset" 328
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_014.uasset" 329
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_015.uasset" 330
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_018.uasset" 331
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_019.uasset" 332
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_021.uasset" 333
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_022.uasset" 334
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Material_023.uasset" 335
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/BedRoom/Wardrobe.uasset" 336
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Texture/Metallic.uasset" 337
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Texture/Samsung_Fridge_low_Samsung_Fridge_Diffuse.uasset" 338
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Texture/Samsung_Fridge_low_Samsung_Fridge_Emissive.uasset" 339
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Texture/Samsung_Fridge_low_Samsung_Fridge_Normal.uasset" 340
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Samsung_Fridge.uasset" 341
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/FridgeUltimate.uasset" 342
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Aluminum_Blurry.uasset" 343
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Black_Kick_Board.uasset" 344
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/Cherry.uasset" 345
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Cherry_Veneer.uasset" 346
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Chrome_Polished.uasset" 347
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Cold_Tap.uasset" 348
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Hot_Tap.uasset" 349
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/Marble_Carrara_003_SD/Marble_Carrara_003_COLOR.uasset" 350
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/_Marble_Carrera_CCO_JP.uasset" 351
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/Material_1.uasset" 352
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Bathroom/Sink/KitchenSink/Tap_Seal.uasset" 353
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/KitchenSilk.uasset" 354
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Kitchen/Oven.uasset" 355
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/Stairs/StairCase.uasset" 356
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door1.uasset" 357
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door2.uasset" 358
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door3.uasset" 359
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door4.uasset" 360
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door5.uasset" 361
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Door6.uasset" 362
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Floor.uasset" 363
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/FloorCellar.uasset" 364
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Walls/Wall2.uasset" 365
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/WindowBase/Window1.uasset" 366
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/BuildingGenerator.uasset" 367
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/WallsGeneratorTest.uasset" 368
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/WallsGeneratorTest.uasset" 369
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/AbstractFactory/AbstractFactory.uasset" 370
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/WallBaseColor.uasset" 371
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Material_001.uasset" 372
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Window_Cube.uasset" 373
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Material.uasset" 374
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Window_Plane.uasset" 375
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/DoorBaseColor.uasset" 376
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/Meshes/Doors/Material.uasset" 377
+"../../../Engine/Content/Animation/DefaultAnimCurveCompressionSettings.uasset" 378
+"../../../Engine/Content/ArtTools/RenderToTexture/Meshes/S_1_Unit_Plane.uasset" 379
+"../../../Engine/Content/EngineMaterials/DefaultMaterial.uasset" 380
+"../../../Engine/Content/BasicShapes/Cone.uasset" 381
+"../../../Engine/Content/BasicShapes/Cube.uasset" 382
+"../../../Engine/Content/BasicShapes/Cylinder.uasset" 383
+"../../../Engine/Content/BasicShapes/Plane.uasset" 384
+"../../../Engine/Content/BasicShapes/Sphere.uasset" 385
+"../../../Engine/Content/EditorLandscapeResources/DataLayer.uasset" 386
+"../../../Engine/Content/EditorMaterials/MAT_Groups_Toggle.uasset" 387
+"../../../Engine/Content/EditorMaterials/MAT_Groups_Visibility.uasset" 388
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 389
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 390
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_ColorTrack.uasset" 391
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Anim.uasset" 392
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_AudioMaster.uasset" 393
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Director.uasset" 394
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Event.uasset" 395
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Fade.uasset" 396
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Float.uasset" 397
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Move.uasset" 398
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Slomo.uasset" 399
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Sound.uasset" 400
+"../../../Engine/Content/EditorMaterials/MatineeGroups/MAT_Groups_Vector.uasset" 401
+"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_NoImage.uasset" 402
+"../../../Engine/Content/EditorMaterials/ParticleSystems/PSysThumbnail_OOD.uasset" 403
+"../../../Engine/Content/EditorMaterials/Camera/CineMat.uasset" 404
+"../../../Engine/Content/EditorMaterials/Camera/MI_CineMat_Rig.uasset" 405
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Arm.uasset" 406
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Base.uasset" 407
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Body.uasset" 408
+"../../../Engine/Content/EditorMeshes/Camera/SM_CraneRig_Mount.uasset" 409
+"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Mount.uasset" 410
+"../../../Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.uasset" 411
+"../../../Engine/Content/EditorResources/BSPVertex.uasset" 412
+"../../../Engine/Content/EditorResources/EmptyActor.uasset" 413
+"../../../Engine/Content/EditorResources/S_Actor.uasset" 414
+"../../../Engine/Content/EditorResources/S_Note.uasset" 415
+"../../../Engine/Content/EditorResources/S_Solver.uasset" 416
+"../../../Engine/Content/EditorResources/S_Trigger.uasset" 417
+"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 418
+"../../../Engine/Content/EditorResources/SequenceRecorder/Countdown.uasset" 419
+"../../../Engine/Content/EditorResources/SequenceRecorder/RecordingIndicator.uasset" 420
+"../../../Engine/Content/EditorSounds/Notifications/CompileFailed.uasset" 421
+"../../../Engine/Content/EditorSounds/Notifications/CompileFailed_Cue.uasset" 422
+"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess.uasset" 423
+"../../../Engine/Content/EditorSounds/Notifications/CompileStart_Cue.uasset" 424
+"../../../Engine/Content/EditorSounds/Notifications/CompileSuccess_Cue.uasset" 425
+"../../../Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset" 426
+"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 427
+"../../../Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset" 428
+"../../../Engine/Content/EngineDebugMaterials/M_SimpleTranslucent.uasset" 429
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.uasset" 430
+"../../../Engine/Content/EngineDebugMaterials/VolumeToRender.uasset" 431
+"../../../Engine/Content/EngineDebugMaterials/M_VolumeRenderSphereTracePP.uasset" 432
+"../../../Engine/Content/EngineDebugMaterials/WireframeMaterial.uasset" 433
+"../../../Engine/Content/EngineFonts/Faces/DroidSansFallback.uasset" 434
+"../../../Engine/Content/EngineFonts/Faces/RobotoBold.uasset" 435
+"../../../Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset" 436
+"../../../Engine/Content/EngineFonts/Faces/RobotoItalic.uasset" 437
+"../../../Engine/Content/EngineFonts/Faces/RobotoLight.uasset" 438
+"../../../Engine/Content/EngineFonts/Faces/RobotoRegular.uasset" 439
+"../../../Engine/Content/EngineFonts/Roboto.uasset" 440
+"../../../Engine/Content/EngineMaterials/BaseFlattenDiffuseMap.uasset" 441
+"../../../Engine/Content/EngineMaterials/BaseFlattenEmissiveMap.uasset" 442
+"../../../Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap.uasset" 443
+"../../../Engine/Content/EngineMaterials/BaseFlattenNormalMap.uasset" 444
+"../../../Engine/Content/EngineMaterials/BaseFlattenMaterial.uasset" 445
+"../../../Engine/Content/EngineMaterials/BlueNoise.uasset" 446
+"../../../Engine/Content/EngineMaterials/DefaultBloomKernel.uasset" 447
+"../../../Engine/Content/EngineMaterials/DefaultBokeh.uasset" 448
+"../../../Engine/Content/EngineMaterials/DefaultDiffuse.uasset" 449
+"../../../Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset" 450
+"../../../Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset" 451
+"../../../Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset" 452
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset" 453
+"../../../Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset" 454
+"../../../Engine/Content/EngineFonts/RobotoDistanceField.uasset" 455
+"../../../Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset" 456
+"../../../Engine/Content/EngineMaterials/DefaultVirtualTextureMaterial.uasset" 457
+"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid.uasset" 458
+"../../../Engine/Content/EngineMaterials/DefaultWhiteGrid_Low.uasset" 459
+"../../../Engine/Content/EngineMaterials/EmissiveMeshMaterial.uasset" 460
+"../../../Engine/Content/EngineMaterials/GizmoMaterial.uasset" 461
+"../../../Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset" 462
+"../../../Engine/Content/EngineMaterials/HairDefaultMaterial.uasset" 463
+"../../../Engine/Content/EngineMaterials/MiniFont.uasset" 464
+"../../../Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset" 465
+"../../../Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset" 466
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/CameraOffset.uasset" 467
+"../../../Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset" 468
+"../../../Engine/Content/EngineMaterials/PreintegratedSkinBRDF.uasset" 469
+"../../../Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset" 470
+"../../../Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.uasset" 471
+"../../../Engine/Content/EngineResources/WhiteSquareTexture.uasset" 472
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough.uasset" 473
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset" 474
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset" 475
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset" 476
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset" 477
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset" 478
+"../../../Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset" 479
+"../../../Engine/Content/EngineMeshes/Cylinder.uasset" 480
+"../../../Engine/Content/EngineMeshes/Sphere.uasset" 481
+"../../../Engine/Content/EngineResources/Black.uasset" 482
+"../../../Engine/Content/EngineResources/DefaultTexture.uasset" 483
+"../../../Engine/Content/EngineResources/DefaultTextureCube.uasset" 484
+"../../../Engine/Content/EngineResources/DefaultVolumeTexture2D.uasset" 485
+"../../../Engine/Content/EngineResources/DefaultVolumeTexture.uasset" 486
+"../../../Engine/Content/EngineResources/GradientTexture0.uasset" 487
+"../../../Engine/Content/EngineSounds/Master.uasset" 488
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec.uasset" 489
+"../../../Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uasset" 490
+"../../../Engine/Content/Maps/Templates/Thumbnails/Default.uasset" 491
+"../../../Engine/Content/Maps/Templates/Thumbnails/TimeOfDay.uasset" 492
+"../../../Engine/Content/Maps/Templates/Thumbnails/VR-Basic.uasset" 493
+"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 494
+"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 495
+"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 496
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 497
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 498
+"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 499
+"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 500
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 501
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 502
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 503
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 504
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 505
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 506
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 507
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 508
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 509
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 510
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 511
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 512
+"../../../Engine/Content/Tutorial/ContentIntroCurve.uasset" 513
+"../../../Engine/Content/Tutorial/Basics/LevelEditorAttract.uasset" 514
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Blueprint_64x.uasset" 515
+"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintEditorTutorial.uasset" 516
+"../../../Engine/Content/VREditor/LaserPointer/VR_LaserPower_01.uasset" 517
+"../../../Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial.uasset" 518
+"../../../Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.uasset" 519
+"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.uasset" 520
+"../../../Engine/Content/VREditor/TransformGizmo/BoundingBoxEdge.uasset" 521
+"../../../Engine/Content/VREditor/TransformGizmo/PlaneTranslationHandle.uasset" 522
+"../../../Engine/Content/VREditor/TransformGizmo/Main.uasset" 523
+"../../../Engine/Content/VREditor/TransformGizmo/Xray.uasset" 524
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Key.uasset" 525
+"../../../Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Node.uasset" 526
+"../../Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.uasset" 527
+"../../Plugins/2D/Paper2D/Content/DummySprite.uasset" 528
+"../../Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uasset" 529
+"../../Plugins/2D/Paper2D/Content/DummySpriteTexture.uasset" 530
+"../../Plugins/2D/Paper2D/Content/DefaultSpriteMaterial.uasset" 531
+"../../Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset" 532
+"../../Plugins/2D/Paper2D/Content/OpaqueUnlitSpriteMaterial.uasset" 533
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorAlmostFull.uasset" 534
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorCharging.uasset" 535
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorCriticalLow.uasset" 536
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorFull.uasset" 537
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorLow.uasset" 538
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorMaterial.uasset" 539
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorMedium.uasset" 540
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/BatteryIndicatorUnknown.uasset" 541
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerParameters.uasset" 542
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerIdleTexture.uasset" 543
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerBaseMaterial.uasset" 544
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerAppTexture.uasset" 545
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerAppMaterial.uasset" 546
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerIdleMaterial.uasset" 547
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerMesh.uasset" 548
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerPadTexture.uasset" 549
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerPadMaterial.uasset" 550
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerReticleTexture.uasset" 551
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerRetMaterial.uasset" 552
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerSysTexture.uasset" 553
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/ControllerSysMaterial.uasset" 554
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/SplitComponents.uasset" 555
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.uasset" 556
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/GazeReticleMaterial.uasset" 557
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/GazeReticleMesh.uasset" 558
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.uasset" 559
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/LocalPosition.uasset" 560
+"../../../Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uasset" 561
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/LaserPointerTexture.uasset" 562
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/LaserPlaneMaterial.uasset" 563
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/LaserPlane.uasset" 564
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/TooltipTextMaterial.uasset" 565
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/TouchTexture.uasset" 566
+"../../Plugins/Runtime/GoogleVR/GoogleVRController/Content/TouchMaterial.uasset" 567
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/LoginScreen_BuiltData.uasset" 568
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/LoginScreen.umap" 569
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/NeighborhoodStructure.uasset" 570
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/JSon/Barrios2.uasset" 571
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/M_Furnitures.uasset" 572
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/M_Furnitures_Inst.uasset" 573
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Widgets/ButtonImage.uasset" 574
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Widgets/ButtonContainer.uasset" 575
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Door.uasset" 576
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Door2.uasset" 577
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Door3.uasset" 578
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Door4.uasset" 579
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWall.uasset" 580
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWall2.uasset" 581
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWall3.uasset" 582
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWall4.uasset" 583
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWallWall.uasset" 584
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWallWall2.uasset" 585
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWallWall3.uasset" 586
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoorWallWall4.uasset" 587
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoubleWall.uasset" 588
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoubleWall2.uasset" 589
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoubleWall3.uasset" 590
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/DoubleWall4.uasset" 591
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Lavamanos1.uasset" 592
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Lavamanos2.uasset" 593
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Lavamanos3.uasset" 594
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Lavamanos4.uasset" 595
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Mesera1.uasset" 596
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Mesera2.uasset" 597
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Mesera3.uasset" 598
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Mesera4.uasset" 599
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Stairs1.uasset" 600
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Stairs1_1.uasset" 601
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Stairs1_2.uasset" 602
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Stairs1_3.uasset" 603
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Stairs1_4.uasset" 604
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Toilet1.uasset" 605
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Toilet2.uasset" 606
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Toilet3.uasset" 607
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Toilet4.uasset" 608
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/TripleWall.uasset" 609
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/TripleWall2.uasset" 610
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/TripleWall3.uasset" 611
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/TripleWall4.uasset" 612
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Wall.uasset" 613
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Wall2.uasset" 614
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Wall3.uasset" 615
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Wall4.uasset" 616
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoor.uasset" 617
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoor2.uasset" 618
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoor3.uasset" 619
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoor4.uasset" 620
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoorWall.uasset" 621
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoorWall2.uasset" 622
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoorWall3.uasset" 623
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallDoorWall4.uasset" 624
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallWallDoor.uasset" 625
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallWallDoor2.uasset" 626
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallWallDoor3.uasset" 627
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/WallWallDoor4.uasset" 628
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Window.uasset" 629
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Window2.uasset" 630
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Window3.uasset" 631
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Images/Window4.uasset" 632
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/MapDisigner/Widgets/WBP_Generator.uasset" 633
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/M_Retainer.uasset" 634
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/BackMarkerBase.uasset" 635
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/BackMarkerNoSelected.uasset" 636
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/BackMarkerSelected.uasset" 637
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/HammerImage.uasset" 638
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Hand.uasset" 639
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/LupaImage.uasset" 640
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/NextBtn2.uasset" 641
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization0.uasset" 642
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization1.uasset" 643
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization2.uasset" 644
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization3.uasset" 645
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization4.uasset" 646
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Penalization5.uasset" 647
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/ProfileImage.uasset" 648
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating0.uasset" 649
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating1.uasset" 650
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating2.uasset" 651
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating3.uasset" 652
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating4.uasset" 653
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/Rating5.uasset" 654
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/StarImage.uasset" 655
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/WBP_ApartmentInfo.uasset" 656
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/UserIcons/VRImage.uasset" 657
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/WBP_ApartSpecic.uasset" 658
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Icons/sand-clock-png-2.uasset" 659
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/WBP_LoadPage.uasset" 660
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/Widgets/Usuario/WBP_Sesion.uasset" 661
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/BP_SesionManager.uasset" 662
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/MainScreen.umap" 663
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/Pruebas.umap" 664
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Materials/M_FlatOrange.uasset" 665
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Meshes/MovementBase.uasset" 666
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BluePrints/InteractiveObjects/BP_InteractiveTeleportPad.uasset" 667
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/SoundEffects/Es_Muy_Listo.uasset" 668
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/BienvenidoTutorial.uasset" 669
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte1-Paso1.uasset" 670
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte1-Paso2.uasset" 671
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte2-Paso1.uasset" 672
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte2-Paso2.uasset" 673
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte2-Paso3.uasset" 674
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte3-Paso1.uasset" 675
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte3-Paso2.uasset" 676
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte3-Paso3.uasset" 677
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte4-Paso1.uasset" 678
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte4-Paso2.uasset" 679
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Assets/Sounds/TutorialRecords/Parte4-Paso3.uasset" 680
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/Tutorial.umap" 681
+"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 682
+"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 683
+"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 684
+"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 685
+"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 686
+"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 687
+"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 688
+"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 689
+"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 690
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/StructureBase.uasset" 691
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/TelepCSV.uasset" 692
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/BuildingGenerator/ObjectsGenerator.uasset" 693
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/Viewer_BuiltData.uasset" 694
+"../../../../../UnrealProjects/ProyectoGrado/ProyectoGradoOP 4.24/Content/New/Maps/Viewer.umap" 695
+"../../../Engine/Content/Maps/Entry_BuiltData.uasset" 696
+"../../../Engine/Content/Maps/Entry.umap" 697
