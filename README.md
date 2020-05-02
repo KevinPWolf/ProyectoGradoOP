@@ -1,5 +1,5 @@
 
-# Configuara Proyecto UE4 para Android
+# Configurar Proyecto UE4 para Android
 
 **1. Configurar Maps and Modes**
 
