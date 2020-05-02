@@ -60,6 +60,12 @@
 		</cxf:providers>
 	</cxf:rsServer>
 	
+	<cxf:rsServer id="restServicePunto" address="/punto" serviceClass="com.proyecto.server.services.ServicioUserData4">
+		<cxf:providers>
+			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
+		</cxf:providers>
+	</cxf:rsServer>
+	
 	
 	  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		   destroy-method="close">
@@ -77,7 +83,9 @@
 	<bean class="com.proyecto.server.sql.ConsultasComentarios" id="consultasComentarios" />
 	<bean class="com.proyecto.server.sql.ConsultasComentarios2" id="consultasComentarios2" />
 	<bean class="com.proyecto.server.sql.Updatefoto" id="updateFoto" />
+	<bean class="com.proyecto.server.sql.Puntuacion" id="PuntuacionSer" />
 	
+	<bean id="correoProcessor4" class="com.proyecto.server.process.CorreoData4" />
 	<bean id="correoProcessor3" class="com.proyecto.server.process.CorreoData3" />
 	<bean id="correoProcessor2" class="com.proyecto.server.process.CorreoData2" />
 	<bean id="processor" class="com.proyecto.server.process.ApartmentData" />
@@ -331,7 +339,48 @@
 			</choice>
 		</route>
 		
-		
+		<route id="myRoutePunto">
+			<from uri="cxfrs://bean://restServicePunto" />
+			 <process ref="correoProcessor4" />
+			<choice>
+				<when>
+					<simple>${property.correo} != null</simple>					
+					<setHeader headerName="correo">
+						<simple>${property.correo}</simple>
+					</setHeader>
+
+					<setHeader headerName="puntuacion">
+						<simple>${property.puntuacion}</simple>
+					</setHeader>
+					
+					<setHeader headerName="id_inmueble">
+						<simple>${property.id_inmueble}</simple>
+					</setHeader>
+					
+					<bean ref="PuntuacionSer" />
+					<choice>
+						<when>
+							<simple>${property.bandera} == 0</simple>
+							<setBody>
+								<simple>se realiza puntuacion </simple>
+							</setBody>				
+						</when>
+						<otherwise>
+							<setBody>
+								<simple>no se realiza puntuacion comentario repetido</simple>
+							</setBody>
+						</otherwise>
+					</choice>			
+					<process ref="responseHandler" />
+				</when>
+				<otherwise>
+					<setBody>
+						<simple>no se realiza puntuacion</simple>
+					</setBody>
+					<process ref="responseHandler" />
+				</otherwise>
+			</choice>
+		</route>
 		
 		
 		<route id="myRouteCha">

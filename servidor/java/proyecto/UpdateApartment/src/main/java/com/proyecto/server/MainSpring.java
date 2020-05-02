@@ -32,6 +32,7 @@ public class MainSpring {
 	//http://localhost:8080/proyecto/vr/apartmentUpdate/Comentario
 	//http://localhost:8080/proyecto/vr/apartmentUpdate/RegisterComentario
 	//http://localhost:8080/proyecto/vr/apartmentUpdate/fotoUsuario
+	//http://localhost:8080/proyecto/vr/apartmentUpdate/punto
 //https://update-vr.herokuapp.com/proyecto/vr/apartmentUpdate
 	public static void main(String[] args) {
         SpringApplication.run(MainSpring.class, args);

@@ -50,6 +50,15 @@ public class comentario implements Serializable{
 	@JsonProperty("emisor")
 	private String emisor;
 	
-	
+	@JsonProperty("puntuacion")
+	private String puntuacion;
+
+
+	public String getPuntuacion() {
+		return puntuacion;
+	}
+	public void setPuntuacion(String puntuacion) {
+		this.puntuacion = puntuacion;
+	}
 	
 }

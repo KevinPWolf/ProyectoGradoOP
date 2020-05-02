@@ -44,6 +44,7 @@ public class ResponseHandler implements Processor {
 				inmu.setBlue((String) map.get(i).get(8));
 				inmu.setRed((String) map.get(i).get(9));
 				inmu.setAlpha((String) map.get(i).get(10));
+				inmu.setConfiabilidad((String) map.get(i).get(11));
 				inmueble.add(inmu);
 			}
 

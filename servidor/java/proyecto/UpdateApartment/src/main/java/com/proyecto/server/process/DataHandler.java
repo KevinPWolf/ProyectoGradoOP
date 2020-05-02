@@ -32,6 +32,7 @@ public class DataHandler implements Processor {
 				inmu.setContexto((String) map.get(i).get(1));
 				inmu.setFecha((String) map.get(i).get(2));
 				inmu.setEmisor((String) map.get(i).get(3));
+				inmu.setPuntuacion((String) map.get(i).get(4));
 				comentario.add(inmu);
 			}
 			comentarios.setComentario(comentario);

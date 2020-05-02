@@ -73,6 +73,7 @@ public class ConsultasComentarios
 			   		data.add(resultSet.getString("contexto"));
 			   		data.add(resultSet.getString("fecha"));
 			   		data.add(resultSet.getString("emisor"));
+			   		data.add(resultSet.getString("puntuacion"));
 			   		map.add(data);
 			   	  }
 			   this.map=map;

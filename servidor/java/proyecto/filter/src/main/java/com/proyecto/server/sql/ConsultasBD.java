@@ -42,8 +42,8 @@ public class ConsultasBD
   private int numero, numero2;
   public void process(Exchange exchange) throws Exception {
 	  int bandera=0;
-	   this.sqlsearch1="SELECT inmu.ID,inmu.nombre_Inmueble,inmu.precio,inmu.Tipo,inmu.estado_inmueble,inmu.estado,inmu.barrio,inmu.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble where Tipo=tieru AND estado=esteru AND estado_inmueble=estinmeru AND barrio=bareru AND localidad=locaeru AND precio BETWEEN cezro AND enormegrgr ORDER BY fecha_registro DESC LIMIT number) inmu"
-	   		+ " WHERE inmu.direccion NOT IN (SELECT DISTINCT inm.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble where Tipo=tieru AND estado=esteru AND estado_inmueble=estinmeru AND barrio=bareru AND localidad=locaeru AND precio BETWEEN cezro AND enormegrgr  ORDER BY fecha_registro DESC LIMIT numo) inm)";
+	   this.sqlsearch1="SELECT inmu.ID,inmu.nombre_Inmueble,inmu.precio,inmu.Tipo,inmu.estado_inmueble,inmu.estado,inmu.barrio,inmu.direccion, inmu.confiabilidad FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion,confiabilidad FROM Inmueble where Tipo=tieru AND estado=esteru AND estado_inmueble=estinmeru AND barrio=bareru AND localidad=locaeru AND precio BETWEEN cezro AND enormegrgr ORDER BY fecha_registro DESC LIMIT number) inmu"
+	   		+ " WHERE inmu.direccion NOT IN (SELECT DISTINCT inm.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion,confiabilidad FROM Inmueble where Tipo=tieru AND estado=esteru AND estado_inmueble=estinmeru AND barrio=bareru AND localidad=locaeru AND precio BETWEEN cezro AND enormegrgr  ORDER BY fecha_registro DESC LIMIT numo) inm)";
 	 
 	   this.sqlsearch="SELECT COUNT(total.barrio) FROM (SELECT inmu.ID,inmu.nombre_Inmueble,inmu.precio,inmu.Tipo,inmu.estado_inmueble,inmu.estado,inmu.barrio,inmu.direccion FROM (select ID,nombre_Inmueble,precio,Tipo,estado_inmueble,estado,barrio,direccion FROM Inmueble where Tipo=tieru AND estado=esteru "
 	   		+ "AND estado_inmueble=estinmeru AND barrio=bareru AND localidad=locaeru AND precio BETWEEN cezro AND enormegrgr ORDER BY fecha_registro DESC) inmu) total";
@@ -200,6 +200,7 @@ public class ConsultasBD
 			   		data.add(resultSet2.getString("red"));
 			   		data.add(resultSet2.getString("alpha"));
 		   	}
+		   	data.add(resultSet.getString("confiabilidad"));
 	   		map.add(data);
 	   		
 	   	  }

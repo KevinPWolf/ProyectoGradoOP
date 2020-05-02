@@ -110,4 +110,14 @@ public class inmueble implements Serializable{
 	public void setAlpha(String alpha) {
 		this.alpha = alpha;
 	}
+	
+	@JsonProperty("confiabilidad")
+	private String confiabilidad;
+	
+	public String getConfiabilidad() {
+		return confiabilidad;
+	}
+	public void setConfiabilidad(String confiabilidad) {
+		this.confiabilidad = confiabilidad;
+	}
 }
