@@ -1,27 +1,28 @@
 
-# ProyectoGradoOP
+# Configuara Proyecto UE4 para Android
 
-1. Configurar Maps and Modes
+**1. Configurar Maps and Modes**
 
   Ir a project Settings -> Maps n modes
   
-  Imagen 1
+  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/1.PNG)
   
-2. Configurar Inputs
+**2. Configurar Inputs**
 
   Cambiar los controles y entradas
   
-  Imagen 2
+  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/2.PNG)
   
-3. Configurar Android
+**3. Configurar Android**
 
   Platforms -> Android
   
   Activar la configuracion de android que debe aparecer en rojo
   
-  Imagen 3 y 4
+  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/3.PNG)
+  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/4.PNG)
   
-4. Agregar archivos SDK
+**4. Agregar archivos SDK**
 
   ir a la carpeta de UE4 y buscar AndroidWorks
   
@@ -39,21 +40,21 @@
   
   Ejecutar: SDKManager e instalar los paquetes seleccionados por defecto aceptando las licencias
   
-4. Configurar SDK
+**4. Configurar SDK**
 
   Platforms -> Android SDK
   
   Agregar los directorios del NDK, SDK, ANT, JAVA
   
-  Imagen 5
+  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/5.PNG)
   
-5. Activar plugins de Google CardBoard:
+**5. Activar plugins de Google CardBoard:**
 
   Edit -> Plugins -> Virtual Reality
   
-  Imagen 6
+  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/6.PNG)
   
   Edit -> Plugins -> Input Devices
   
-  Imagen 7
+  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/7.PNG)
   
