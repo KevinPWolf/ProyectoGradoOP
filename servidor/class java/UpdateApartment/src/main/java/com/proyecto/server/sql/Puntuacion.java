@@ -80,7 +80,7 @@ public class Puntuacion
       resultSet = statement.executeQuery(this.sqlsearch0);   
       int resul=cont(resultSet);
      count.setCount(resul);
-      if(!(resul>0)) { 
+      if(!(resul>1)) { 
     	  statement.executeUpdate(this.sqlsearch);
           
           resultSet = statement.executeQuery(this.sqlsearch2);   

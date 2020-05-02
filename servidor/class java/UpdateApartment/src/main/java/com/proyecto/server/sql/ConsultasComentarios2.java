@@ -32,11 +32,13 @@ public class ConsultasComentarios2
   private DataSource dataSource;
   
   
-  private  String sqlinsert;
-  
+  private  String sqlinsert,sqlsearch0;
+  Counter count=new Counter();
 
   public void process(Exchange exchange) throws Exception {
-	  
+	  int bandera=0;
+	  this.sqlsearch0="SELECT puntuacion  FROM comentarios WHERE emisor='address' and ID_inmueble='inmuid'";
+
 	  this.sqlinsert="INSERT INTO comentarios(contexto,emisor,ID_inmueble) VALUE('mensaje','correo', 'identificador')";	    
 	  String id = (String) exchange.getIn().getHeader("id");
 	  String contexto = (String) exchange.getIn().getHeader("contexto");
@@ -46,9 +48,12 @@ public class ConsultasComentarios2
 	    this.sqlinsert = this.sqlinsert.replaceAll("correo", emisor);
 	    this.sqlinsert = this.sqlinsert.replaceAll("identificador", id);
 
-	    conexion();
+	    this.sqlsearch0 = this.sqlsearch0.replaceAll("address", emisor);
+	    this.sqlsearch0 = this.sqlsearch0.replaceAll("inmuid", id);
+	    bandera=conexion(bandera);
+		  exchange.setProperty("bandera",bandera);
 	}
-  public void conexion()
+  public int conexion(int bandera)
 		    throws Exception
 		  {
 		    Connection connection = null;
@@ -58,9 +63,16 @@ public class ConsultasComentarios2
 		    {
 		      connection = getConnection();
 		      statement  =  connection.createStatement();
-		      statement.executeUpdate(this.sqlinsert);   
 		      
-		      
+		      resultSet = statement.executeQuery(this.sqlsearch0);   
+		      int resul=cont(resultSet);
+		     count.setCount(resul);
+		      if(!(resul>0)) { 
+		    	  statement.executeUpdate(this.sqlinsert); 
+		    	  return bandera=0;
+		      }else {
+		    	  return bandera=1;
+		      } 
 		    }
 		    finally
 		    {
