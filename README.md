@@ -5,13 +5,13 @@
 
   Ir a project Settings -> Maps n modes
   
-  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/1.PNG)
+![Maps n modes](https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/1.PNG)
   
 **2. Configurar Inputs**
 
   Cambiar los controles y entradas
   
-  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/2.PNG)
+![controles](https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/2.PNG)
   
 **3. Configurar Android**
 
@@ -19,8 +19,8 @@
   
   Activar la configuracion de android que debe aparecer en rojo
   
-  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/3.PNG)
-  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/4.PNG)
+![Android](https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/3.PNG)
+![Android](https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/4.PNG)
   
 **4. Agregar archivos SDK**
 
@@ -46,15 +46,15 @@
   
   Agregar los directorios del NDK, SDK, ANT, JAVA
   
-  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/5.PNG)
+![SDK](https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/5.PNG)
   
 **5. Activar plugins de Google CardBoard:**
 
   Edit -> Plugins -> Virtual Reality
   
-  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/6.PNG)
+![Virtual Reality](https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/6.PNG)
   
   Edit -> Plugins -> Input Devices
   
-  (https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/7.PNG)
+![Input Devices](https://github.com/KevinPWolf/ProyectoGradoOP/blob/master/Readme/7.PNG)
   
