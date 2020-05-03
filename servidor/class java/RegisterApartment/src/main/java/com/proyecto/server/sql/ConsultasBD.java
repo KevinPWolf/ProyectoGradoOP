@@ -42,7 +42,7 @@ public class ConsultasBD
 	   this.sqlsearch="SELECT direccion FROM Inmueble WHERE direccion = 'address'";
 	  this.sqlinsert="INSERT INTO Inmueble(ancho,largo, estado_inmueble, precio, estado, barrio, direccion,nombre_inmueble,informacion_extra,Tipo,localidad,ID_VENDEDOR) VALUE('width','depth', 'state_property','price','state','neighborhood','address','name','inext','type','stlo','correo')";
 	  this.sqlsearch2="SELECT ID FROM Inmueble WHERE direccion = 'address'";
-	  this.sqlinsert2="INSERT INTO Pisos(paredes,habitaciones,muebles,texturas,posiciones_muebles,ID_inmueble) VALUE('walls','rooms','furniture','texg','posfur','Ifuri')";
+	  this.sqlinsert2="INSERT INTO Pisos(paredes,habitaciones,muebles,texturas,posiciones_muebles,piso,ID_inmueble) VALUE('walls','rooms','furniture','texg','posfur','pifloor','Ifuri')";
 	  
 	  this.sqlinsert3="INSERT INTO fotos(green,blue,red,alpha,ID_INMUEBLE) VALUE('verde','azul','rojo','alf','Ifuri')";
 	  
@@ -137,6 +137,7 @@ public class ConsultasBD
               sqlinsert3 = sqlinsert3.replaceAll("furniture", pisos.get(i).getMuebles());
               sqlinsert3 = sqlinsert3.replaceAll("texg", pisos.get(i).getTexturas());
               sqlinsert3 = sqlinsert3.replaceAll("posfur", pisos.get(i).getPosiciones_muebles());
+              sqlinsert3 = sqlinsert3.replaceAll("pifloor", pisos.get(i).getPiso());
               sqlinsert3 = sqlinsert3.replaceAll("Ifuri", ID);
               statement.executeUpdate(sqlinsert3);
                

@@ -28,6 +28,18 @@ public class pisos implements Serializable{
 	@JsonProperty("posiciones_muebles")
 	private String posiciones_muebles;
 
+	@JsonProperty("piso")
+	private String piso;
+	
+	public String getPiso() {
+		return piso;
+	}
+
+	public void setPiso(String piso) {
+		this.piso = piso;
+	}
+
+	
 	public String getParedes() {
 		return paredes;
 	}

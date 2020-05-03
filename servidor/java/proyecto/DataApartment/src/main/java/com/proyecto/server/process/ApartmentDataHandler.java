@@ -33,6 +33,7 @@ public class ApartmentDataHandler implements Processor {
 				piso.setMuebles((String) map.get(i).get(13));
 				piso.setTexturas((String) map.get(i).get(14));
 				piso.setPosiciones_muebles((String) map.get(i).get(15));
+				piso.setPiso((String) map.get(i).get(20));
 				pisos.add(piso);
 			}
 			

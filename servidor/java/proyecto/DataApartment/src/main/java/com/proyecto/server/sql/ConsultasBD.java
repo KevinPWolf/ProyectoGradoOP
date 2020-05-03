@@ -38,7 +38,7 @@ public class ConsultasBD
   List<List> map = new ArrayList<List>();
   public void process(Exchange exchange) throws Exception {
 	  int bandera=0;
-	   this.sqlsearch="SELECT Inmueble.ID,Inmueble.ancho, Inmueble.largo, Inmueble.estado_inmueble, Inmueble.precio, Inmueble.estado, Inmueble.barrio, Inmueble.direccion, Inmueble.nombre_Inmueble, Inmueble.informacion_extra, Inmueble.Tipo, telefonos.numero, Pisos.paredes, Pisos.habitaciones, Pisos.muebles, Pisos.texturas, Pisos.posiciones_muebles FROM Inmueble INNER JOIN telefonos ON Inmueble.ID_VENDEDOR = telefonos.ID_PERSONA INNER JOIN Pisos ON Inmueble.ID = Pisos.ID_inmueble where Inmueble.ID=numinid";
+	   this.sqlsearch="SELECT Inmueble.ID,Inmueble.ancho, Inmueble.largo, Inmueble.estado_inmueble, Inmueble.precio, Inmueble.estado, Inmueble.barrio, Inmueble.direccion, Inmueble.nombre_Inmueble, Inmueble.informacion_extra, Inmueble.Tipo, telefonos.numero, Pisos.paredes, Pisos.habitaciones, Pisos.muebles, Pisos.texturas, Pisos.posiciones_muebles, Pisos.piso FROM Inmueble INNER JOIN telefonos ON Inmueble.ID_VENDEDOR = telefonos.ID_PERSONA INNER JOIN Pisos ON Inmueble.ID = Pisos.ID_inmueble where Inmueble.ID=numinid";
 	    String numerot = (String) exchange.getIn().getHeader("id");
 	   
 	    this.sqlsearch = this.sqlsearch.replaceAll("numinid", numerot);
@@ -99,6 +99,7 @@ public class ConsultasBD
 			   		data.add(resultSet2.getString("red"));
 			   		data.add(resultSet2.getString("alpha"));
 		   	}
+		   	data.add(resultSet.getString("piso"));
 	   		map.add(data);
 	   	  }
 	   this.map=map;
