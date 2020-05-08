@@ -44,6 +44,10 @@
 			"Name": "VictoryBPLibrary",
 			"Enabled": true,
 			"MarketplaceURL": "http://www.ue4code.com"
+		},
+		{
+			"Name": "GoogleVRTransition2D",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
