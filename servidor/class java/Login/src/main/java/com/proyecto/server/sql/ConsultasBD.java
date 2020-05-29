@@ -75,7 +75,7 @@ public class ConsultasBD
 	   	  while(resultSet.next()) {
 	   		islogging =resultSet.getInt("islogging");
 	   		contrase=resultSet.getString("contrasena");
-	   		if(islogging==0) {
+	   		if(islogging==0 || islogging==1 ) {
 	   			if(password.equals(contrase)) {
 	   		     statement.executeUpdate(this.sqlUpdate);
 	   				LOG.info("login-success");
