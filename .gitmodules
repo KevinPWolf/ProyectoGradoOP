@@ -1,4 +1,0 @@
-[submodule "servidor/java/proyecto/AparmentDataSearch"]
-	url = https://git.heroku.com/login-vr.git
-[submodule "servidor/java/proyecto/Login"]
-	url = https://git.heroku.com/login-vr.git
