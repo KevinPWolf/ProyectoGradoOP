@@ -25,7 +25,7 @@
 	</cxf:rsServer>
 	
 	
-	<cxf:rsServer id="restServiceDeleteFavorito" address="/DeleteFavorito" serviceClass="com.proyecto.server.services.ServicioUserData">
+	<cxf:rsServer id="restServiceDeleteFavorito" address="/DeleteFavorito" serviceClass="com.proyecto.server.services.ServicioUserDataF">
 		<cxf:providers>
 			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
 		</cxf:providers>
@@ -90,6 +90,7 @@
 	<bean id="correoProcessor3" class="com.proyecto.server.process.CorreoData3" />
 	<bean id="correoProcessor2" class="com.proyecto.server.process.CorreoData2" />
 	<bean id="processor" class="com.proyecto.server.process.ApartmentData" />
+	<bean id="processorf" class="com.proyecto.server.process.ApartmentDataf" />
 	<bean id="correoProcessor" class="com.proyecto.server.process.CorreoData" />
 	<bean id="password" class="com.proyecto.server.process.Password" />
 	<bean id="responseHandler" class="com.proyecto.server.process.ApartmentDataHandler" />
@@ -149,14 +150,16 @@
 		
 		<route id="myRouteDeleteFavoritos">
 			<from uri="cxfrs://bean://restServiceDeleteFavorito" />
-			 <process ref="processor" />
+			 <process ref="processorf" />
 			<choice>
 				<when>
 					<simple>${property.id} != null</simple>					
 					<setHeader headerName="id">
 						<simple>${property.id}</simple>
 					</setHeader>
-	
+					<setHeader headerName="correo">
+						<simple>${property.correo}</simple>
+					</setHeader>
 					<bean ref="consultasBDeleteFavorito" />
 					<setBody>
 						<simple>delete realizado exitosamente</simple>

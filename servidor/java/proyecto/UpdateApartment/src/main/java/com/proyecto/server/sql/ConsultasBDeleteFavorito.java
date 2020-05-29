@@ -30,16 +30,17 @@ public class ConsultasBDeleteFavorito
   private DataSource dataSource;
   
   
-  private  String sqlsearch;
+  private  String sqlsearch,sqlsearch2;
   
 
  
   public void process(Exchange exchange) throws Exception {
-	   this.sqlsearch="DELETE FROM inmueblexpersona WHERE ID_INMUEBLE=numero";
-	    String numerot = (String) exchange.getIn().getHeader("id");
-	    
+	   this.sqlsearch="DELETE FROM inmueblexpersona WHERE ID_INMUEBLE=numero and ID_PERSONA=nuper";
+	   this.sqlsearch2="SELECT ID FROM Persona WHERE correo = 'usuario'";
+	   String numerot = (String) exchange.getIn().getHeader("id");
+	    String correo = (String) exchange.getIn().getHeader("correo");
 	    this.sqlsearch = this.sqlsearch.replaceAll("numero", numerot);
-   
+	    this.sqlsearch2 = this.sqlsearch2.replaceAll("usuario", correo);
 	   conexion();
 	}
   public void conexion()
@@ -48,11 +49,18 @@ public class ConsultasBDeleteFavorito
     Connection connection = null;
     Statement statement =null;
     ResultSet resultSet = null;
+    String ID=null;
     try
     {
       connection = getConnection();
       statement  =  connection.createStatement();
-  
+      
+      resultSet = statement.executeQuery(this.sqlsearch2);       
+	  while(resultSet.next()) {
+		  ID =resultSet.getString("ID");  
+	  } 
+	  this.sqlsearch = this.sqlsearch.replaceAll("nuper", ID);
+      
       statement.executeUpdate(this.sqlsearch);
     }
     finally
