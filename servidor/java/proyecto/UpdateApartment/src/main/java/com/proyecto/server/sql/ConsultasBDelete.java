@@ -39,7 +39,7 @@ public class ConsultasBDelete
 	   this.sqlsearch1="DELETE FROM inmueblexpersona WHERE ID_INMUEBLE=numero";
 	   this.sqlsearch2="DELETE FROM comentarios WHERE ID_inmueble=numero";
 	   this.sqlsearch3="DELETE FROM Pisos WHERE ID_inmueble=numero";
-	   this.sqlsearch4="DELETE FROM fotoxinmueble WHERE ID_INMUEBLE=numero";
+	   this.sqlsearch4="DELETE FROM fotos WHERE ID_INMUEBLE=numero";
 	   
 	    String numerot = (String) exchange.getIn().getHeader("id");
 	    this.sqlsearch1 = this.sqlsearch1.replaceAll("numero", numerot);
